@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet'   type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  
+  <header>
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">
+            Eric Stephenson
+          </a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      	    <span class="sr-only">Toggle Navigation</span>
+      	    <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+        </div>          
+        <ul class="nav navbar-nav collapse navbar-collapse">
+          <li><a href="#">Welcome</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>  
+  </header>
+  
+  <%= yield %>
+  
+  <footer>
+    <div class="footer-contact">
+      <ul class="social-media">
+        <li>
+          <a class="github" href="#"><img src="https://photos-3.dropbox.com/t/2/AAAmNGxBdXcxe4VkwanHdZ1C7fNLtEFKAbc9TfP8wA-CEg/12/114129399/png/32x32/1/_/1/2/github.png/ELzujFgY2_YHIAEgAigC/nXUzGHMnHvW_13U6Y1httj0OWtOIGLAh86GXRtHiZYo?size=1024x768&size_mode=2"/></a>
+        </li>
+        <li>
+          <a class="linkedin" href="#"><img src="https://photos-5.dropbox.com/t/2/AACc6RgT52C338hvn4l4-FFce5xe7tkF2S7hOuLSvsl0iw/12/114129399/png/32x32/1/_/1/2/linkedin.png/ELzujFgY2_YHIAEgAigC/wRLi4OWdrGDiPVc0aaPBrvoj1Zx-3mucCLJm4ygDHhI?size=1024x768&size_mode=2"/></a>
+        </li>
+        <li>
+          <a class="twitter" href="#"><img src="https://photos-6.dropbox.com/t/2/AAAdGRwFTKcDKSXT3b63XCiU7pS9fSQIjAaH2R_Z6DJtEA/12/114129399/png/32x32/1/_/1/2/twitter1.png/ELzujFgY3fYHIAEgAigC/wZGsb8yApCgAthgQJgYB5zPPtKr0Peoq3GQ1qRhjbfA?size=1024x768&size_mode=2"/></a>
+        </li>
+      </ul>
+      <p>© 2015 Eric Stephenson</p>
+    </div>
+    <div class="flaticon">Icons made by <a href="http://www.flaticon.com/authors/stephen-hutchings" title="Stephen Hutchings">Stephen Hutchings</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+  </footer>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+  background: url(https://photos-4.dropbox.com/t/2/AAB72n13us2KRHyJ9zgDMjK6NelPtBYz8ulBsI6TdHALXw/12/114129399/jpeg/32x32/1/_/1/2/mount_rainier.jpg/ELzujFgYz_YHIAEgAigC/KCrpyij3qUQAvnowqhKsfFluQUbCd-yqTzvZL-loUHk?size=1024x768&size_mode=2) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main a {
+  width: 40px;
+  height: 15px;
+  color: white;
+  background-color: #4d4d4d;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.social-media {
+  margin-right: 2em;
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+  img {
+    width: 32px;
+    margin: 0.5em;
+  }
+}
+
+.footer-contact {
+  float: right;
+  margin-right: 2em;
+  p {
+    float: right;
+    margin-right: 2em;
+  }
+}
+
+.flaticon {
+  float: right;
+  display: block;
+  clear: both;
+  margin: 1em;
+}
+
+
