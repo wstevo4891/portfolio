@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Portfolio of Eric Stephenson</title>
   <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet'   type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -12,11 +13,9 @@
   
   <header>
     <div class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
+      <div role="navigation" class="container">
         <div class="navbar-header">
-          <a href="#" class="navbar-brand">
-            Eric Stephenson
-          </a>
+          <%= link_to "Eric Stephenson", root_path, class: "logo" %>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
       	    <span class="sr-only">Toggle Navigation</span>
       	    <span class='icon-bar'></span>
@@ -24,12 +23,14 @@
             <span class='icon-bar'></span>
           </button>
         </div>          
-        <ul class="nav navbar-nav collapse navbar-collapse">
-          <li><a href="#">Welcome</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+          <li role="presentation"><%= link_to "Work", pages_work_path %></li>
+          <li role="presentation"><a href="#">About</a></li>
+          <li role="presentation"><a href="#">Blog</a></li>
+          <li role="presentation"><a href="#">Contact</a></li>
+          <li role="presentation"><a href="#"><%= image_tag("github13.png") %></a></li>
+          <li role="presentation"><a href="#"><%= image_tag("linkedin11.png") %></a></li>
+          <li role="presentation"><a href="#"><%= image_tag("twitter1.png") %></a></li>
         </ul>
       </div>
     </div>  

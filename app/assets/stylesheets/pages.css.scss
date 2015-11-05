@@ -2,22 +2,121 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+/* Navigation */
+
+.navbar-header{
+  a {
+    color: white;
+    position: relative;
+    top: 1em;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.navbar {
+  margin-bottom: 0;
+  height: 4em;
+  font-size: 2em;
+}
+
+.nav {
+  margin-top: 1em;
+  img {
+    width: 1.5em;
+    position: relative;
+    bottom: 0.4em;
+  }
+}
+
+/* Welcome Page */
+
 .jumbotron {
   background: url(https://photos-4.dropbox.com/t/2/AAB72n13us2KRHyJ9zgDMjK6NelPtBYz8ulBsI6TdHALXw/12/114129399/jpeg/32x32/1/_/1/2/mount_rainier.jpg/ELzujFgYz_YHIAEgAigC/KCrpyij3qUQAvnowqhKsfFluQUbCd-yqTzvZL-loUHk?size=1024x768&size_mode=2) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 50em;
 }
 
-.main a {
-  width: 40px;
-  height: 15px;
+.main {
+  a {
+  width: 10em;
+  height: 5em;
   color: white;
-  background-color: #4d4d4d;
+  background-color: black;
   font-weight: bold;
   text-decoration: none;
-  padding: 10px;
+  padding: 2em;
+  position: relative;
+  top: 2.5em;
+  }
+}
+
+/* Work Page */
+
+.baldwin {
+  width: 100%;
+  height: 52em;
+  padding-bottom: 3em;
+}
+
+.griffen {
+  width: 100%;
+  height: 52em;
+  padding-bottom: 3em;
+}
+
+.smm {
+  width: 100%;
+  height: 52em;
+  padding-bottom: 3em;
+}
+
+.p-item {
+  margin-top: 3em;
+  box-shadow: 10px 10px 5px #888888;
+  border: solid 1px #4d4d4d;
+  img {
+    height: 30em;
+  }
+}
+
+.p-info {
+  height: 10em;
+  background-color: black;
+  color: white;
+}
+
+/* Unslider */
+
+.banner {
+  position: relative;
+  top: 2em;
+  bottom: 2em;
+  background-color: black;
+  padding: 2em;
+  overflow: auto;
+  li {
+    list-style: none;
+    margin: 0 auto;
+  }
+  ul li {
+    float: left;
+  }
+  img {
+    width: 45em;
+    height: 30em;
+  }
+}
+
+/* Footer */
+
+footer {
+  padding-top: 2em;
 }
 
 .social-media {
