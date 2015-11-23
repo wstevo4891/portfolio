@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 /* Navigation */
 
 .navbar-header{
@@ -40,6 +39,11 @@
   -o-background-size: cover;
   background-size: cover;
   height: 50em;
+  color: white;
+  h1 {
+    position: relative;
+    top: 2.5em;
+  }
 }
 
 .main {
@@ -57,6 +61,13 @@
 }
 
 /* Work Page */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 .baldwin {
   width: 100%;
@@ -77,11 +88,57 @@
 }
 
 .p-item {
+  height: 25em;
+  width: 35em;
   margin-top: 3em;
-  box-shadow: 10px 10px 5px #888888;
+  -webkit-box-shadow: 10px 10px 5px #888888;
+          box-shadow: 10px 10px 5px #888888;
   border: solid 1px #4d4d4d;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;  
+  img {
+    height: 25em;
+    width: 40em;
+    background-size: cover;
+    -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;  
+  }
+}
+
+.focus-b:hover {
+  border: 70px solid #000;
+  border-radius: 50%;
+  img {
+    margin-top: 4em;
+    margin-left: 9em;
+    height: 35em;
+    width: 50em;
+  }
+}
+
+.focus-g:hover {
+  border: 70px solid #000;
+  border-radius: 50%;
+  img {
+    margin-top: 4em;
+  }
+}
+
+.focus-smm:hover {
+  border: 70px solid #000;
+  border-radius: 50%;
   img {
     height: 30em;
+    width: 45em;
+    margin-top: 3em;
+    margin-left: 7em;
   }
 }
 
@@ -89,6 +146,14 @@
   height: 10em;
   background-color: black;
   color: white;
+}
+
+.break {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: solid 1px #444;
+  position: relative;
+  bottom: 4em;
 }
 
 /* Unslider */
