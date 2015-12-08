@@ -117,21 +117,29 @@
   border: 70px solid #000;
   border-radius: 50%;
   -webkit-transform: rotateX(0deg);
+     -moz-transform: rotateX(0deg);
+      -ms-transform: rotateX(0deg);
+       -o-transform: rotateX(0deg);
+          transform: rotateX(0deg);
   img {
     margin-top: 13em;
     margin-left: 18em;
-    -webkit-transform: scale(2.0);
-       -moz-transform: scale(2.0);
-         -o-transform: scale(2.0);
-        -ms-transform: scale(2.0);
-            transform: scale(2.0);
+    -webkit-transform: scale(2);
+       -moz-transform: scale(2);
+         -o-transform: scale(2);
+        -ms-transform: scale(2);
+            transform: scale(2);
   }
 }
 
 .focus-g:hover {
-  -webkit-transform: rotateX(0deg);
   border: 70px solid #000;
-  border-radius: 50%;  
+  border-radius: 50%; 
+  -webkit-transform: rotateX(0deg);
+     -moz-transform: rotateX(0deg);
+      -ms-transform: rotateX(0deg);
+       -o-transform: rotateX(0deg);
+          transform: rotateX(0deg);   
   img {
     margin-top: 6.5em;
     -webkit-transform: scale(1.5);
@@ -150,7 +158,17 @@
   -webkit-transform: rotateZ(360deg);
   border: 70px solid #000;
   border-radius: 50%;
+  -webkit-transition: all 2s ease;
+     -moz-transition: all 2s ease;
+       -o-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+          transition: all 2s ease;  
   img {
+    -webkit-transition: all 2s ease;
+       -moz-transition: all 2s ease;
+         -o-transition: all 2s ease;
+        -ms-transition: all 2s ease;
+            transition: all 2s ease;  
     -webkit-transform: scale(2.0);
        -moz-transform: scale(2.0);
          -o-transform: scale(2.0);

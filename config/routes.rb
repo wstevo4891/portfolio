@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
   get 'pages/work'
+  get 'pages/about'
+  get 'pages/blog'
+  get 'pages/contact'
   
   root 'pages#welcome'
   
