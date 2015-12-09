@@ -3,17 +3,15 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Portfolio of Eric Stephenson</title>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet'   type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,500,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   
-  <header>
     <div class="navbar navbar-inverse navbar-static-top">
-      <div role="navigation" class="container">
+
         <div class="navbar-header">
           <%= link_to "Eric Stephenson", root_path, class: "logo" %>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,9 +30,7 @@
           <li role="presentation"><a href="https://www.linkedin.com/in/ericbstephenson4891"><%= image_tag("linkedin11.png") %></a></li>
           <li role="presentation"><a href="https://twitter.com/EricBStephenson"><%= image_tag("twitter1.png") %></a></li>
         </ul>
-      </div>
     </div>  
-  </header>
   
   <%= yield %>
   
@@ -53,7 +49,7 @@
       </ul>
       <p>© 2015 Eric Stephenson</p>
     </div>
-    <div class="flaticon">Icons made by <a href="http://www.flaticon.com/authors/stephen-hutchings" title="Stephen Hutchings">Stephen Hutchings</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+    <div class="flaticon">Icons made by <a href="http://www.flaticon.com/authors/stephen-hutchings" title="Stephen Hutchings">Stephen Hutchings</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
   </footer>
     
 </body>

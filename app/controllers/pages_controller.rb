@@ -13,4 +13,13 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def baldwin
+  end
+
+  def griffen
+  end
+
+  def smm
+  end
 end
