@@ -10,29 +10,31 @@
 </head>
 <body>
   
-    <div class="navbar navbar-inverse navbar-static-top">
-
-        <div class="navbar-header">
-          <%= link_to "Eric Stephenson", root_path, class: "logo" %>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      	    <span class="sr-only">Toggle Navigation</span>
-      	    <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-          </button>
-        </div>          
-        <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
-          <li role="presentation"><%= link_to "Work", pages_work_path %></li>
-          <li role="presentation"><%= link_to "About", pages_about_path %></li>
-          <li role="presentation"><%= link_to "Blog", pages_blog_path %></li>
-          <li role="presentation"><%= link_to "Contact", pages_contact_path %></li>
-          <li role="presentation"><a href="https://github.com/wstevo4891"><%= image_tag("github13.png") %></a></li>
-          <li role="presentation"><a href="https://www.linkedin.com/in/ericbstephenson4891"><%= image_tag("linkedin11.png") %></a></li>
-          <li role="presentation"><a href="https://twitter.com/EricBStephenson"><%= image_tag("twitter1.png") %></a></li>
-        </ul>
-    </div>  
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to "Eric Stephenson", root_path, class: "navbar-brand logo" %>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    	    <span class="sr-only">Toggle Navigation</span>
+    	    <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+        </button>
+      </div>          
+      <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+        <li ><%= link_to "WORK", pages_work_path, class: "mobile-nav-break" %></li>
+        <li ><%= link_to "ABOUT", pages_about_path, class: "mobile-nav-break" %></li>
+        <li ><%= link_to "BLOG", pages_blog_path, class: "mobile-nav-break" %></li>
+        <li ><%= link_to "CONTACT", pages_contact_path %></li>
+        <li ><a href="https://github.com/wstevo4891"><%= image_tag("github13.png") %></a></li>
+        <li ><a href="https://www.linkedin.com/in/ericbstephenson4891"><%= image_tag("linkedin11.png") %></a></li>
+      </ul>
+    </div>
+  </div>  
   
-  <%= yield %>
+  <main>
+    <%= yield %>
+  </main>
   
   <footer>
     <div class="footer-contact">
