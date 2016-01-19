@@ -7,10 +7,12 @@
 
 body {
   line-height: 1.42857143;
+  font-size: 14px;
 }
 
 .page-title {
   margin-top: 2em;
+  font-weight: 300;
 }
 
 .technologies {
@@ -78,27 +80,46 @@ main {
 }
 
 .jumbotron {
-  background: image-url("mount_rainier.jpg") no-repeat center center fixed;
+  background: image-url("rainier-enhanced.jpg") no-repeat center center fixed;
   @include background-size(cover);
+  margin: 0;
   height: 25em;
-  color: white;
+  color: 4d4d4d;
   h1 {
     position: relative;
-    top: 2.5em;
+    @media only screen and (min-width: 768px) {
+      top: 2.5em;
+    }
   }
-  @media only screen and (min-width: 782px) {
+  @media only screen and (min-width: 768px) {
     height: 45em;
+    color: white;
   }
 }
 
 .jumbotron-small {
-  background: image-url("mount_rainier.jpg") no-repeat center center fixed;
-  height: 18em;
+  background: image-url("rainier-enhanced.jpg") no-repeat center center fixed;
+  height: 20em;
   @include background-size(cover);
   h1 {
     position: relative;
     top: 2.5em;
   }
+}
+
+.jumbotron-contact {
+  @extend .jumbotron-small;
+  background: image-url("seattle-enhanced-again.jpg") no-repeat center;
+  background-size: 100% auto;
+  color: white;
+}
+
+.jumbotron-about {
+  @extend .jumbotron-small;
+  background: image-url("atacama-enhanced.jpg") no-repeat center center;
+  background-size: 100% 55em;
+  height: 25em;
+  color: white;
 }
 
 .main {
@@ -113,6 +134,10 @@ main {
   position: relative;
   top: 2.5em;
   }
+}
+
+.skills-copy {
+  font-size: 18px;
 }
 
 /* Work Page */
@@ -295,6 +320,13 @@ main {
 
 .project-page {
   background-color: #F8F8F8;
+  padding-bottom: 4em;
+}
+
+.skillset {
+  background-color: #2F4F4F;
+  color: white;
+  padding-bottom: 4em;
 }
 
 .project-img {
@@ -302,6 +334,13 @@ main {
     border: 1px solid #4D4D4D;
   }
   margin-top: 5em;
+}
+
+.contact-page {
+  background-color: #F8F8F8;
+  height: 26em;
+  padding-top: 4em;
+  font-size: 18px;
 }
 
 .break {
