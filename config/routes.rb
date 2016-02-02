@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'pages/baldwin'
   get 'pages/griffen'
   get 'pages/smm'
+  get 'pages/suggestion_box'
   
   root 'pages#welcome'
   

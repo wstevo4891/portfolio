@@ -22,4 +22,7 @@ class PagesController < ApplicationController
 
   def smm
   end
+
+  def suggestion_box
+  end
 end
