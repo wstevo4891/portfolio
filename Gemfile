@@ -8,6 +8,7 @@ gem 'rails', '4.2.3'
 gem 'sqlite3', group: :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'compass-rails'
 # Use Bootstrap Sass
 gem 'bootstrap-sass', '3.3.4.1'
 # Use Uglifier as compressor for JavaScript assets
