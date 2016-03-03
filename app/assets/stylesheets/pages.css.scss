@@ -121,6 +121,14 @@ main {
   font-size: 18px;
 }
 
+.code-school {
+  color: #00BFFF;
+  &:hover {
+    color: #1E90FF;
+    text-decoration: none;
+  }
+}
+
 /* Work Page */
 
 * {
@@ -312,7 +320,7 @@ footer {
     display: inline-block;
   }
   img {
-    width: 32px;
+    width: 38px;
     margin: 0.5em;
   }
 }

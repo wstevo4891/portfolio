@@ -4,8 +4,6 @@ ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-# Use sqlite3 as the development database for Active Record
-gem 'sqlite3', group: :development
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'compass-rails'
@@ -29,15 +27,22 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring', group: :development
+group :development do
+	gem 'spring'
+	gem 'sqlite3'
+	gem 'awesome_print', require: 'ap'
+	gem 'better_errors'
+	gem 'pry-rails'
+	gem 'quiet_assets'
+	gem 'meta_request'
+	gem 'rack-timeout'
+	gem 'binding_of_caller'
+end
 
-# Use Puma for a server
-gem 'puma'
-gem 'rack-timeout'
 
 group :production do
 # Use PostGreSQL as the production database
   gem 'pg'
   gem 'rails_12factor'
+  gem 'puma'
 end
