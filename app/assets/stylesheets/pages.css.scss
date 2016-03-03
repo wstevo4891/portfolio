@@ -25,6 +25,19 @@ main {
   text-align: center;
 }
 
+.headshot {
+  background: image-url("headshot1-thumb.jpg") center;
+  height: 14em;
+  width: 14em;
+  position: absolute;
+  top: 8em;
+  left: 3em;
+  border: solid 6px #000;
+  border-radius: 50%;
+  @include box-shadow(5px 5px 5px #444);
+}
+
+
 /* Navigation */
 
 .logo {
