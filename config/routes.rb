@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'pages/about'
   get 'pages/blog'
   get 'pages/contact'
+  get 'pages/bolt_network'
   get 'pages/baldwin'
   get 'pages/griffen'
   get 'pages/smm'

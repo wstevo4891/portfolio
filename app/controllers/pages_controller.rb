@@ -14,6 +14,9 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def bolt_network
+  end
+
   def baldwin
   end
 
