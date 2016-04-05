@@ -156,12 +156,29 @@ main {
   }
 }
 
+.p-bolt {
+  @extend .p-item;
+  border: solid 1px #0393ff;
+  @include transition(all 2s ease);
+}
+
 .focus:hover {
   border: 40px solid #000;
   border-radius: 50%;
   @include transform(rotateX(0deg));
   img {
     @include transform(scale(2));
+  }
+}
+
+.focus-bolt:hover {
+  border: 50px solid #0393ff;
+  border-radius: 50%;
+  @include transform(rotateX(0deg));
+  img {
+    @include transform(scale(4));
+    margin-top: 39em;
+    margin-left: 44em;
   }
 }
 
@@ -230,6 +247,9 @@ main {
   a {
     color: #4d4d4d;
     @include transition(all 0.5s ease);
+    &:focus {
+      text-decoration: none;
+    }
   }
   span {
     display: none;
