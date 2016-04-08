@@ -90,7 +90,7 @@ main {
 
 .jumbotron-contact {
   @extend .jumbotron-small;
-  background: image-url("seattle-enhanced-again.jpg") no-repeat center;
+  background: image-url("lake-union.jpg") no-repeat center;
   background-size: 100% auto;
   color: white;
 }
@@ -159,7 +159,7 @@ main {
 .p-bolt {
   @extend .p-item;
   border: solid 1px #0393ff;
-  @include transition(all 2s ease);
+  @include transition(all 1.5s ease);
 }
 
 .focus:hover {
@@ -176,7 +176,8 @@ main {
   border-radius: 50%;
   @include transform(rotateX(0deg));
   img {
-    @include transform(scale(4));
+    @include transform(scale(4), translateZ(0));
+    -webkit-backface-visibility: hidden;
     margin-top: 39em;
     margin-left: 44em;
   }
