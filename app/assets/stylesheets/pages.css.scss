@@ -210,7 +210,15 @@ main {
   background-color: #fff;
 
   img {
-    @include transform-origin(-20%, -3%);
+    @include transform-origin(-8%, -3%);
+  }
+}
+
+.focus-baldwin:hover {
+  @extend .focus:hover;
+
+  img {
+    @include transform(scale(2.5, 2));
   }
 }
 
@@ -237,15 +245,23 @@ main {
 }
 
 // Sherry Matthews Marketing animation
-.focus-smm:hover {
-  @extend .focus:hover;
-  @include transform(rotateZ(360deg));
-  @include transition(all 2s ease);  
+.p-smm {
+  @extend .p-item;
+  @include transition(all 2s ease);
+
   img {
-    margin-top: 7em;
-    margin-left: 9em;
     @include transition(all 2s ease);
-    @include transform(scale(2));
+    @include transform-origin(30%, 32%);
+  }
+}
+
+.focus-smm:hover {
+  border: 40px solid #000;
+  border-radius: 50%;
+  @include transform(rotateZ(360deg));
+
+  img {
+    @include transform(scale(3.5, 3));
   }
 }
 
