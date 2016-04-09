@@ -133,12 +133,14 @@ main {
   }
 }
 
-/* Work Page */
+
+/* Work Page styles */
 
 * {
   @include box-sizing(border-box);
 }
 
+// div and hover animation general settings
 .p-item {
   display: inline-block;
   margin: 3em auto;
@@ -156,49 +158,85 @@ main {
   }
 }
 
-.p-bolt {
-  @extend .p-item;
-  border: solid 1px #0393ff;
-  @include transition(all 1.5s ease);
-}
-
 .focus:hover {
   border: 40px solid #000;
   border-radius: 50%;
-  @include transform(rotateX(0deg));
+  @include transform(rotate(0.1deg));
   img {
     @include transform(scale(2));
+  }
+}
+
+// Bolt Network animation
+.p-bolt {
+  @extend .p-item;
+  border: solid 1px #0393ff;
+  background-color: #000;
+
+  img {
+    @include transform-origin(-4%, -3%);
   }
 }
 
 .focus-bolt:hover {
   border: 50px solid #0393ff;
   border-radius: 50%;
-  @include transform(rotateX(0deg));
+  @include transform(rotateX(0.1deg));
   img {
-    @include transform(scale(4), translateZ(0));
-    -webkit-backface-visibility: hidden;
-    margin-top: 39em;
-    margin-left: 44em;
+    @include transform(scale(4), rotate(0.1deg));
   }
 }
 
-.focus-b:hover {
-  @extend .focus:hover;
+// Griffen Financial animation
+.p-griffen {
+  @extend .p-item;
+  @include transform(rotateX(0.1deg));
+
   img {
-    margin-top: 8em;
-    margin-left: 10em;
+    @include transform-origin(center, 30%);
   }
 }
 
 .focus-g:hover {
   @extend .focus:hover;  
   img {
-    margin-top: 4.5em;
-    @include transform(scale(1.5));
+    @include transform(scale(2.5, 2), rotate(0.1deg));
   }
 }
 
+// Baldwin Interiors animation
+.p-baldwin {
+  @extend .p-item;
+  background-color: #fff;
+
+  img {
+    @include transform-origin(-20%, -3%);
+  }
+}
+
+// Suggestion Box animation
+.p-suggestion {
+  @extend .p-item;
+  @include transition(all 0.5s ease);
+
+  img {
+    @include transition(all 0.5s ease);
+    @include transform-origin(8%, 4%);
+  }
+}
+
+.focus-sugg:hover {
+  width: 28em;
+  border: 40px solid #000;
+  border-radius: 50%;
+  @include transform(rotateZ(360deg));
+
+  img {
+    @include transform(scale(3.75, 3));
+  }
+}
+
+// Sherry Matthews Marketing animation
 .focus-smm:hover {
   @extend .focus:hover;
   @include transform(rotateZ(360deg));
@@ -211,6 +249,7 @@ main {
   }
 }
 
+/* Project Pages styles */
 .p-info {
   margin: 2em auto;
   color: #4d4d4d;
