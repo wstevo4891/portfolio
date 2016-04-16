@@ -32,9 +32,9 @@ main {
   position: absolute;
   top: 8em;
   left: 3em;
-  border: solid 6px #000;
+  border: solid 6px #333;
   border-radius: 50%;
-  @include box-shadow(5px 5px 5px #444);
+  @include box-shadow(4px 4px 4px #4D4D4D);
 }
 
 
@@ -74,7 +74,7 @@ main {
     margin: 0 auto;
     top: 1em;
     position: relative;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #000;
   }
 }
 
@@ -82,17 +82,26 @@ main {
   background: image-url("rainier-enhanced.jpg") no-repeat center center fixed;
   height: 20em;
   @include background-size(cover);
+  color: white;
   h1 {
     position: relative;
     top: 2.5em;
+    text-shadow: 2px 2px 4px #000;
   }
 }
 
 .jumbotron-contact {
   @extend .jumbotron-small;
-  background: image-url("lake-union.jpg") no-repeat center;
+  background: image-url("lake-union.jpg") no-repeat center center;
   background-size: 100% auto;
   color: white;
+  h1 {
+    max-width: 10em;
+    margin: 0 auto;
+    top: 0.8em;
+    position: relative;
+    text-shadow: 2px 2px 4px #000;
+  }
 }
 
 .jumbotron-about {
@@ -339,8 +348,9 @@ main {
 }
 
 .skillset {
-  background-color: #2F4F4F;
+  background: image-url("macbook-coffee.jpg") no-repeat center center;
   color: white;
+  text-shadow: 2px 2px 4px #000;
   padding-bottom: 4em;
 }
 
@@ -473,6 +483,12 @@ footer {
   }
 }
 
+.skills-copy {
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
 
 // Work Page
 
@@ -532,5 +548,14 @@ footer {
 .p-info {
   @media only screen and (min-width: 990px) {
     width: 60%;
+  }
+}
+
+// Contact Page
+.jumbotron-contact {
+  @media screen and (min-width: 1024px) {
+    h1 {
+      font-size: 6em;
+    }
   }
 }
