@@ -110,6 +110,9 @@ main {
   background-size: 100% 55em;
   height: 25em;
   color: white;
+  h1 {
+    top: 0.5em;
+  }
 }
 
 .main {
@@ -396,6 +399,16 @@ main {
   }
 }
 
+
+/* ABOUT PAGE */
+
+.about-copy {
+  p, h2, h3 {
+    margin-bottom: 1em;
+  }
+}
+
+
 /* Footer */
 
 footer { 
@@ -550,6 +563,17 @@ footer {
     width: 60%;
   }
 }
+
+
+// About Page
+.jumbotron-about {
+  @media screen and (min-width: 1024px) {
+    h1 {
+      font-size: 6em;
+    }
+  }
+}
+
 
 // Contact Page
 .jumbotron-contact {
