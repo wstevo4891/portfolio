@@ -79,13 +79,13 @@ main {
 }
 
 .jumbotron-small {
-  background: image-url("rainier-enhanced.jpg") no-repeat center center fixed;
+  background: image-url("macbook-coffee.jpg") no-repeat center center fixed;
   height: 20em;
   @include background-size(cover);
   color: white;
   h1 {
     position: relative;
-    top: 2.5em;
+    top: 0.8em;
     text-shadow: 2px 2px 4px #000;
   }
 }
@@ -98,9 +98,6 @@ main {
   h1 {
     max-width: 10em;
     margin: 0 auto;
-    top: 0.8em;
-    position: relative;
-    text-shadow: 2px 2px 4px #000;
   }
 }
 
@@ -131,6 +128,10 @@ main {
 
 .skills-copy {
   font-size: 18px;
+  p {
+    display: inline-block;
+    margin: 2em;
+  }
 }
 
 .code-school {
@@ -588,18 +589,8 @@ footer {
 }
 
 
-// About Page
-.jumbotron-about {
-  @media screen and (min-width: 1024px) {
-    h1 {
-      font-size: 6em;
-    }
-  }
-}
-
-
-// Contact Page
-.jumbotron-contact {
+// Jumbotrons
+.jumbotron-contact, .jumbotron-small {
   @media screen and (min-width: 1024px) {
     h1 {
       font-size: 6em;
