@@ -27,18 +27,40 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use Jekyll for blogging platform
-gem 'jekyll', '~> 3.1.0'
+# User carrierwave for image uploads
+gem 'carrierwave'
+gem 'rmagick'
 
 group :development do
-	gem 'spring'
 	gem 'sqlite3'
 	gem 'awesome_print', require: 'ap'
 	gem 'better_errors'
-	gem 'pry-rails'
 	gem 'quiet_assets'
 	gem 'meta_request'
-	gem 'binding_of_caller'
+end
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+  gem 'dotenv-rails'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails', '~> 4.5'
+  gem 'pry-rescue'
+  gem 'pry-stack_explorer'
+  gem 'pry-rails'
+  gem 'binding_of_caller'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'email_spec'  
+  gem 'guard-rspec'
+  gem 'database_cleaner'
 end
 
 group :production do

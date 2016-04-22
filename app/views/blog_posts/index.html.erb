@@ -1,0 +1,19 @@
+<div class="jumbotron-small">
+  <div class="main col-md-12 text-center">
+    <h1>BLOG</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+    </div>
+  </div>
+  <% @blog_posts.each do |blog_post| %>
+    <div class="row">
+      <h2><%= link_to blog.title, blog_post %></h2>
+    </div>
+  <% end %>
+    </div>
+  </div>
+</div>
