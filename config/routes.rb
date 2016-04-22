@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :admins
   resources :blog_images
   resources :blog_posts
   get 'pages/work'

@@ -31,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave'
 gem 'rmagick'
 
+# Use Devise for admin auth
+gem 'devise'
+
 group :development do
 	gem 'sqlite3'
 	gem 'awesome_print', require: 'ap'
