@@ -34,6 +34,9 @@ gem 'rmagick'
 # Use Devise for admin auth
 gem 'devise'
 
+# Use Font-Awesome for icons
+gem 'font-awesome-sass'
+
 group :development do
 	gem 'sqlite3'
 	gem 'awesome_print', require: 'ap'

@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_action :authenticate_admin!, only: :dashboard
+
   def welcome
   end
   
@@ -27,5 +29,9 @@ class PagesController < ApplicationController
   end
 
   def suggestion_box
+  end
+
+  def dashboard
+    @blog_posts = BlogPost.all
   end
 end

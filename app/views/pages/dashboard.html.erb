@@ -1,0 +1,24 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12">
+			<ul class="nav nav-pills">
+				<li><%= link_to 'Home', pages_dashboard_path %></li>
+				<li><%= link_to 'New', new_blog_post_path %></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+    <h1>Blog Dashboard</h1>		
+	</div>
+
+	<% @blog_posts.each do |post| %>
+	  <div class="row">
+	    <h2><%= post.title %></h2>
+	    <p><%= post.date %></p>
+		  <%= link_to 'Read', post, class: "btn btn-lg btn-primary" %>
+		  <%= link_to 'Edit', edit_blog_post_path(post), class: "btn btn-lg btn-warning" %>
+		  <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-lg btn-danger" %>
+	  </div>
+	<% end %>
+</div>

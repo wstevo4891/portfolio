@@ -1,14 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "compass/css3";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// LAYOUT ##################
 
 body {
   line-height: 1.42857143;
   font-size: 14px;
+  margin-top: 90px;
 }
 
 .page-title {
@@ -40,12 +41,22 @@ main {
 
 /* Navigation */
 
-.logo {
+.navbar {
+  background-color: #222;
+}
+
+.logo, .nav a {
   font-size: 2em;
+  color: #F8F8F8;
+  @include transition(all 0.5s ease);
+  &:hover {
+    color: #18bc9c;
+  }
 }
 
 .navbar {
   margin-bottom: 0;
+  padding: 0.5em;
 }
 
 .nav {
@@ -55,9 +66,70 @@ main {
     position: relative;
     bottom: 0.4em;
   }
+
   a {
     font-size: 1.5em;
   }
+
+  i {
+    font-size: 2em;
+    margin-top: -0.25em;
+  }
+}
+
+#nav-list a:hover {
+  background-color: #222;
+}
+
+
+/* Footer */
+
+footer { 
+  padding-top: 2em;
+  background-color: #EEE0CB;
+  border-top: solid 2px #222;
+  color: #222;
+  height: 180px;
+}
+
+.social-media {
+  width: 15em;
+  padding: 0;
+  margin: 2em auto 1em auto;
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+
+  a {
+    color: #222;
+    @include transition(all 0.5s ease);
+    &:hover {
+      color: #18bc9c;
+    }
+  }
+
+  i {
+    font-size: 4em;
+    margin-right: 0.2em;
+  }
+}
+
+.footer-contact {
+  float: right;
+  margin-right: 2em;
+  p {
+    float: right;
+    margin-right: 2em;
+  }
+}
+
+.flaticon {
+  float: right;
+  display: block;
+  clear: both;
+  margin: 1em;
 }
 
 
@@ -300,7 +372,7 @@ main {
 
 .site-link:hover {
   text-decoration: none;
-  color: deepskyblue;
+  color: #18bc9c;
 }
 
 .web-link {
@@ -356,6 +428,7 @@ main {
   color: white;
   text-shadow: 2px 2px 4px #000;
   padding-bottom: 4em;
+  height: 420px;
 }
 
 .project-img {
@@ -408,42 +481,6 @@ main {
 
 #about-last {
   margin-bottom: 4em;
-}
-
-
-/* Footer */
-
-footer { 
-  padding-top: 2em;
-  border-top: 1px solid #4d4d4d;
-}
-
-.social-media {
-  margin-right: 2em;
-  li {
-    list-style-type: none;
-    display: inline-block;
-  }
-  img {
-    width: 38px;
-    margin: 0.5em;
-  }
-}
-
-.footer-contact {
-  float: right;
-  margin-right: 2em;
-  p {
-    float: right;
-    margin-right: 2em;
-  }
-}
-
-.flaticon {
-  float: right;
-  display: block;
-  clear: both;
-  margin: 1em;
 }
 
 
