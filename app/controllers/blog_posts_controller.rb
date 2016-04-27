@@ -5,20 +5,17 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts
   # GET /blog_posts.json
   def index
-    @latest_post = BlogPost.order(:created_at).last
-    @blog_posts = BlogPost.all
+    @blog_posts = BlogPost.all.order(created_at: :desc)
   end
 
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
-    @blog_images = @blog_post.blog_images.all
   end
 
   # GET /blog_posts/new
   def new
     @blog_post = BlogPost.new
-    @blog_image = @blog_post.blog_images.build
   end
 
   # GET /blog_posts/1/edit
@@ -35,7 +32,7 @@ class BlogPostsController < ApplicationController
         params[:blog_images]['image'].each do |a|
           @blog_image = @blog_post.blog_images.create!(image: a)
         end
-        format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully created.' }
+        format.html { redirect_to dashboard_url, notice: 'Blog post was successfully created.' }
         format.json { render :show, status: :created, location: @blog_post }
       else
         format.html { render :new }
@@ -49,7 +46,7 @@ class BlogPostsController < ApplicationController
   def update
     respond_to do |format|
       if @blog_post.update(blog_post_params)
-        format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully updated.' }
+        format.html { redirect_to dashboard_url, notice: 'Blog post was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog_post }
       else
         format.html { render :edit }
@@ -63,7 +60,7 @@ class BlogPostsController < ApplicationController
   def destroy
     @blog_post.destroy
     respond_to do |format|
-      format.html { redirect_to blog_posts_url, notice: 'Blog post was deleted' }
+      format.html { redirect_to dashboard_url, notice: 'Blog post was deleted' }
       format.json { head :no_content }
     end
   end
@@ -76,7 +73,6 @@ class BlogPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
-      params.require(:blog_post).permit(:title, :date, :body, 
-        blog_images_attributes: [:id, :blog_post_id, :image])
+      params.require(:blog_post).permit(:title, :date, :body, :cover, :cover_cache, {images: []})
     end
 end

@@ -5,20 +5,15 @@
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3 text-center">
-      <h2><%= @latest_post.title %></h2>
-      <p><%= @latest_post.date %></p>
-      <p><%= truncate(strip_tags(@latest_post.body), length: 400) %></p>
-      <%= link_to 'Read More', blog_post_path(@latest_post) %>
-    </div>
-  </div>
   <% @blog_posts.each do |post| %>
     <div class="row">
-      <h3><%= link_to post.title, post %></h3>
-      <p><%= post.date %></p>
+      <div class="post">
+        <h2 class="post-title"><%= post.title %></h2>
+        <p class="post-date"><%= post.date %></p>
+        <%= image_tag(post.cover, class: "img-responsive post-cover") %>
+        <p class="post-body text-left"><%= truncate(strip_tags(post.body), length: 500) %></p>
+        <%= link_to 'Read More', post, class: "site-link" %>
+      </div>
     </div>
   <% end %>
-    </div>
-  </div>
 </div>

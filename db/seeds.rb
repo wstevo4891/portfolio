@@ -7,19 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 BlogPost.create!(
-  title: 'PDF Uploads with Dropbox API in Rails',
-  date: 'April, 21, 2016',
+  title: 'PDF Uploads with Dropbox API',
+  date: 'April 26, 2016',
   body: 'Say you want to upload a PDF of an application form when a user completes it.'
 )
 
 BlogPost.create!(
-  title: 'A Fully Ajaxified Form in Rails',
+  title: 'A Fully Ajaxified Index Table',
   date: 'April 21, 2016',
   body: 'AJAX can be tricky when you\'re working with tables.'
 )
 
 BlogPost.create!(
-  title: 'Dynamic Content Loading in Rails',
+  title: 'Dynamic Content Loading with Ruby',
   date: 'April 21, 2016',
   body: 'Sometimes a good ruby algorithm can save us the trouble of continually updating a site\'s content.'
 )

@@ -1,17 +1,61 @@
 <%= form_for(@blog_post) do |f| %>
+  
   <% if @blog_post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
+    <div class="row">
+      <div id="error_explanation">
+        <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
 
-      <ul>
-      <% @blog_post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @blog_post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+    <div class="form-group col-sm-6 col-sm-offset-3">
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="form-group col-sm-6 col-sm-offset-3">
+      <%= f.label :date %><br>
+      <%= f.text_field :date, class: "form-control" %>
+    </div>
+
+    <div class="form-group col-sm-6 col-sm-offset-3">
+      <%= f.label :cover, "Cover Photo" %><br>
+      <%= f.file_field :cover, class: "form-control" %>
+      <%= f.hidden_field :cover_cache %>
+    </div>
+
+    <div class="image-preview col-sm-6 col-sm-offset-3">
+      <% if f.object.cover.url.present? %>
+        <%= image_tag(f.object.cover.url, class: "img-responsive post-cover") %>
+      <% else %>
+        <img/>
+      <% end %>
+    </div>
+
+    <div class="form-group col-sm-6 col-sm-offset-3">
+      <%= f.label :images %><br>
+      <%= f.file_field :images, multiple: "multiple", autofocus: true, class: "form-control image-select" %>
+    </div>
+
+    <div class="form-group col-sm-6 col-sm-offset-3">
+      <%= f.label :body %><br>
+      <%= f.text_area :body, class: "form-control", rows: 20 %>
+    </div>
+  </div>
+
+  <div class="actions row">
+    <%= f.submit "Save", class: "btn btn-lg btn-primary" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  $(".image-select").select2();
+</script>
+

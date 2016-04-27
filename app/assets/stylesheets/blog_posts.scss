@@ -1,3 +1,44 @@
-// Place all the styles related to the BlogPosts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass/css3";
+
+.post {
+	width: 50em;
+	margin: 2em auto;
+	padding: 1em 0 4em 0;
+	border-bottom: solid 1px #949494;
+}
+
+.show-post {
+	@extend .post;
+	border: none;
+}
+
+.post-title {
+	font-size: 3em;
+	font-weight: 300;
+}
+
+.post-date {
+	font-size: 1.5em;
+	color: #949494;
+}
+
+.post-cover {
+	border: solid 1px #949494;
+	@include box-shadow(3px 3px 5px #888888);
+}
+
+.image-preview {
+	margin: 1.5em 0;
+}
+
+.post-body {
+	font-size: 1.5em;
+	margin: 2em 0 3em 0;
+}
+
+.post-view {
+	p {
+		font-size: 1.5em;
+		margin: 1.5em 0;
+	}
+}

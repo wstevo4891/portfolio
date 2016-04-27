@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'select2-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'jquery-turbolinks'
@@ -28,7 +29,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # User carrierwave for image uploads
-gem 'carrierwave'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'rmagick'
 
 # Use Devise for admin auth
@@ -36,6 +37,10 @@ gem 'devise'
 
 # Use Font-Awesome for icons
 gem 'font-awesome-sass'
+
+# Redcarpet and CodeRay for blogging
+gem 'redcarpet'
+gem 'coderay'
 
 group :development do
 	gem 'sqlite3'

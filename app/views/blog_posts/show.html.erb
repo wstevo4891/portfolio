@@ -1,4 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<div class="row">
+		<div class="show-post">
+			<h2 class="post-title"><%= @blog_post.title %></h2>
 
-<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
-<%= link_to 'Back', blog_posts_path %>
+			<h3 class="post-date"><%= @blog_post.date %></h3>
+
+			<%= image_tag(@blog_post.cover, class: "img-responsive post-cover") %>
+      
+      <div class="text-left post-view">
+			  <p class="post-body"><%= markdown(@blog_post.body) %></p>
+			</div>
+		</div>
+	</div>
+</div>
