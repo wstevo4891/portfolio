@@ -38,7 +38,7 @@ gem 'devise'
 # Use Font-Awesome for icons
 gem 'font-awesome-sass'
 
-# Redcarpet and CodeRay for blogging
+# Redcarpet and CodeRay for Markdown blogging and syntax highlighting
 gem 'redcarpet'
 gem 'coderay'
 
@@ -48,6 +48,8 @@ group :development do
 	gem 'better_errors'
 	gem 'quiet_assets'
 	gem 'meta_request'
+  gem 'flamegraph'
+  gem 'rack-mini-profiler'
 end
 
 group :development, :test do

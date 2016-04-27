@@ -1,0 +1,180 @@
+// PAGES STYLES ######################
+
+
+// WELCOME PAGE ######################
+
+.skills-copy {
+  font-size: 18px;
+  p {
+    display: inline-block;
+    margin: 1em;
+  }
+}
+
+.code-school {
+  color: #00BFFF;
+  &:hover {
+    color: #1E90FF;
+    text-decoration: none;
+  }
+  &:focus {
+    color: #1E90FF;
+    text-decoration: none;
+  }
+}
+
+
+// ABOUT PAGE ###################
+
+.about-copy {
+  margin: 2em auto;
+  color: #4d4d4d;
+  text-align: justify;
+  font-size: 18px;
+  width: 90%;
+
+  h1 {
+    margin-bottom: 1.5em;
+    color: #333;
+  }
+
+  h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+#about-last {
+  margin-bottom: 4em;
+}
+
+
+// PROJECT PAGES ############################ 
+
+.p-info {
+  margin: 2em auto;
+  color: #4d4d4d;
+  text-align: justify;
+  font-size: 18px;
+  width: 90%;
+}
+
+.site-link {
+  padding: 0.6em;
+  border: 2px solid;
+  border-radius: 40px;
+  width: 15%;
+  height: 3em;
+  color: #4d4d4d;
+  font-size: 1.5em;
+  @include transition(all 0.5s ease);
+}
+
+.site-link:hover {
+  text-decoration: none;
+  color: #18bc9c;
+}
+
+.web-link {
+  width: 8em;
+  height: 3em;
+  margin: 2em auto;
+  padding: 0.6em;
+  color: #4d4d4d;
+  border: 2px solid;
+  border-radius: 40px;
+  font-size: 1.5em;
+  @include transition(all 0.5s ease);
+  a {
+    color: #4d4d4d;
+    @include transition(all 0.5s ease);
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  span {
+    display: none;
+    font-size: 2em;
+    @include transition(all 0.5s ease);
+  }
+}
+
+.web-link:hover {
+  @include transform(rotateZ(360deg));
+  padding: 0.3em;
+  color: deepskyblue;
+  border-radius: 50%;
+  width: 8em;
+  a {
+    text-decoration: none;
+    color: deepskyblue;
+  }
+  p {
+    display: none;
+  }
+  span {
+    display: block;
+    color: deepskyblue;
+  }
+}
+
+.project-page {
+  background-color: #F8F8F8;
+  padding-bottom: 4em;
+}
+
+.skillset {
+  background: image-url("macbook-coffee.jpg") no-repeat center center;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  padding-bottom: 4em;
+  height: 420px;
+}
+
+.project-img {
+  img {
+    border: 1px solid #4D4D4D;
+  }
+  margin-top: 5em;
+}
+
+.contact-page {
+  background-color: #F8F8F8;
+  height: 26em;
+  padding-top: 4em;
+  font-size: 18px;
+}
+
+.break {
+  width: 80%;
+  margin: 3em auto;
+  border-bottom: solid 1px #444;
+}
+
+
+// MEDIA QUERIES ###########################
+
+
+// Welcome Page
+
+.skills-copy {
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+
+// About Page
+
+.p-info, .about-copy {
+  @media only screen and (min-width: 990px) {
+    width: 60%;
+  }
+}

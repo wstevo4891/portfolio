@@ -1,13 +1,12 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "compass/css3";
-
 // LAYOUT ##################
 
 body {
   line-height: 1.42857143;
   font-size: 14px;
-  margin-top: 90px;
+}
+
+* {
+  @include box-sizing(border-box);
 }
 
 .page-title {
@@ -22,7 +21,7 @@ body {
 
 main {
   text-align: center;
-  margin-top: 90px;
+  margin-top: 5em;
 }
 
 .headshot {
@@ -40,8 +39,8 @@ main {
 
 /* Navigation */
 
-.navbar {
-  margin-bottom: 0;
+.navbar, .navbar-fixed-top {
+  margin: 0;
   padding: 0.8em;
   background-color: #222;
 
@@ -184,3 +183,10 @@ footer {
     }
   }
 }
+
+.mobile-nav-break {
+  @media only screen and (max-width: 768px) {
+    border-bottom: 0.05em solid white;
+  }
+}
+

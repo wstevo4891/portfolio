@@ -7,11 +7,15 @@
 <div class="container">
   <% @blog_posts.each do |post| %>
     <div class="row">
-      <div class="post">
+      <div class="post col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
         <h2 class="post-title"><%= post.title %></h2>
+
         <p class="post-date"><%= post.date %></p>
+
         <%= image_tag(post.cover, class: "img-responsive post-cover") %>
+
         <p class="post-body text-left"><%= truncate(strip_tags(post.body), length: 500) %></p>
+
         <%= link_to 'Read More', post, class: "site-link" %>
       </div>
     </div>

@@ -1,0 +1,182 @@
+// PROJECT LINK ANIMATIONS #################
+
+// div and hover animation general settings
+.p-item {
+  display: inline-block;
+  margin: 3em auto;
+  border: solid 1px #4d4d4d;
+  overflow: hidden;
+  height: 15em;
+  width: 20em;  
+  @include transition(all 1.5s ease);
+  @include box-shadow(10px 10px 5px #888888); 
+
+  img {
+    @include transition(all 1.5s ease);
+    height: 15em;
+    width: 20em;
+  }
+}
+
+.focus:hover {
+  border: 40px solid #000;
+  border-radius: 50%;
+  @include transform(rotate(0.1deg));
+  img {
+    @include transform(scale(2));
+  }
+}
+
+// Bolt Network animation
+.p-bolt {
+  @extend .p-item;
+  border: solid 1px #0393ff;
+  background-color: #000;
+
+  img {
+    @include transform-origin(-4%, -3%);
+  }
+}
+
+.focus-bolt:hover {
+  border: 50px solid #0393ff;
+  border-radius: 50%;
+  @include transform(rotateX(0.1deg));
+  img {
+    @include transform(scale(4), rotate(0.1deg));
+  }
+}
+
+// Griffen Financial animation
+.p-griffen {
+  @extend .p-item;
+  @include transform(rotateX(0.1deg));
+
+  img {
+    @include transform-origin(center, 6%);
+  }
+}
+
+.focus-g:hover {
+  @extend .focus:hover;  
+  img {
+    @include transform(scale(2.5, 2));
+  }
+}
+
+// Baldwin Interiors animation
+.p-baldwin {
+  @extend .p-item;
+  background-color: #fff;
+
+  img {
+    @include transform-origin(-8%, -3%);
+  }
+}
+
+.focus-baldwin:hover {
+  @extend .focus:hover;
+
+  img {
+    @include transform(scale(2.5, 2));
+  }
+}
+
+// Suggestion Box animation
+.p-suggestion {
+  @extend .p-item;
+  @include transition(all 0.5s ease);
+
+  img {
+    @include transition(all 0.5s ease);
+    @include transform-origin(8%, 4%);
+  }
+}
+
+.focus-sugg:hover {
+  width: 28em;
+  border: 40px solid #000;
+  border-radius: 50%;
+  @include transform(rotateZ(360deg));
+
+  img {
+    @include transform(scale(3.75, 3));
+  }
+}
+
+// Sherry Matthews Marketing animation
+.p-smm {
+  @extend .p-item;
+  @include transition(all 2s ease);
+
+  img {
+    @include transition(all 2s ease);
+    @include transform-origin(30%, 32%);
+  }
+}
+
+.focus-smm:hover {
+  border: 40px solid #000;
+  border-radius: 50%;
+  @include transform(rotateZ(360deg));
+
+  img {
+    @include transform(scale(3.5, 3));
+  }
+}
+
+
+// MEDIA QUERIES ############################
+
+.p-item {
+  @media only screen and (min-width: 480px) and (max-width: 1199px) {
+    height: 20em;
+    width: 30em;
+  }
+  @media only screen and (min-width: 1200px) {
+    height: 25em;
+    width: 35em;
+  }
+  img {
+    @media only screen and (min-width: 480px) and (max-width: 1199px) {
+      height: 20em;
+      width: 35em;
+    }
+    @media only screen and (min-width: 1200px) {
+      height: 25em;
+      width: 40em;
+    }
+  }
+}
+
+.p-griffen {
+  img {
+    @media screen and (min-width: 480px) and (max-width: 781px) {
+      @include transform-origin(center, 3%);
+    }
+  }
+}
+
+.focus:hover {
+  @media only screen and (min-width: 782px) {
+    border: 70px solid #000;
+  }
+}
+
+.focus-b:hover {
+  img {
+    @media only screen and (min-width: 1200px) {
+      margin-top: 13em;
+      margin-left: 18em;
+    }
+  }
+}
+
+.focus-smm:hover {
+  img {
+    @media only screen and (min-width: 1200px) {
+      margin-top: 12em;
+      margin-left: 16em;
+    }
+  }
+}
