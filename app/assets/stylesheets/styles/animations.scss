@@ -1,6 +1,8 @@
-// PROJECT LINK ANIMATIONS #################
 
-// div and hover animation general settings
+// WORK PAGE: PROJECT LINK ANIMATIONS
+
+// div and hover animation general settings ########
+
 .p-item {
   display: inline-block;
   margin: 3em auto;
@@ -27,19 +29,21 @@
   }
 }
 
-// Bolt Network animation
+
+// Bolt Network animation ########
+
 .p-bolt {
   @extend .p-item;
   border: solid 1px #0393ff;
   background-color: #000;
 
   img {
-    @include transform-origin(-4%, -3%);
+    @include transform-origin(-4%, top);
   }
 }
 
 .focus-bolt:hover {
-  border: 50px solid #0393ff;
+  border: 40px solid #0393ff;
   border-radius: 50%;
   @include transform(rotateX(0.1deg));
   img {
@@ -47,13 +51,16 @@
   }
 }
 
-// Griffen Financial animation
+
+// Griffen Financial animation #########
+
 .p-griffen {
   @extend .p-item;
   @include transform(rotateX(0.1deg));
+  z-index: 1;
 
   img {
-    @include transform-origin(center, 6%);
+    @include transform-origin(center, 5%);
   }
 }
 
@@ -64,13 +71,14 @@
   }
 }
 
-// Baldwin Interiors animation
+
+// Baldwin Interiors animation ########
 .p-baldwin {
   @extend .p-item;
   background-color: #fff;
 
   img {
-    @include transform-origin(-8%, -3%);
+    @include transform-origin(-8%, -4%);
   }
 }
 
@@ -94,8 +102,8 @@
 }
 
 .focus-sugg:hover {
-  width: 28em;
-  border: 40px solid #000;
+  width: 17em;
+  border: 25px solid #000;
   border-radius: 50%;
   @include transform(rotateZ(360deg));
 
@@ -111,7 +119,7 @@
 
   img {
     @include transition(all 2s ease);
-    @include transform-origin(30%, 32%);
+    @include transform-origin(9%, 9%);
   }
 }
 
@@ -149,34 +157,59 @@
   }
 }
 
+// Bolt Network ####
+
+.p-bolt {
+  @media screen and (min-width: 480px) {
+    img {
+      @include transform-origin(-4%, -3%);
+    }
+  }
+}
+
+
+// Griffen Financial ####
+
 .p-griffen {
   img {
-    @media screen and (min-width: 480px) and (max-width: 781px) {
-      @include transform-origin(center, 3%);
+    @media screen and (min-width: 480px) {
+      @include transform-origin(center, -2%);
     }
   }
 }
 
-.focus:hover {
-  @media only screen and (min-width: 782px) {
-    border: 70px solid #000;
-  }
-}
+// Baldwin Interiors ####
 
-.focus-b:hover {
-  img {
-    @media only screen and (min-width: 1200px) {
-      margin-top: 13em;
-      margin-left: 18em;
+.p-baldwin {
+  @media screen and (min-width: 480px) {
+    img {
+      @include transform-origin(-8%, -10%);
     }
   }
 }
 
-.focus-smm:hover {
-  img {
-    @media only screen and (min-width: 1200px) {
-      margin-top: 12em;
-      margin-left: 16em;
+// Suggestion Box ####
+
+.focus-sugg:hover {
+  @media screen and (min-width: 480px) {
+    width: 20em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 28em;
+    border: solid 40px #000;
+  }
+}
+
+// SMM ####
+
+.p-smm {
+  @media screen and (min-width: 480px) {
+    img {
+      @include transform-origin(9%, 7%);
     }
   }
 }
+
+
+

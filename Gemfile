@@ -49,7 +49,12 @@ group :development do
 	gem 'quiet_assets'
 	gem 'meta_request'
   gem 'flamegraph'
+  gem 'stackprof'
   gem 'rack-mini-profiler'
+  gem 'guard', require: false
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  gem 'rb-fsevent', require: false
 end
 
 group :development, :test do
