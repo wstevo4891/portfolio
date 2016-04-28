@@ -31,7 +31,7 @@
       <%= f.hidden_field :cover_cache %>
     </div>
 
-    <div class="image-preview col-sm-6 col-sm-offset-3">
+    <div class="col-sm-6 col-sm-offset-3">
       <% if f.object.cover.url.present? %>
         <%= image_tag(f.object.cover.url, class: "img-responsive post-cover") %>
       <% else %>

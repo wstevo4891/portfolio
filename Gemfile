@@ -52,6 +52,7 @@ group :development do
   gem 'stackprof'
   gem 'rack-mini-profiler'
   gem 'guard', require: false
+  gem 'guard-compass', require: false
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
   gem 'rb-fsevent', require: false

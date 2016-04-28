@@ -31,7 +31,7 @@ Rails.application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = false
+  config.assets.debug = true
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
@@ -39,7 +39,7 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = false
 
   # Live Reload Setup
-  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+  config.middleware.insert_before Rack::Lock, Rack::LiveReload
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

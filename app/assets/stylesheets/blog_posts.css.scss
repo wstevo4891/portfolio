@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 // BLOG STYLES ###################
 
 .post {
@@ -25,6 +27,7 @@
 .post-cover {
 	border: solid 1px #949494;
 	@include box-shadow(3px 3px 5px #888888);
+	margin: 2em 0;
 }
 
 .image-preview {
