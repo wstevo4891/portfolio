@@ -14,13 +14,13 @@ BlogPost.create!(
 
 BlogPost.create!(
   title: 'A Fully Ajaxified Index Table',
-  date: 'April 21, 2016',
+  date: 'April 28, 2016',
   body: 'AJAX can be tricky when you\'re working with tables.'
 )
 
 BlogPost.create!(
   title: 'Dynamic Content Loading with Ruby',
-  date: 'April 21, 2016',
+  date: 'April 28, 2016',
   body: 'Sometimes a good ruby algorithm can save us the trouble of continually updating a site\'s content.'
 )
 

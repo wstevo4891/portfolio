@@ -29,9 +29,6 @@ class BlogPostsController < ApplicationController
 
     respond_to do |format|
       if @blog_post.save
-        params[:blog_images]['image'].each do |a|
-          @blog_image = @blog_post.blog_images.create!(image: a)
-        end
         format.html { redirect_to dashboard_url, notice: 'Blog post was successfully created.' }
         format.json { render :show, status: :created, location: @blog_post }
       else

@@ -43,7 +43,6 @@ gem 'redcarpet'
 gem 'coderay'
 
 group :development do
-	gem 'sqlite3'
 	gem 'awesome_print', require: 'ap'
 	gem 'better_errors'
 	gem 'quiet_assets'
@@ -59,7 +58,7 @@ group :development do
 end
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'sqlite3'
   gem 'byebug'
   gem 'dotenv-rails'
   gem 'rspec-rails', '~> 3.0'

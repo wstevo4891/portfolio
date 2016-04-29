@@ -3,7 +3,9 @@ class CreateBlogPosts < ActiveRecord::Migration
     create_table :blog_posts do |t|
     	t.string :title
     	t.string :date
-    	t.string :body
+    	t.string :cover
+    	t.text :body
+    	t.json :images, array: true, default: []
 
       t.timestamps null: false
     end

@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426225642) do
+ActiveRecord::Schema.define(version: 20160422222527) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",               default: "", null: false
@@ -21,7 +24,14 @@ ActiveRecord::Schema.define(version: 20160426225642) do
     t.datetime "updated_at",                       null: false
   end
 
-# Could not dump table "blog_posts" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "blog_posts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "date"
+    t.string   "cover"
+    t.text     "body"
+    t.json     "images",     default: [],              array: true
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
 end
