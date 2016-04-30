@@ -14,7 +14,7 @@
 
         <%= image_tag(post.cover, class: "img-responsive post-cover") %>
 
-        <p class="post-body text-left"><%= truncate(strip_tags(post.body), length: 500) %></p>
+        <p id="post-body" class="text-left"><%= truncate(strip_tags(post.body), length: 500) %></p>
 
         <%= link_to 'Read More', post, class: "site-link" %>
       </div>

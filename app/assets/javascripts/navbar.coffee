@@ -5,7 +5,7 @@ $(window).scroll ->
   	$('nav').removeClass 'shrink'
   return
 
-$(window).on 'resize', ->
+$changeNavContainer = ->
 	if $(window).width() > 991
 		$('#nav-container').addClass 'container'
 		$('#nav-container').removeClass 'container-fluid'
@@ -13,3 +13,8 @@ $(window).on 'resize', ->
 		$('#nav-container').addClass 'container-fluid'
 		$('#nav-container').removeClass 'container'
 	return
+
+$(window).on 'resize', $changeNavContainer
+
+$(window).on 'load', $changeNavContainer
+
