@@ -1,5 +1,5 @@
 <nav class="navbar navbar-fixed-top">
-  <div class="container">
+  <div id="nav-container">
     <div class="navbar-header">
       <%= link_to "Eric Stephenson", root_path, class: "navbar-brand", id: "logo" %>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -10,16 +10,16 @@
       </button>
     </div>          
     <ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="nav-list">
-      <li ><%= link_to "WORK", work_path, class: "mobile-nav-break" %></li>
-      <li ><%= link_to "ABOUT", about_path, class: "mobile-nav-break" %></li>
+      <li><%= link_to "WORK", work_path, class: "mobile-nav-break" %></li>
+      <li><%= link_to "ABOUT", about_path, class: "mobile-nav-break" %></li>
       <li><%= link_to "BLOG", blog_posts_path, class: "mobile-nav-break" %></li>
-      <li ><%= link_to "CONTACT", contact_path %></li>
-      <li >
+      <li><%= link_to "CONTACT", contact_path %></li>
+      <li class="icon-link">
         <a href="https://github.com/wstevo4891">
           <i class="fa fa-github"></i>
         </a>
       </li>
-      <li >
+      <li class="icon-link">
         <a href="https://www.linkedin.com/in/ericbstephenson4891">
           <i class="fa fa-linkedin-square"></i>
         </a>

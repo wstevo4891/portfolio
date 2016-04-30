@@ -3,8 +3,8 @@
 // BLOG STYLES ###################
 
 .post {
-	margin-top: 2em;
-	margin-bottom: 2em;
+	width: 90%;
+	margin: 2em auto;
 	padding: 1em 0 4em 0;
 	border-bottom: solid 1px #949494;
 }
@@ -25,9 +25,11 @@
 }
 
 .post-cover {
+	max-height: 400px;
+	width: 690px;
 	border: solid 1px #949494;
 	@include box-shadow(3px 3px 5px #888888);
-	margin: 2em 0;
+	margin: 2em auto;
 }
 
 .image-preview {
@@ -44,4 +46,12 @@
 		font-size: 1.5em;
 		margin: 1.5em 0;
 	}
+}
+
+// MEDIA QUERIES ##################
+
+@media screen and (min-width: 768px) {
+  .post {
+  	width: 690px;
+  }
 }

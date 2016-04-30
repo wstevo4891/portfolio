@@ -89,12 +89,6 @@ nav.navbar.shrink {
 }
 
 .nav {
-  img {
-    width: 1.5em;
-    position: relative;
-    bottom: 0.4em;
-  }
-
   a {
     font-size: 1.5em;
   }
@@ -109,6 +103,13 @@ nav.navbar.shrink {
   margin-top: 0.6em; 
   a:hover {
     background-color: #222;
+  }
+
+  .icon-link {
+    a {
+      height: 50px;
+      margin-bottom: 0.5em;
+    }
   }
 }
 
