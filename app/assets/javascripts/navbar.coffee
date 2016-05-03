@@ -9,12 +9,11 @@ $changeNavContainer = ->
 	if $(window).width() > 991
 		$('#nav-container').addClass 'container'
 		$('#nav-container').removeClass 'container-fluid'
-	else
+	else if $(window).width() <= 990
 		$('#nav-container').addClass 'container-fluid'
 		$('#nav-container').removeClass 'container'
 	return
 
 $(window).on 'resize', $changeNavContainer
 
-$(window).on 'load', $changeNavContainer
-
+$(document).ready $changeNavContainer

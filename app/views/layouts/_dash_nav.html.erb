@@ -1,0 +1,11 @@
+<div class="container-fluid" id="dash-nav-container">
+	<div class="row">
+		<div class="col-sm-12">
+			<ul class="nav nav-pills" id="dash-nav">
+				<li><%= link_to 'Home', dashboard_path %></li>
+				<li><%= link_to 'New', new_blog_post_path %></li>
+				<li><%= link_to 'Logout', destroy_admin_session_path, method: "delete" %></li>
+			</ul>
+		</div>
+	</div>
+</div>
