@@ -1,4 +1,3 @@
-@import "compass/css3";
 
 // WORK PAGE: PROJECT LINK ANIMATIONS
 
@@ -39,7 +38,7 @@
   background-color: #000;
 
   img {
-    @include transform-origin(-4%, top);
+    @include transform-origin(-3%, -5%);
   }
 }
 
@@ -48,7 +47,7 @@
   border-radius: 50%;
   @include transform(rotateX(0.1deg));
   img {
-    @include transform(scale(4), rotate(0.1deg));
+    @include transform(scale(3), rotate(0.1deg));
   }
 }
 
@@ -163,7 +162,7 @@
 .p-bolt {
   @media screen and (min-width: 480px) {
     img {
-      @include transform-origin(-4%, -3%);
+      @include transform-origin(-3%, -8%);
     }
   }
 }

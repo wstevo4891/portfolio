@@ -10,13 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- //= require layouts
- //= require banners
- //= require pages
- //= require animations
- //= require blog_posts
+ //= require_self
+ //= require main
  */
-
-@import "compass/css3";
-@import "font-awesome-sprockets";
-@import "font-awesome";
