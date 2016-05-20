@@ -6,24 +6,27 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+def seed_image(file_name)
+	File.open(File.join(Rails.root + "app/assets/images/#{file_name}"))
+end
+
 BlogPost.create!(
   title: 'PDF Uploads with Dropbox API',
+  cover: seed_image("dropbox-api.png"),
   date: 'April 26, 2016',
   body: 'Say you want to upload a PDF of an application form when a user completes it.'
 )
 
 BlogPost.create!(
   title: 'A Fully Ajaxified Index Table',
+  cover: seed_image("ajax-blue.jpg"),
   date: 'April 28, 2016',
   body: 'AJAX can be tricky when you\'re working with tables.'
 )
 
 BlogPost.create!(
-  title: 'Dynamic Content Loading with Ruby',
+  title: 'Live-reloading with Guard LiveReload',
+  cover: seed_image("livereload-with-rails-4.jpg"),
   date: 'April 28, 2016',
   body: 'Sometimes a good ruby algorithm can save us the trouble of continually updating a site\'s content.'
 )
-
-
-
-
