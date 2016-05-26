@@ -90,10 +90,10 @@
         <%= image_tag("bolt-network-main-slider.gif", class: "img-responsive") %>
 
         <p>The main slideshow is built on Vegas.js with custom scripts for altering content 
-        and scaling to browser width. At the moment, the content div is set to 18em and the 
-        slider height adjusts to 200px less than the browser width. Content text is set to 
-        scale at 0.014% of browser width. I intend to adjust the content scaling in future 
-        versions to resize in a smoother, less noticeable way.</p>
+        and scaling to browser width. At the moment, the content div height is set to 18em 
+        and the slider height adjusts to 200px less than the browser width. Content text is 
+        set to scale at 0.014% of browser width. I intend to adjust the content scaling in 
+        future versions to resize in a smoother, less noticeable way.</p>
 
       <div class="line-break-blue"></div>
     </div>
@@ -101,17 +101,49 @@
     <div class="p-info">
       <h2>Navigation Bar</h2>
 
+      <%= image_tag("bolt-network-navbar.gif", class: "img-responsive") %>
+
+      <p>Netflix's navbar appears on scrolldown, which was easy enough to implement, but a 
+      challenge arose when dealing with the mobile menu. I kept the Bootstrap slidedown 
+      style, but when you open the menu at the top of the page, it had a transparent 
+      background. I solved this by using a variable to keep track of scroll-length and 
+      adding a class to the nav that prevents removing the background if the menu is open.</p>
+
       <div class="line-break-blue"></div>
     </div>
 
     <div class="p-info">
       <h2>Search Bar</h2>
 
+      <%= image_tag("bolt-network-searchbar.gif", class: "img-responsive") %>
+
+      <p>Re-creating the Netflix search bar animation involved a bit of jQuery to hide the
+      nav link, show the div containing the search form, and animating its width to 270px. 
+      Getting it to disappear when you click outside was a matter of checking three attributes. 
+      1. Is the mouseup target the search bar? 2. Does the mouseup target have a length of 0? 
+      3. Does the search bar have a width of 270px?  If, no, yes, and yes, the search bar 
+      shrinks and disappears, replaced by the nav link. Another function checks the length 
+      of the search input tag's value. If it's greater than 0, the X icon appears. When you 
+      click that icon, it sets the input value to an empty string.</p>
+
       <div class="line-break-blue"></div>
     </div>
 
     <div class="p-info">
       <h2>Carousel Sliders</h2>
+
+      <%= image_tag("bolt-network-carousels.gif", class: "img-responsive") %>
+
+      <p>The carousels are built using a Ruby algorithm in an erb partial and a modified 
+      Unslider.js. Since Unslider uses list items for its slides, I put five movie divs 
+      in each li and assigned classes with jQuery to the first and last images in each slide. 
+      Those classes control which CSS3 animation class is added to or removed from the ul on 
+      hovering over an image. The first image in a slide removes any of those classes, so the 
+      image's scale animation stretches it out to the right. The images in the middle put a 
+      translateX animation on the ul so it moves to the left on hover, thus simulating the 
+      of a movie image pushing the slides on either side when it grows. The last image in a 
+      slide puts an even greater translateX on the ul, so the image appears to stretch left. 
+      This way, the images stay within the shadowed borders on either side of the slide.</p>
 
       <div class="line-break-blue"></div>
     </div>
