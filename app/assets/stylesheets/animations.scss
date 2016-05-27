@@ -50,7 +50,7 @@
 
 .p-bolt {
   @extend .p-item;
-  border: solid 1px #0393ff;
+  border-color: $azure-radiance;
   background-color: #000;
 
   img {
@@ -59,7 +59,7 @@
 }
 
 .focus-bolt:hover {
-  border: 40px solid #0393ff;
+  border: 40px solid $azure-radiance;
   border-radius: 50%;
   @include transform(rotateX(0.1deg));
   img {
@@ -137,6 +137,7 @@
 
 // Sherry Matthews Marketing animation
 .p-smm {
+  border-color: $lime-green;
   @extend .p-item;
   @include transition(all 2s ease);
 
@@ -147,7 +148,7 @@
 }
 
 .focus-smm:hover {
-  border: 40px solid #000;
+  border: 40px solid $lime-green;
   border-radius: 50%;
   @include transform(rotateZ(360deg));
 

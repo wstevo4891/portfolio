@@ -77,10 +77,20 @@
   }
 }
 
-.line-break-blue {
+.line-break {
   width: 80%;
   margin: 3em auto;
-  border-bottom: solid 2px #3093ff;
+  border-bottom: solid 2px #333;
+}
+
+.line-break-blue {
+  @extend .line-break;
+  border-color: $azure-radiance;
+}
+
+.line-break-green {
+  @extend .line-break;
+  border-color: $lime-green;
 }
 
 .site-link {
