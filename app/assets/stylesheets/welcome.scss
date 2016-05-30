@@ -1,0 +1,111 @@
+
+/* WELCOME PAGE STYLES 
+===================================*/
+
+.skillset {
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  padding-bottom: 4em;
+  height: 475px;
+}
+
+.skillset-default {
+  background: image-url("macbook-coffee-bw.jpg") no-repeat center center;
+}
+
+.skillset-ror {
+  background: image-url("fast-train.gif") no-repeat center center;
+  background-size: cover;
+}
+
+.skills-copy {
+
+}
+
+.skills {
+  display: none;
+
+  p {
+    position: absolute;
+    margin: 1em;
+    cursor: pointer;
+    @include transition(all 0.5s ease);
+  }
+}
+
+.ruby-link {
+  left: 10em;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.javascript-link {
+  left: 17.1em;
+}
+
+.javascript-5 {
+  @include transition(all 0.5s ease);
+
+  &:hover {
+    color: yellow;
+    .javascript-fine {
+      color: white;
+    }
+  }
+}
+
+.javascript-fine {
+  display: none;
+  font-size: 18px;
+  text-align: center;
+}
+
+.ror-link {
+  right: 6.1em;
+
+  &:hover {
+    color: red;
+    @include transform(scale(1.5));
+  }
+}
+
+.bootstrap-link {
+  top: 4em;
+  left: 10em;
+}
+
+.jquery-link {
+  top: 4em;
+  left: 18em;
+}
+
+.css3-link {
+  top: 4em;
+  right: 9.6em;
+  @include transition(all 0.1s ease);
+
+  &:hover {
+    @include transform(rotateZ(-750deg) scale(12.5));
+    color: #29a9df;
+    z-index: 5;
+  }
+
+  &:active {
+    @include transform(rotateY(360deg));
+  }
+}
+
+.exhibit {
+  display: none;
+}
+
+/* MEDIA QUERIES 
+===================================*/
+
+.skills-copy {
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+}

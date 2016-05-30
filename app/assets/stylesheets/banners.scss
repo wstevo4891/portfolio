@@ -1,7 +1,8 @@
 
 // JUMBOTRON BANNERS ##############
 
-.jumbotron {
+.jumbotron-main {
+  @extend .jumbotron;
   background: image-url("rainier-enhanced.jpg") no-repeat center center fixed;
   @include background-size(cover);
   margin: 0;

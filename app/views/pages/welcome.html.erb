@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron-main">
   <div class="container-fluid">
     <div class="headshot hidden-xs hidden-sm"></div>
     <div class="main col-md-8 col-md-offset-2 text-center">
@@ -8,57 +8,78 @@
 </div>
 
 <div class="project-page">
-<div class="container">
-  <h1 class="page-title">Recent Projects</h1>
+  <div class="container">
+    <h1 class="page-title">Recent Projects</h1>
 
-  <div class="row">
-    <div class="col-md-6">
-      <div class="p-bolt focus-bolt">
-        <a href="/work/bolt_network">
-          <div class="cover">
-            <%= image_tag("bolt-network.svg", class: "img-responsive", id: "bolt-svg") %>
-            <%= image_tag("bolt-network-home.png", class: "img-responsive", id: "pirate-pic") %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="p-bolt focus-bolt">
+          <a href="/work/bolt_network">
+            <div class="cover">
+              <%= image_tag("bolt-network.svg", class: "img-responsive", id: "bolt-svg") %>
+              <%= image_tag("bolt-network-home.png", class: "img-responsive", id: "pirate-pic") %>
+            </div>
+          </a>
+        </div>
+        <h3>Bolt Network</h3>    
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-griffen focus-g">
+          <a href="/work/griffen">
+            <%= image_tag("griffen.png", class: "img-responsive") %>
+          </a>
+        </div>
+        <h3>Griffen Financial</h3>      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="skillset skillset-default">
+  <div class="container">
+    <h1 class="page-title">Skills</h1>
+    <br>
+    <div class="row">
+    	<div class="col-sm-10 col-sm-offset-1 skills-copy">
+
+        <button class="skills-button btn btn-large btn-primary">Click Me</button>
+
+        <div class="skills">
+          <div class="row">
+      	    <p class="ruby-link">Ruby</p>
+            <p class="javascript-link javascript-1">JavaScript<span class="javascript-fine">Fine, click me!</span></p>
+            <p class="ror-link">Ruby on Rails</p>
+            <!-- <p class="node-link">NodeJS</p> -->
           </div>
-        </a>
-      </div>
-      <h3>Bolt Network</h3>    
-    </div>
-
-    <div class="col-md-6">
-      <div class="p-griffen focus-g">
-        <a href="/work/griffen">
-          <%= image_tag("griffen.png", class: "img-responsive") %>
-        </a>
-      </div>
-      <h3>Griffen Financial</h3>      
+          <div class="row">
+            <!-- <p class="angular-link">AngularJS</p> -->
+            <p class="bootstrap-link">Bootstrap</p>
+            <p class="jquery-link">jQuery</p>
+            <p class="css3-link">CSS3</p>
+      	  </div>
+        </div>
     </div>
   </div>
 </div>
+
+<div class="exhibit ruby-exhibit">
+  
 </div>
 
-<div class="skillset">
-<div class="container">
-  <h1 class="page-title">Skills</h1>
-  <br>
-  <div class="row">
-  	<div class="col-sm-10 col-sm-offset-1 skills-copy">
-      <div class="row">
-  	    <p>Ruby</p>
-        <p>JavaScript</p>
-        <p>Ruby on Rails</p>
-        <p>NodeJS</p>
-      </div>
-      <div class="row">
-        <p>AngularJS</p>
-        <p>Bootstrap</p>
-        <p>jQuery</p>
-        <p>CSS3</p>
-  	  </div>  
-  </div>
-</div>
+<div class="exhibit javascript-exhibit">
+  
 </div>
 
+<div class="exhibit ror-exhibit">
+  
+</div>
 
+<div class="exhibit bootstrap-exhibit"></div>
+
+<div class="exhibit jquery-exhibit"></div>
+
+<div class="exhibit css3-exhibit"></div>
 
 
 
