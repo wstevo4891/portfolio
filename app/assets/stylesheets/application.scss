@@ -11,5 +11,24 @@
  * file per style scope.
  *
  //= require_self
- //= require main
+ //
+ //= require layout/_body
+ //= require layout/_navbar
+ //= require layout/_dashboard
+ //= require layout/_footer
+ //
+ //= require components/_animations
+ //= require components/_banners
+ //= require components/_buttons
+ //
+ //= require pages/_welcome
+ //= require pages/_about
+ //= require pages/_work
+ //= require pages/_projects
+ //= require pages/_blog
+ //
+ //= require skills/_ruby
  */
+
+@import "font-awesome-sprockets";
+@import "font-awesome";

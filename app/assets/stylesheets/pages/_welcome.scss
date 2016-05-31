@@ -1,3 +1,4 @@
+@import "compass/css3";
 
 /* WELCOME PAGE STYLES 
 ===================================*/
@@ -11,7 +12,7 @@
   color: white;
   text-shadow: 2px 2px 4px #000;
   height: 475px;
-  overflow: hidden;
+  @include transition(animate 0.5s ease);
 
   h1 {
     margin: 0;
@@ -36,6 +37,7 @@
     position: absolute;
     margin: 1em;
     cursor: pointer;
+    z-index: 5;
     @include transition(all 0.5s ease);
   }
 
@@ -48,29 +50,23 @@
   left: 13em;
 
   &:hover {
+    @include transform(scale(1.5));
     color: red;
   }
 }
 
+.ruby-gif {
+  display: none;
+  position: absolute;
+  left: 32em;
+  z-index: 0;
+}
+
 .javascript-link {
   left: 23.3em;
-}
-
-.javascript-5 {
-  @include transition(all 0.5s ease);
-
   &:hover {
     color: yellow;
-    .javascript-fine {
-      color: white;
-    }
   }
-}
-
-.javascript-fine {
-  display: none;
-  font-size: 18px;
-  text-align: center;
 }
 
 .ror-link {
@@ -83,8 +79,28 @@
 }
 
 .bootstrap-link {
-  top: 11em;
-  left: 13em;
+  position: absolute;
+  top: 12em;
+  left: 14em;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+
+  li {
+    display: inline;
+    list-style-type: none;
+    margin: -3px;
+    @include transition(all 0.5s ease);
+  }
+
+  &:hover {
+    li {
+      height: 4em;
+      margin: 0;
+      padding: 5px;
+      border-right: solid 1px white; 
+    }
+  }
 }
 
 .jquery-link {
@@ -92,10 +108,32 @@
   left: 24.3em;
 }
 
+.jquery-5 {
+  @include transition(all 0.5s ease);
+
+  &:hover {
+    @include transform(scale(1.5));
+    color: lightskyblue;
+  }
+}
+
+.jquery-fine {
+  display: none;
+  font-size: 18px;
+  text-align: center;
+  color: white !important;
+}
+
+.jquery-title {
+  top: 10px;
+  left: 10px;
+  color: lightskyblue !important;
+}
+
 .css3-link {
   top: 11em;
   right: 12.5em;
-  @include transition(all 0.1s ease);
+  @include transition(rotate scale 0.1s ease);
 
   &:hover {
     @include transform(rotateZ(-750deg) scale(12.5));
@@ -104,7 +142,7 @@
   }
 }
 
-.css3-title {
+.css-title {
   top: 10px;
   left: 10px;
   color: #29a9df !important;
@@ -114,6 +152,7 @@
   display: none;
   top: 2.5em;
   left: 10px;
+  @include transition(all 0.5s ease);
 }
 
 .exhibit {
@@ -123,6 +162,7 @@
   width: 30%;
   height: 475px;
   background-color: #333;
+  @include transition(all 0.5s ease);
 }
 
 /* MEDIA QUERIES 

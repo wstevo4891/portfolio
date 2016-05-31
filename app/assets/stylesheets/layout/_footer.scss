@@ -1,0 +1,36 @@
+@import "compass/css3";
+
+/* FOOTER STYLES 
+================================*/
+
+footer { 
+  padding-top: 1em;
+  background-color: #EEE0CB;
+  border-top: solid 2px #222;
+  color: #222;
+  height: 140px;
+}
+
+.social-media {
+  width: 15em;
+  padding: 0;
+  margin: 1em auto;
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+
+  a {
+    color: #222;
+    @include transition(all 0.5s ease);
+    &:hover {
+      color: #18bc9c;
+    }
+  }
+
+  i {
+    font-size: 4em;
+    margin-right: 0.2em;
+  }
+}

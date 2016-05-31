@@ -1,5 +1,8 @@
+@import "bootstrap";
+@import "compass/css3";
 
-// JUMBOTRON BANNERS ##############
+/* JUMBOTRON BANNERS 
+==========================================*/
 
 .jumbotron-main {
   @extend .jumbotron;
@@ -65,7 +68,7 @@
 
 // MEDIA QUERIES #################
 
-.jumbotron {
+.jumbotron-main {
   @media only screen and (min-width: 768px) {
     height: 45em;
   }

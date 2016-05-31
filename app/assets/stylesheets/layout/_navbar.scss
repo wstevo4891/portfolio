@@ -1,45 +1,8 @@
+@import "bootstrap";
+@import "compass/css3";
 
-// LAYOUT ##################
-
-body {
-  line-height: 180%;
-  font-size: 14px;
-  overflow-x: hidden;
-}
-
-* {
-  @include box-sizing(border-box);
-}
-
-.page-title {
-  margin-top: 2em;
-  font-weight: 300;
-}
-
-.technologies {
-  font-family: 'Cambria';
-  color: #696969;
-}
-
-main {
-  text-align: center;
-  margin-top: 5em;
-}
-
-.headshot {
-  background: image-url("headshot1-thumb.jpg") center;
-  height: 14em;
-  width: 14em;
-  position: absolute;
-  top: 8em;
-  left: 3em;
-  border: solid 6px #333;
-  border-radius: 50%;
-  @include box-shadow(4px 4px 4px #4D4D4D);
-}
-
-
-/* Navigation */
+/* NAVIGATION STYLES 
+==============================================*/
 
 nav.navbar {
   margin: 0;
@@ -109,67 +72,7 @@ nav.navbar.shrink {
   }
 }
 
-
-/* Footer */
-
-footer { 
-  padding-top: 1em;
-  background-color: #EEE0CB;
-  border-top: solid 2px #222;
-  color: #222;
-  height: 140px;
-}
-
-.social-media {
-  width: 15em;
-  padding: 0;
-  margin: 1em auto;
-
-  li {
-    list-style-type: none;
-    display: inline-block;
-  }
-
-  a {
-    color: #222;
-    @include transition(all 0.5s ease);
-    &:hover {
-      color: #18bc9c;
-    }
-  }
-
-  i {
-    font-size: 4em;
-    margin-right: 0.2em;
-  }
-}
-
-
-// Dashboard
-
-#dash-nav-container {
-  position: fixed;
-}
-
-#dash-nav {
-  margin: 1em;
-}
-
-#dash-nav a {
-  color: #222;
-  &:hover {
-    color: #18bc9c;
-  }
-}
-
-.dashboard-view {
-  margin-bottom: 4em;
-}
-
-
-// MEDIA QUERIES #####################
-
-// Navigation
+// MEDIA QUERIES #######
 
 #logo {
   @media only screen and (min-width: 768px) {
@@ -201,4 +104,3 @@ footer {
     border-bottom: 0.05em solid white;
   }
 }
-

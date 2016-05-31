@@ -11,13 +11,8 @@
 
 // LOCAL IMPORTS
 
-@import "variables";
-@import "buttons";
-@import "layouts";
-@import "banners";
-@import "welcome";
-@import "skills/_ruby_exhibit";
-@import "about";
-@import "projects";
-@import "blog_posts";
-@import "animations";
+@import "helpers";
+@import "components";
+@import "layout";
+@import "pages";
+@import "skills";

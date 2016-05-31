@@ -1,5 +1,8 @@
+@import "compass/css3";
+@import "helpers/_variables";
 
-// WORK PAGE: PROJECT LINK ANIMATIONS
+/* PROJECT LINK ANIMATIONS 
+===============================================*/
 
 // div and hover animation general settings ########
 
@@ -242,18 +245,5 @@
     img {
       @include transform-origin(9%, 7%);
     }
-  }
-}
-
-/* MEDIA QUERIES 
-===============================*/
-
-.p-info, .about-copy {
-  img {
-    @include box-shadow(10px 10px 5px #888888);
-  }
-
-  @media only screen and (min-width: 990px) {
-    width: 60%;
   }
 }

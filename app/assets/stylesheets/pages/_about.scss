@@ -1,3 +1,4 @@
+@import "compass/css3";
 
 /* ABOUT PAGE STYLES */
 
@@ -28,4 +29,16 @@
 
 #about-last {
   margin-bottom: 4em;
+}
+
+// MEDIA QUERIES #######
+
+.about-copy {
+  img {
+    @include box-shadow(10px 10px 5px #888888);
+  }
+
+  @media only screen and (min-width: 990px) {
+    width: 60%;
+  }
 }

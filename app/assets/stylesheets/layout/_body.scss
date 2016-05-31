@@ -1,0 +1,41 @@
+@import "compass/css3";
+
+/* SITE-WIDE STYLES 
+===============================*/
+
+body {
+  line-height: 180%;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+.page-title {
+  margin-top: 2em;
+  font-weight: 300;
+}
+
+.technologies {
+  font-family: 'Cambria';
+  color: #696969;
+}
+
+main {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.headshot {
+  background: image-url("headshot1-thumb.jpg") center;
+  height: 14em;
+  width: 14em;
+  position: absolute;
+  top: 8em;
+  left: 3em;
+  border: solid 6px #333;
+  border-radius: 50%;
+  @include box-shadow(4px 4px 4px #4D4D4D);
+}
