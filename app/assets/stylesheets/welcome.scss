@@ -2,11 +2,22 @@
 /* WELCOME PAGE STYLES 
 ===================================*/
 
+.skills-box {
+  position: relative;
+}
+
 .skillset {
+  position: relative;
   color: white;
   text-shadow: 2px 2px 4px #000;
-  padding-bottom: 4em;
   height: 475px;
+  overflow: hidden;
+
+  h1 {
+    margin: 0;
+    padding: 1.5em 0 1em;
+    font-weight: 300;
+  }
 }
 
 .skillset-default {
@@ -18,23 +29,23 @@
   background-size: cover;
 }
 
-.skills-copy {
-
-}
-
 .skills {
-  display: none;
 
-  p {
+  p, a {
+    color: white;
     position: absolute;
     margin: 1em;
     cursor: pointer;
     @include transition(all 0.5s ease);
   }
+
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .ruby-link {
-  left: 10em;
+  left: 13em;
 
   &:hover {
     color: red;
@@ -42,7 +53,7 @@
 }
 
 .javascript-link {
-  left: 17.1em;
+  left: 23.3em;
 }
 
 .javascript-5 {
@@ -63,7 +74,7 @@
 }
 
 .ror-link {
-  right: 6.1em;
+  right: 9em;
 
   &:hover {
     color: red;
@@ -72,18 +83,18 @@
 }
 
 .bootstrap-link {
-  top: 4em;
-  left: 10em;
+  top: 11em;
+  left: 13em;
 }
 
 .jquery-link {
-  top: 4em;
-  left: 18em;
+  top: 11em;
+  left: 24.3em;
 }
 
 .css3-link {
-  top: 4em;
-  right: 9.6em;
+  top: 11em;
+  right: 12.5em;
   @include transition(all 0.1s ease);
 
   &:hover {
@@ -91,14 +102,27 @@
     color: #29a9df;
     z-index: 5;
   }
+}
 
-  &:active {
-    @include transform(rotateY(360deg));
-  }
+.css3-title {
+  top: 10px;
+  left: 10px;
+  color: #29a9df !important;
+}
+
+.skills-back {
+  display: none;
+  top: 2.5em;
+  left: 10px;
 }
 
 .exhibit {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 30%;
+  height: 475px;
+  background-color: #333;
 }
 
 /* MEDIA QUERIES 

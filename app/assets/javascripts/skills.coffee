@@ -1,8 +1,5 @@
 skills_main = ->
-  $('.skills-button').bind 'click', ->
-    $(this).fadeOut 'slow'
-    $('.skills').delay(500).fadeIn 'slow'
-    return
+
   $('.javascript-link').mouseover ->
     if $(this).hasClass('javascript-1')
       $(this).animate top: '10em'
@@ -24,6 +21,7 @@ skills_main = ->
     else if $(this).hasClass('javascript-5')
       $('.javascript-fine').css display: 'block'
     return
+
   $('.ror-link').hover (->
     $('.skillset').removeClass 'skillset-default'
     $('.skillset').addClass 'skillset-ror'
@@ -32,6 +30,22 @@ skills_main = ->
     $('.skillset').removeClass 'skillset-ror'
     $('.skillset').addClass 'skillset-default'
     return
+  
+  $('.css3-link').click ->
+    $(this).removeClass('css3-link').addClass 'css3-title'
+    $('.skills-back').fadeIn 'slow'
+    $('.skillset').animate width: '70%'
+    $('.css3-exhibit').animate left: '70%'
+    return
+
+  $('.skills-back').click ->
+  	$(this).fadeOut 'slow'
+  	$('.css3-title').removeClass('css3-title').addClass 'css3-link'
+  	$('.css3-link').fadeOut 'slow'
+  	$('.skillset').animate width: '100%'
+  	$('.css3-exhibit').animate left: '100%'
+  	$('.css3-link').fadeIn 'slow'
+  	return
   return
 
 $(document).ready skills_main
