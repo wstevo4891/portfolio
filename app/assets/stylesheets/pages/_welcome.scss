@@ -1,4 +1,5 @@
-@import "compass/css3";
+@import "compass/css3/transition";
+@import "compass/css3/transform";
 
 /* WELCOME PAGE STYLES 
 ===================================*/
@@ -130,7 +131,7 @@
   margin: 0;
   padding: 0;
   color: #5a4080 !important;
-  text-shadow: 1px 1px white;
+  text-shadow: 1px 1px 8px white;
   z-index: 5;
   @include transition(all 0.5s ease);
   @include transform(scale(1.5));
@@ -193,6 +194,7 @@
   position: absolute;
   top: 3.5em;
   left: 26px;
+  cursor: pointer;
   @include perspective(1000px);
 }
 
