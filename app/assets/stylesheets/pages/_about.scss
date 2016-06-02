@@ -25,6 +25,10 @@
   p {
     margin-bottom: 1em;
   }
+
+  img {
+    @include box-shadow(10px 10px 5px #888888);
+  }
 }
 
 #about-last {
@@ -34,10 +38,6 @@
 // MEDIA QUERIES #######
 
 .about-copy {
-  img {
-    @include box-shadow(10px 10px 5px #888888);
-  }
-
   @media only screen and (min-width: 990px) {
     width: 60%;
   }
