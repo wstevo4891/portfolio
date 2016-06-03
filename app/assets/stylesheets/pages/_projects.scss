@@ -24,6 +24,7 @@
   }
 
   img {
+    border: 1px solid #4D4D4D;
     @include box-shadow(10px 10px 5px #888888);
   }
 }
@@ -114,6 +115,10 @@
     @include box-shadow(10px 10px 5px #888888);
   }
   margin-top: 5em;
+}
+
+.mobile-image {
+  margin-bottom: 4em;
 }
 
 .contact-page {
