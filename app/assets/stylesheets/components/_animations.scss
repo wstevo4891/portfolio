@@ -27,7 +27,7 @@
 }
 
 .focus:hover {
-  border: 40px solid #000;
+  border: 20px solid #000;
   border-radius: 50%;
   @include transform(rotate(0.1deg));
   img {
@@ -51,7 +51,7 @@
   top: 3.47%;
   left: 3%;
   @include opacity(0);
-  @include transform-origin(-7%, -190%);
+  @include transform-origin(-28%, -310%);
 }
 
 .p-bolt {
@@ -65,7 +65,7 @@
 }
 
 .focus-bolt:hover {
-  border: 40px solid $azure-radiance;
+  border: 20px solid $azure-radiance;
   border-radius: 50%;
   @include transform(rotateX(0.1deg));
   img {
@@ -89,7 +89,7 @@
   z-index: 1;
 
   img {
-    @include transform-origin(center, 5%);
+    @include transform-origin(center, -8%);
   }
 }
 
@@ -102,12 +102,13 @@
 
 
 // Baldwin Interiors animation ########
+
 .p-baldwin {
   @extend .p-item;
   background-color: #fff;
 
   img {
-    @include transform-origin(-8%, -4%);
+    @include transform-origin(-3%, -1%);
   }
 }
 
@@ -115,29 +116,31 @@
   @extend .focus:hover;
 
   img {
-    @include transform(scale(2.5, 2));
+    @include transform(scale(3.5, 3));
   }
 }
 
-// Suggestion Box animation
+// SUGGESTION BOX ANIMATION #################
+
 .p-suggestion {
   @extend .p-item;
   @include transition(all 0.5s ease);
+  border-color: rgb(110,191,212);
 
   img {
     @include transition(all 0.5s ease);
-    @include transform-origin(8%, 4%);
+    @include transform-origin(11%, 6%);
   }
 }
 
 .focus-sugg:hover {
   width: 17em;
-  border: 25px solid #000;
+  border-width: 10px;
   border-radius: 50%;
   @include transform(rotateZ(360deg));
 
   img {
-    @include transform(scale(3.75, 3));
+    @include transform(scale(5, 4));
   }
 }
 
@@ -149,12 +152,12 @@
 
   img {
     @include transition(all 2s ease);
-    @include transform-origin(9%, 9%);
+    @include transform-origin(7%, 9%);
   }
 }
 
 .focus-smm:hover {
-  border: 40px solid $lime-green;
+  border: 20px solid $lime-green;
   border-radius: 50%;
   @include transform(rotateZ(360deg));
 
@@ -165,6 +168,12 @@
 
 
 // MEDIA QUERIES ############################
+
+@media only screen and (min-width: 480px) {
+  .focus:hover, .focus-bolt:hover, .focus-smm:hover {
+    border-width: 40px;
+  }
+}
 
 .p-item {
   @media only screen and (min-width: 480px) and (max-width: 1199px) {
@@ -200,6 +209,7 @@
 #bolt-svg {
   @media screen and (min-width: 480px) {
     width: 7em;
+    @include transform-origin(-7%, -190%);
   }
 
   @media screen and (min-width: 1200px) {
@@ -223,21 +233,30 @@
 .p-baldwin {
   @media screen and (min-width: 480px) {
     img {
-      @include transform-origin(-8%, -10%);
+      @include transform-origin(-3.5%, top);
     }
   }
 }
 
-// Suggestion Box ####
+// SUGGESTION BOX ####
 
-.focus-sugg:hover {
-  @media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .focus-sugg:hover {
     width: 20em;
   }
 
-  @media screen and (min-width: 1200px) {
+  .p-suggestion img {
+    -moz-transform-origin: 8% 4%;
+    -ms-transform-origin: 8% 4%;
+    -webkit-transform-origin: 8% 4%;
+    transform-origin: 11% 5%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .focus-sugg:hover {
     width: 28em;
-    border: solid 40px #000;
+    border-width: 20px;
   }
 }
 
@@ -246,7 +265,7 @@
 .p-smm {
   @media screen and (min-width: 480px) {
     img {
-      @include transform-origin(9%, 7%);
+      @include transform-origin(7%, 8%);
     }
   }
 }

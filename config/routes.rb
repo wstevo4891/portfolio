@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'work/baldwin' => 'pages#baldwin'
   get 'work/griffen' => 'pages#griffen'
   get 'work/smm' => 'pages#smm'
-  get 'work/suggestion_box' => 'pages#suggestion_boxf'
+  get 'work/suggestion_box' => 'pages#suggestion_box'
   
   root 'pages#welcome'
   
