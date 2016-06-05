@@ -6,6 +6,7 @@
 
 .skills-box {
   position: relative;
+  @include perspective(1000px);
 }
 
 .skillset {
@@ -14,6 +15,7 @@
   text-shadow: 2px 2px 4px #000;
   height: 475px;
   @include transition(animate 0.5s ease);
+  @include transform-style(preserve-3d);
 
   h1 {
     margin: 0;
@@ -131,7 +133,11 @@
   margin: 0;
   padding: 0;
   color: #5a4080 !important;
-  text-shadow: 1px 1px 8px white;
+  text-shadow:
+   -1px -1px 1px #F8F8F8,  
+    1px -1px 1px #F8F8F8,
+    -1px 1px 1px #F8F8F8,
+     1px 1px 1px #F8F8F8;
   z-index: 5;
   @include transition(all 0.5s ease);
   @include transform(scale(1.5));

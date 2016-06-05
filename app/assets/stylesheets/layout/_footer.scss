@@ -1,14 +1,16 @@
 @import "compass/css3/transition";
+@import "compass/css3/transform";
 
 /* FOOTER STYLES 
 ================================*/
 
 footer { 
   padding-top: 1em;
-  background-color: #40BC78;
+  background-color: #00A676;
   border-top: solid 2px #222;
   color: #222;
   height: 140px;
+  z-index: 0;
 }
 
 .social-media {
@@ -25,7 +27,7 @@ footer {
     color: #222;
     @include transition(all 0.5s ease);
     &:hover {
-      color: #F8F8F8;
+      color: #f8f8f8;
     }
   }
 
