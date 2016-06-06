@@ -1,16 +1,22 @@
 @import "compass/css3/transition";
 @import "compass/css3/transform";
+@import "helpers/variables";
 
 /* FOOTER STYLES 
 ================================*/
 
 footer { 
   padding-top: 1em;
-  background-color: #00A676;
-  border-top: solid 2px #222;
-  color: #222;
+  background-color: $jade;
+  border-top: solid 2px $mine-shaft;
+  color: $mine-shaft;
   height: 140px;
   z-index: 0;
+
+  p {
+    position: relative;
+    top: 2.5em;
+  }
 }
 
 .social-media {
@@ -24,15 +30,42 @@ footer {
   }
 
   a {
-    color: #222;
+    color: $mine-shaft;
     @include transition(all 0.5s ease);
     &:hover {
-      color: #f8f8f8;
+      background-color: $alabaster;
     }
   }
 
   i {
     font-size: 4em;
-    margin-right: 0.2em;
+  }
+
+  .github-link {
+    width: 56px;
+    height: 4em;
+    position: absolute;
+    top: 0.9em;
+    left: 39%;
+    border: 1px solid transparent;
+    border-radius: 50%;
+
+    &:hover {
+      color: $github-blue;
+    }
+  }
+
+  .linkedin-link {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    top: 1em;
+    left: 51%;
+    border: solid 1px transparent;
+    border-radius: 15px;
+
+    &:hover {
+      color: $linkedin-blue;
+    }
   }
 }
