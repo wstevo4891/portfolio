@@ -31,7 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # User carrierwave for image uploads
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'rmagick'
-gem 'fog-aws'
+gem 'fog', require: 'fog/aws'
 
 # Use Devise for admin auth
 gem 'devise'
