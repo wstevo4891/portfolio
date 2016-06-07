@@ -50,7 +50,7 @@
   }
 }
 
-.ruby-link {
+.ruby-skill {
   left: 13em;
 
   &:hover {
@@ -72,7 +72,7 @@
   z-index: 0;
 }
 
-.javascript-link {
+.javascript-skill {
   left: 23.3em;
   &:hover {
     color: yellow;
@@ -86,7 +86,7 @@
   color: yellow !important;
 }
 
-.ror-link {
+.ror-skill {
   right: 9em;
 
   &:hover {
@@ -101,7 +101,7 @@
   color: red !important;
 }
 
-.bootstrap-link {
+.bootstrap-skill {
   position: absolute;
   top: 12em;
   left: 14em;
@@ -151,7 +151,7 @@
   }
 }
 
-.jquery-link {
+.jquery-skill {
   top: 11em;
   left: 24.3em;
 }
@@ -178,7 +178,7 @@
   color: lightskyblue !important;
 }
 
-.css3-link {
+.css3-skill {
   top: 11em;
   right: 12.5em;
   @include transition(rotate scale 0.1s ease);

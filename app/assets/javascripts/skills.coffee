@@ -4,7 +4,7 @@
 
 skills_main = ->
 
-  $('.ruby-link').hover (->
+  $('.ruby-skill').hover (->
     unless $(this).hasClass 'ruby-title' 
       $('.ruby-gif').fadeIn 'fast'
     return 
@@ -12,26 +12,26 @@ skills_main = ->
     $('.ruby-gif').fadeOut 'fast'
     return
 
-  $('.ruby-link').click ->
-    $(this).removeClass('ruby-link').addClass 'ruby-title'
+  $('.ruby-skill').click ->
+    $(this).removeClass('ruby-skill').addClass 'ruby-title'
     $('.ruby-gif').fadeOut 'fast'
-    $("[class$=-link]").fadeOut 'fast'
+    $("[class$=-skill]").fadeOut 'fast'
     $("p:regex(class,[1-5])").fadeOut 'fast'
     $('.skills-back').fadeIn 'slow'
     $('.skillset').animate width: '70%'
     $('.ruby-exhibit').animate left: '70%'
     return
 
-  $('.javascript-link').click ->
-    $(this).removeClass('javascript-link').addClass 'javascript-title'
-    $("[class$=-link]").fadeOut 'fast'
+  $('.javascript-skill').click ->
+    $(this).removeClass('javascript-skill').addClass 'javascript-title'
+    $("[class$=-skill]").fadeOut 'fast'
     $("p:regex(class,[1-5])").fadeOut 'fast'
     $('.skills-back').fadeIn 'slow'
     $('.skillset').animate width: '70%'
-    $('.ruby-exhibit').animate left: '70%'
+    $('.javascript-exhibit').animate left: '70%'
     return
 
-  $('.ror-link').hover (->
+  $('.ror-skill').hover (->
     $('.skillset').removeClass('skillset-default').addClass 'skillset-ror'
     return
   ), ->
@@ -39,25 +39,25 @@ skills_main = ->
       $('.skillset').removeClass('skillset-ror').addClass 'skillset-default'
     return
 
-  $('.ror-link').click ->
-    $(this).removeClass('ror-link').addClass 'ror-title'
-    $("[class$=-link]").fadeOut 'fast'
+  $('.ror-skill').click ->
+    $(this).removeClass('ror-skill').addClass 'ror-title'
+    $("[class$=-skill]").fadeOut 'fast'
     $("p:regex(class,[1-5])").fadeOut 'fast'
     $('.skills-back').fadeIn 'slow'
     $('.skillset').animate width: '70%'
-    $('.ruby-exhibit').animate left: '70%'
+    $('.ror-exhibit').animate left: '70%'
     return
 
-  $('.bootstrap-link').click ->
-    $(this).removeClass('bootstrap-link').addClass 'bootstrap-title'
-    $("[class$=-link]").fadeOut 'fast'
+  $('.bootstrap-skill').click ->
+    $(this).removeClass('bootstrap-skill').addClass 'bootstrap-title'
+    $("[class$=-skill]").fadeOut 'fast'
     $("p:regex(class,[1-5])").fadeOut 'fast'
     $('.skills-back').fadeIn 'slow'
     $('.skillset').animate width: '70%'
-    $('.ruby-exhibit').animate left: '70%'
+    $('.bootstrap-exhibit').animate left: '70%'
     return
 
-  $('.jquery-link').mouseover ->
+  $('.jquery-skill').mouseover ->
     if $(this).hasClass('jquery-1')
       $(this).css 'top', '16em'
       $(this).removeClass 'jquery-1'
@@ -79,21 +79,21 @@ skills_main = ->
       $('.jquery-fine').slideDown('slow').css('display', 'block')
     return
 
-  $('.jquery-link').click ->
+  $('.jquery-skill').click ->
     $(this).css 'top', '10px'
     $(this).css 'left', '10px'
-    $(this).removeClass 'jquery-link'
+    $(this).removeClass 'jquery-skill'
     $(this).removeClass('jquery-5').addClass 'jquery-title'
     $('.jquery-fine').slideUp 'slow'
-    $("[class$=-link]").fadeOut 'fast'
+    $("[class$=-skill]").fadeOut 'fast'
     $('.skills-back').fadeIn 'slow'
     $('.skillset').animate width: '70%'
     $('.jquery-exhibit').animate left: '70%'
     return
   
-  $('.css3-link').click ->
-    $(this).removeClass('css3-link').addClass 'css-title'
-    $("[class$=-link]").fadeOut 'fast'
+  $('.css3-skill').click ->
+    $(this).removeClass('css3-skill').addClass 'css-title'
+    $("[class$=-skill]").fadeOut 'fast'
     $("p:regex(class,[1-5])").fadeOut 'fast'
     $('.skills-back').fadeIn 'slow'
     $('.skillset').animate width: '70%'
@@ -103,18 +103,18 @@ skills_main = ->
   $('.skills-back').click ->
     $(this).fadeOut 'slow'
     $('[class$=-title]').fadeOut 'slow'
-    $('.ruby-title').removeClass('ruby-title').addClass 'ruby-link'
-    $('.javascript-title').removeClass('javascript-title').addClass 'javascript-link'
-    $('.ror-title').removeClass('ror-title').addClass 'ror-link'
-    $('.jquery-title').removeClass('jquery-title').addClass('jquery-link').addClass('jquery-1').css 'display', 'none'
-    $('.jquery-link').css 'top', '11em'
-    $('.jquery-link').css 'left', '24.3em'
-    $('.bootstrap-title').removeClass('bootstrap-title').addClass 'bootstrap-link'
-    $('.css-title').removeClass('css-title').addClass('css3-link').css 'display', 'none'
+    $('.ruby-title').removeClass('ruby-title').addClass 'ruby-skill'
+    $('.javascript-title').removeClass('javascript-title').addClass 'javascript-skill'
+    $('.ror-title').removeClass('ror-title').addClass 'ror-skill'
+    $('.jquery-title').removeClass('jquery-title').addClass('jquery-skill').addClass('jquery-1').css 'display', 'none'
+    $('.jquery-skill').css 'top', '11em'
+    $('.jquery-skill').css 'left', '24.3em'
+    $('.bootstrap-title').removeClass('bootstrap-title').addClass 'bootstrap-skill'
+    $('.css-title').removeClass('css-title').addClass('css3-skill').css 'display', 'none'
     $('.skillset').removeClass('skillset-ror').addClass 'skillset-default'
-    $('.skillset').animate width: '100%'
-    $('[class$=-exhibit]').animate left: '100%'
-    $("[class$=-link]").delay(500).fadeIn 'slow'
+    $('[class$=-exhibit]').animate { left: '100%' }, 100
+    $('.skillset').animate { width: '100%' }, 300
+    $("[class$=-skill]").delay(500).fadeIn 'slow'
     $("p:regex(class,[1-5])").delay(500).fadeIn 'slow'
     return
   return

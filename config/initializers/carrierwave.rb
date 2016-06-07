@@ -1,5 +1,15 @@
-CarrierWave.configure do |config|
-  if Rails.env.production?
+
+# Use local storage in development & test
+if Rails.env.development? || Rails.env.test?
+  CarrierWave.configure do |config|
+    config.storage = :file
+  end
+end
+
+# Use AWS storage in production
+if Rails.env.production?
+  CarrierWave.configure.do |config|
+    config.storage = :fog
     config.fog_credentials = {
       provider: 'AWS',
       aws_access_key_id: ENV["AWS_ACCESS_KEY"],
@@ -7,12 +17,10 @@ CarrierWave.configure do |config|
     }
     config.fog_directory = ENV["AWS_BUCKET"]
     config.fog_public = true
-  else
-    config.storage = :file
-    config.enable_processing = false
   end
 end
 
+# Store uploads in spec/support/uploads in test environment
 if Rails.env.test?
 
   ImageUploader
