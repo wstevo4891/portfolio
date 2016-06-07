@@ -25,7 +25,7 @@
 
   <div class="row">
     <div class="project-img col-md-8 col-md-offset-2">
-      <%= image_tag(s3_path("bolt-network-full-new.png"), class: "img-responsive") %>
+      <%= image_tag("bolt-network-full-new.png", class: "img-responsive") %>
     </div>
   </div>
 
@@ -71,13 +71,13 @@
           <div class="col-sm-5 text-center">
             <h3>this...</h3>
 
-            <%= image_tag(s3_path("bolt-network-full-old.png"), class: "img-responsive") %>
+            <%= image_tag("bolt-network-full-old.png", class: "img-responsive") %>
           </div>
 
           <div class="col-sm-5 col-sm-offset-1 text-center">
             <h3>...into this!</h3>
 
-            <%= image_tag(s3_path("bolt-network-full-new.png"), class: "img-responsive") %>
+            <%= image_tag("bolt-network-full-new.png", class: "img-responsive") %>
           </div>
         </div>
 
@@ -87,7 +87,7 @@
       <div class="p-info">
         <h2>Main Slideshow</h2>
 
-        <%= image_tag(s3_path("bolt-network-main-slider.gif"), class: "img-responsive") %>
+        <%= image_tag("bolt-network-main-slider.gif", class: "img-responsive") %>
 
         <p>The main slideshow is built on Vegas.js with custom scripts for altering content 
         and scaling to browser width. At the moment, the content div height is set to 18em 
@@ -101,7 +101,7 @@
     <div class="p-info">
       <h2>Navigation Bar</h2>
 
-      <%= image_tag(s3_path("bolt-network-navbar.gif"), class: "img-responsive") %>
+      <%= image_tag("bolt-network-navbar.gif", class: "img-responsive") %>
 
       <p>Netflix's navbar appears on scrolldown, which was easy enough to implement, but a 
       challenge arose when dealing with the mobile menu. I kept the Bootstrap slidedown 
@@ -115,7 +115,7 @@
     <div class="p-info">
       <h2>Search Bar</h2>
 
-      <%= image_tag(s3_path("bolt-network-searchbar.gif"), class: "img-responsive") %>
+      <%= image_tag("bolt-network-searchbar.gif", class: "img-responsive") %>
 
       <p>Re-creating the Netflix search bar animation involved a bit of jQuery to hide the
       nav link, show the div containing the search form, and animating its width to 270px. 
@@ -132,7 +132,7 @@
     <div class="p-info">
       <h2>Carousel Sliders</h2>
 
-      <%= image_tag(s3_path("bolt-network-carousels.gif"), class: "img-responsive") %>
+      <%= image_tag("bolt-network-carousels.gif", class: "img-responsive") %>
 
       <p>The carousels are built using a Ruby algorithm in an erb partial, some jQuery functions, 
       and a modified Unslider.js. Since Unslider uses list items for its slides, I put five movie divs 

@@ -18,8 +18,4 @@ module ApplicationHelper
 		markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
 		markdown_to_html.render(text).html_safe
 	end
-
-	def s3_path(image_name)
-		"https://s3.amazonaws.com/portfolio-of-eric-stephenson/#{image_name}"
-	end
 end

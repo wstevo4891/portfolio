@@ -30,7 +30,7 @@ main {
 }
 
 .headshot {
-  background: url("https://s3.amazonaws.com/portfolio-of-eric-stephenson/headshot1-thumb.jpg") center;
+  background: image-url("headshot1-thumb.jpg") center;
   height: 14em;
   width: 14em;
   position: absolute;
