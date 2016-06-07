@@ -113,7 +113,7 @@ nav.navbar.shrink {
 
 .jumbotron-main {
   @extend .jumbotron;
-  background: image-url("rainier-enhanced.jpg") no-repeat center center fixed;
+  background: url("https://s3.amazonaws.com/portfolio-of-eric-stephenson/rainier-enhanced.jpg") no-repeat center center fixed;
   @include background-size(cover);
   margin: 0;
   height: 25em;
@@ -128,7 +128,7 @@ nav.navbar.shrink {
 }
 
 .jumbotron-small {
-  background: image-url("macbook-coffee-color.jpg") no-repeat center center fixed;
+  background: url("https://s3.amazonaws.com/portfolio-of-eric-stephenson/macbook-coffee-color.jpg") no-repeat center center fixed;
   height: 20em;
   @include background-size(cover);
   color: white;
@@ -141,7 +141,7 @@ nav.navbar.shrink {
 
 .jumbotron-contact {
   @extend .jumbotron-small;
-  background: image-url("lake-union.jpg") no-repeat center;
+  background: url("https://s3.amazonaws.com/portfolio-of-eric-stephenson/lake-union.jpg") no-repeat center;
   @include background-size(1280px 100%);
   h1 {
     max-width: 10em;
@@ -151,7 +151,7 @@ nav.navbar.shrink {
 
 .jumbotron-about {
   @extend .jumbotron-small;
-  background: image-url("atacama-enhanced.jpg") no-repeat center center;
+  background: url("https://s3.amazonaws.com/portfolio-of-eric-stephenson/atacama-enhanced.jpg") no-repeat center center;
   height: 25em;
   h1 {
     top: 0.5em;

@@ -7,7 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 def seed_image(file_name)
-	File.open(File.join(Rails.root + "app/assets/images/#{file_name}"))
+  if Rails.env.production?
+    "https://s3.amazonaws.com/portfolio-of-eric-stephenson/#{file_name}"
+  else
+	  File.open(File.join(Rails.root + "app/assets/images/#{file_name}"))
+  end
 end
 
 BlogPost.create!(
