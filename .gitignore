@@ -16,5 +16,5 @@
 /tmp
 .DS_Store
 
-# Ignore .env files
-.env.local
+# Ignore application configuration
+/config/application.yml
