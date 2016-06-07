@@ -21,7 +21,7 @@
 
       <div class="row">
         <div class="project-img col-md-8 col-md-offset-2">
-          <%= image_tag("griffen-home-page.png", class: "img-responsive") %>
+          <%= image_tag(s3_path("griffen-home-page.png"), class: "img-responsive") %>
         </div>
       </div>
       <br>
@@ -58,15 +58,13 @@
 
         <div class="row">
           <div class="mobile-image col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">
-            <%= image_tag("griffen-mobile-full.png", class: "img-responsive") %>
+            <%= image_tag(s3_path("griffen-mobile-full.png"), class: "img-responsive") %>
           </div>
 
           <div class="mobile-image col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-2">
-            <%= image_tag("griffen-mobile-menu.png", class: "img-responsive") %>
+            <%= image_tag(s3_path("griffen-mobile-menu.png"), class: "img-responsive") %>
           </div>
         </div>
-
-        <div class="line-break"></div>
       </div>
     </div>
   </div>
