@@ -7,7 +7,6 @@
 
 .skills-box {
   position: relative;
-  @include perspective(1000px);
 }
 
 .skillset {
@@ -16,7 +15,6 @@
   text-shadow: 2px 2px 4px #000;
   height: 475px;
   @include transition(animate 0.5s ease);
-  @include transform-style(preserve-3d);
 
   h1 {
     margin: 0;
@@ -34,12 +32,16 @@
   background-size: cover;
 }
 
+.skillset-deep {
+  @include perspective(1000px);
+  @include transform-style(preserve-3d);
+}
+
 .skills {
 
   p, a {
     color: white;
     position: absolute;
-    margin: 1em;
     cursor: pointer;
     z-index: 5;
     @include transition(all 0.5s ease);
@@ -51,7 +53,7 @@
 }
 
 .ruby-skill {
-  left: 2em;
+  left: 14%;
 
   &:hover {
     @include transform(scale(1.5));
@@ -68,12 +70,16 @@
 .ruby-gif {
   display: none;
   position: absolute;
-  left: 32em;
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
   z-index: 0;
 }
 
 .javascript-skill {
-  left: 23.3em;
+  left: 50%;
+  width: 17%;
+  margin-left: -8.5%;
   &:hover {
     color: yellow;
     @include transform(scale(1.5));
@@ -87,7 +93,7 @@
 }
 
 .ror-skill {
-  right: 9em;
+  right: 8%;
 
   &:hover {
     color: red;
@@ -103,8 +109,8 @@
 
 .bootstrap-skill {
   position: absolute;
-  top: 12em;
-  left: 14em;
+  top: 16em;
+  left: 12%;
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -152,15 +158,16 @@
 }
 
 .jquery-skill {
-  top: 11em;
-  left: 24.3em;
+  top: 16em;
+  left: 50%;
+  width: 12%;
+  margin-left: -6%;
 }
 
 .jquery-5 {
   @include transition(all 0.5s ease);
 
   &:hover {
-    @include transform(scale(1.5));
     color: lightskyblue;
   }
 }
@@ -179,12 +186,12 @@
 }
 
 .css3-skill {
-  top: 11em;
-  right: 12.5em;
+  top: 16em;
+  right: 14%;
   @include transition(rotate scale 0.1s ease);
 
   &:hover {
-    @include transform(rotateZ(-750deg) scale(12.5));
+    @include transform(translateX(-150px) rotateZ(-750deg) scale(12.5));
     color: #29a9df;
     z-index: 5;
   }
@@ -199,8 +206,8 @@
 .skills-back {
   display: none;
   position: absolute;
-  top: 3.5em;
-  left: 26px;
+  top: 2.5em;
+  left: 2px;
   cursor: pointer;
   @include perspective(1000px);
 }
@@ -250,16 +257,45 @@
 /* MEDIA QUERIES 
 ===================================*/
 
+@media screen and (min-width: 480px) {
+  .skills-copy {
+    font-size: 1.3em;
+  }
+}
+
 
 @media screen and (min-width: 768px) {
   .skills-copy {
     font-size: 24px;
   }
-}
 
-
-@media screen and (min-width: 1200px) {
-  .ruby-skill {
-    left: 13em;
+  .bootstrap-skill, .jquery-skill, .css3-skill {
+    top: 12em;
   }
 }
+
+
+@media screen and (min-width: 1024px) {
+  .ruby-skill {
+    left: 22%;
+  }
+
+  .ror-skill {
+    right: 15%;
+  }
+
+  .bootstrap-skill {
+    left: 20%;
+  }
+
+  .css3-skill {
+    right: 19%;
+  }
+}
+
+
+
+
+
+
+
