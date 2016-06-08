@@ -51,7 +51,7 @@
 }
 
 .ruby-skill {
-  left: 13em;
+  left: 2em;
 
   &:hover {
     @include transform(scale(1.5));
@@ -250,8 +250,16 @@
 /* MEDIA QUERIES 
 ===================================*/
 
-.skills-copy {
-  @media screen and (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
+  .skills-copy {
     font-size: 24px;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .ruby-skill {
+    left: 13em;
   }
 }
