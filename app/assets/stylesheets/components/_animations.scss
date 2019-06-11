@@ -6,17 +6,17 @@
 // div and hover animation general settings ########
 
 .p-item {
-  display: inline-block;
+  display: block;
   margin: 3em auto;
   border: solid 1px #4d4d4d;
   overflow: hidden;
   height: 15em;
   width: 20em;  
-  @include transition(all 1.5s ease);
+  @include transition(all .5s ease);
   @include box-shadow(10px 10px 5px #888888); 
 
   img {
-    @include transition(all 1.5s ease);
+    @include transition(all .5s ease);
     height: 15em;
     width: 20em;
   }
