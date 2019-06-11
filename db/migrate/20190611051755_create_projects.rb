@@ -1,8 +1,21 @@
 class CreateProjects < ActiveRecord::Migration
   def change
     create_table :projects do |t|
+      t.string   :title
+      t.string   :slug
+      t.string   :cover
+      t.string   :images, array: true, default: []
+      t.string   :meta_title
+      t.string   :meta_description
+      t.text     :summary
+      t.string   :site_link
+      t.string   :repo_link
+      t.text     :description, array: true, default: []
+      t.string   :features, array: true, default: []
+      t.string   :apis, array: true, default: []
+      t.string   :tech_stack, array: true, default: []
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
