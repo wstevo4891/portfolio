@@ -39,7 +39,7 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = false
 
   # Live Reload Setup
-  config.middleware.insert_before Rack::Lock, Rack::LiveReload
+  # config.middleware.insert_before Rack::Lock, Rack::LiveReload
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

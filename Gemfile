@@ -50,15 +50,15 @@ group :development do
 	gem 'awesome_print', require: 'ap'
 	gem 'better_errors'
 	gem 'quiet_assets'
-	gem 'meta_request'
-  gem 'flamegraph'
-  gem 'stackprof'
-  gem 'rack-mini-profiler'
-  gem 'guard', require: false
-  gem 'guard-compass', require: false
-  gem 'guard-livereload', require: false
-  gem 'rack-livereload'
-  gem 'rb-fsevent', require: false
+	# gem 'meta_request'
+  # gem 'flamegraph'
+  # gem 'stackprof'
+  # gem 'rack-mini-profiler'
+  # gem 'guard', require: false
+  # gem 'guard-compass', require: false
+  # gem 'guard-livereload', require: false
+  # gem 'rack-livereload'
+  # gem 'rb-fsevent', require: false
 end
 
 group :development, :test do
