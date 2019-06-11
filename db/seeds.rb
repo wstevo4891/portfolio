@@ -6,31 +6,80 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-def seed_image(file_name)
+def seed_asset_image(image)
+  File.open(Rails.root + "app/assets/images/#{image}")
+end
+
+def seed_image_array(arr)
+  arr.map { |img| seed_asset_image(img) }
+end
+
+def load_yaml(file)
+  YAML.load_file(Rails.root.join("db/yaml_data/#{file}.yml"))
+end
+
+def create_date(arr)
+  Date.new(arr[0], arr[1], arr[2])
+end
+
+def seed_aws_image(file)
   if Rails.env.production?
-    "https://s3.amazonaws.com/portfolio-of-eric-stephenson/#{file_name}"
+    "https://s3.amazonaws.com/portfolio-of-eric-stephenson/#{file}"
   else
-	  File.open(File.join(Rails.root + "app/assets/images/#{file_name}"))
+    File.open(Rails.root + "app/assets/images/#{file}")
   end
 end
 
-BlogPost.create!(
-  title: 'PDF Uploads with Dropbox API',
-  cover: seed_image("dropbox-api.png"),
-  date: 'April 26, 2016',
-  body: 'Say you want to upload a PDF of an application form when a user completes it.'
-)
+Project.delete_all
 
-BlogPost.create!(
-  title: 'A Fully Ajaxified Index Table',
-  cover: seed_image("ajax-blue.jpg"),
-  date: 'April 28, 2016',
-  body: 'AJAX can be tricky when you\'re working with tables.'
-)
+puts 'Loading projects ========================='
 
-BlogPost.create!(
-  title: 'Live-reloading with Guard LiveReload',
-  cover: seed_image("livereload-with-rails-4.jpg"),
-  date: 'April 28, 2016',
-  body: 'Sometimes a good ruby algorithm can save us the trouble of continually updating a site\'s content.'
-)
+projects = load_yaml('projects')
+
+projects.each do |project|
+  puts "Creating project: #{project['title']}"
+
+  Project.create!(
+    title: project['title'],
+    slug: project['slug'],
+    cover: seed_asset_image(project['cover']),
+    images: seed_image_array(project['images']),
+    meta_title: project['meta_title'],
+    meta_description: project['meta_description'],
+    summary: project['summary'],
+    site_link: project['site_link'],
+    repo_link: project['repo_link'],
+    description: project['description'],
+    features: project['features'],
+    apis: project['apis'],
+    tech_stack: project['tech_stack']
+  )
+end
+
+posts = load_yaml('posts')
+
+Post.delete_all
+
+puts 'Loading posts ============================'
+
+posts.each do |post|
+  puts "Loading post: #{post['title']}"
+
+  new_post = Post.create!(
+    meta_title: post['meta_title'],
+    meta_description: post['meta_description'],
+    title: post['title'],
+    slug: post['slug'],
+    date: create_date(post['date']),
+    cover: seed_asset_image(post['cover']),
+    description: post['description']
+  )
+
+  post['sections'].each do |section|
+    new_post.sections.create!(
+      header: section['header'],
+      image: section['image'],
+      body: section['body']
+    )
+  end
+end
