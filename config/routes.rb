@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  root 'home#index'
   
   devise_for :admins, 
-    controllers: { sessions: "admins/sessions" }
+             controllers: { sessions: "admins/sessions" }
 
   resources :blog_images
   resources :blog_posts
@@ -17,7 +18,4 @@ Rails.application.routes.draw do
   get 'work/griffen' => 'pages#griffen'
   get 'work/smm' => 'pages#smm'
   get 'work/suggestion_box' => 'pages#suggestion_box'
-  
-  root 'pages#welcome'
-  
 end
