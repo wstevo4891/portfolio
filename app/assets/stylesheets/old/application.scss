@@ -10,20 +10,20 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ //= require_self
+ //
+ //= require layout/_body
+ //= require layout/_navbar_and_banners
+ //= require layout/_dashboard
+ //= require layout/_footer
+ //
+ //= require components/_animations
+ //= require components/_buttons
+ //
+ //= require pages/_welcome
+ //= require pages/_about
+ //= require pages/_projects
+ //= require pages/_blog
+ //
+ //= require skills/_ruby
  */
-
- /* ALL APPLICATION IMPORTS 
-===========================================*/
-
-// VENDOR IMPORTS
-@import "bootstrap";
-@import "compass/css3";
-@import "font-awesome-sprockets";
-@import "font-awesome";
-
-// LOCAL IMPORTS
-@import "helpers/*";
-@import "layout/*";
-@import "components/*";
-@import "pages/*";
-// @import "skills/*";

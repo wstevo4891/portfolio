@@ -11,8 +11,8 @@
 
 // LOCAL IMPORTS
 
-@import "helpers";
-@import "components";
-@import "layout";
-@import "pages";
-@import "skills";
+@import "helpers/*";
+@import "layout/*";
+@import "components/*";
+@import "pages/*";
+// @import "skills/*";
