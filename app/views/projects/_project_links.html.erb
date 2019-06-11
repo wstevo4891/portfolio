@@ -1,0 +1,21 @@
+<div class="row">
+
+  <%= @projects.each do |project| %>
+
+    <div class="col-md-6">
+      <div class="project-link p-item">
+        <a href="/work/<%= project.slug %>">
+          <img src="/assets/<%= project.cover %>" class="img-responsive">
+
+          <div class="project-overlay"></div>
+
+          <div class="overlay-text">
+            <%= project.title %>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  <% end %>
+
+</div>

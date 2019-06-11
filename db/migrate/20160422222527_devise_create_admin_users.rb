@@ -1,6 +1,6 @@
-class DeviseCreateAdmins < ActiveRecord::Migration
+class DeviseCreateAdminUser < ActiveRecord::Migration
   def self.up
-    create_table(:admins) do |t|
+    create_table(:admin_users) do |t|
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       t.datetime :remember_created_at
@@ -9,6 +9,6 @@ class DeviseCreateAdmins < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :admins
+    drop_table :admin_users
   end
 end

@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<div class="show-post">
+			<h2 class="post-title"><%= @post.title %></h2>
+
+			<h3 class="post-date"><%= @post.date %></h3>
+
+			<%= image_tag(@post.cover, class: "img-responsive post-cover") %>
+      
+      <div class="text-left post-view">
+			  <%= markdown(@post.body) %>
+			</div>
+		</div>
+	</div>
+</div>

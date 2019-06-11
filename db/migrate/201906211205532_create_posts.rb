@@ -1,10 +1,10 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
-      t.string   :meta_title
-      t.string   :meta_description
       t.string   :title
       t.string   :slug
+      t.string   :meta_title
+      t.string   :meta_description
       t.date     :date
       t.string   :cover
       t.text     :description

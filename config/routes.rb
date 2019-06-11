@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'home#index'
   
-  devise_for :admins, 
-             controllers: { sessions: "admins/sessions" }
+  devise_for :admin_users, controllers: { sessions: "admin_users/sessions" }
+
+  get '/admin' => 'admin#index'
 
   namespace :admin do
     resources :projects
