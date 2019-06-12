@@ -30,7 +30,7 @@ module Admin
   
       respond_to do |format|
         if @post.save
-          format.html { redirect_to admin_url, notice: 'Blog post was successfully created.' }
+          format.html { redirect_to show_post, notice: 'Blog post was successfully created.' }
           format.json { render :show, status: :created, location: @post }
         else
           format.html { render :new }
@@ -44,7 +44,7 @@ module Admin
     def update
       respond_to do |format|
         if @post.update(post_params)
-          format.html { redirect_to admin_url, notice: 'Blog post was successfully updated.' }
+          format.html { redirect_to show_post, notice: 'Blog post was successfully updated.' }
           format.json { render :show, status: :ok, location: @post }
         else
           format.html { render :edit }
@@ -58,7 +58,7 @@ module Admin
     def destroy
       @post.destroy
       respond_to do |format|
-        format.html { redirect_to admin_url, notice: 'Blog post was deleted' }
+        format.html { redirect_to admin_posts_url, notice: 'Blog post was deleted' }
         format.json { head :no_content }
       end
     end
@@ -73,6 +73,9 @@ module Admin
       def post_params
         params.require(:post).permit(:title, :date, :body, :cover, :cover_cache, {images: []})
       end
+
+      def show_post
+        admin_post_url(@post.id)
+      end
   end
-  
 end

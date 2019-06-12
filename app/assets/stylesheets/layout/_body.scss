@@ -1,5 +1,4 @@
 
-
 /* SITE-WIDE STYLES 
 ===============================*/
 
@@ -10,7 +9,7 @@ body {
 }
 
 * {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 .page-headline {
@@ -38,5 +37,5 @@ main {
   left: 3em;
   border: solid 6px #333;
   border-radius: 50%;
-  @include box-shadow(4px 4px 4px #4D4D4D);
+  box-shadow: 4px 4px 4px #4D4D4D;
 }

@@ -6,7 +6,7 @@
 .jumbotron-main {
   @extend .jumbotron;
   background: image-url("rainier-enhanced.jpg") no-repeat center center fixed;
-  @include background-size(cover);
+  background-size: cover;
   margin: 0;
   height: 25em;
   color: white;
@@ -22,7 +22,7 @@
 .jumbotron-small {
   background: image-url("macbook-coffee-color.jpg") no-repeat center center fixed;
   height: 20em;
-  @include background-size(cover);
+  background-size: cover;
   color: white;
   h1 {
     position: relative;
@@ -34,7 +34,7 @@
 .jumbotron-contact {
   @extend .jumbotron-small;
   background: image-url("lake-union.jpg") no-repeat center;
-  @include background-size(1280px 100%);
+  background-size: 1280px 100%;
   h1 {
     max-width: 10em;
     margin: 0 auto;

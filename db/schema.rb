@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160422222527) do
+ActiveRecord::Schema.define(version: 201906211205532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admins", force: :cascade do |t|
+  create_table "admin_users", force: :cascade do |t|
     t.string   "email",               default: "", null: false
     t.string   "encrypted_password",  default: "", null: false
     t.datetime "remember_created_at"
@@ -24,14 +24,45 @@ ActiveRecord::Schema.define(version: 20160422222527) do
     t.datetime "updated_at",                       null: false
   end
 
-  create_table "blog_posts", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.string   "title"
-    t.string   "date"
+    t.string   "slug"
+    t.string   "meta_title"
+    t.string   "meta_description"
+    t.date     "date"
     t.string   "cover"
-    t.text     "body"
-    t.json     "images",     default: [],              array: true
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.string   "cover"
+    t.string   "images",           default: [], array: true
+    t.string   "meta_title"
+    t.string   "meta_description"
+    t.text     "summary"
+    t.string   "site_link"
+    t.string   "repo_link"
+    t.text     "description",      default: [], array: true
+    t.string   "features",         default: [], array: true
+    t.string   "apis",             default: [], array: true
+    t.string   "tech_stack",       default: [], array: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.integer  "post_id"
+    t.string   "header"
+    t.string   "image"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sections", ["post_id"], name: "index_sections_on_post_id", using: :btree
 
 end

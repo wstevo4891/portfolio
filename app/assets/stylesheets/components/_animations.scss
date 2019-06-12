@@ -12,11 +12,11 @@
   overflow: hidden;
   height: 15em;
   width: 20em;  
-  @include transition(all .5s ease);
-  @include box-shadow(10px 10px 5px #888888); 
+  transition: all .5s ease;
+  box-shadow: 10px 10px 5px #888888; 
 
   img {
-    @include transition(all .5s ease);
+    transition: all .5s ease;
     height: 15em;
     width: 20em;
   }
@@ -25,9 +25,9 @@
 .focus:hover {
   border: 20px solid #000;
   border-radius: 50%;
-  @include transform(rotate(0.1deg));
+  transform: rotate(0.1deg);
   img {
-    @include transform(scale(2));
+    transform: scale(2);
   }
 }
 
@@ -46,8 +46,8 @@
   position: absolute;
   top: 3.47%;
   left: 3%;
-  @include opacity(0);
-  @include transform-origin(-28%, -310%);
+  opacity: 0;
+  transform-origin: -28%, -310%;
 }
 
 .p-bolt {
@@ -56,24 +56,24 @@
   background-color: #000;
 
   img {
-    @include transform-origin(-3%, -5%);
+    transform-origin: -3%, -5%;
   }
 }
 
 .focus-bolt:hover {
   border: 20px solid $azure-radiance;
   border-radius: 50%;
-  @include transform(rotateX(0.1deg));
+  transform: rotateX(0.1deg);
   img {
-    @include transform(scale(3), rotate(0.1deg));
+    transform: scale(3), rotate(0.1deg);
   }
   #bolt-svg {
-    @include opacity(1);
+    opacity: 1;
   }
 }
 
 #pirate-pic:hover {
-  @include opacity(0);
+  opacity: 0;
 }
 
 
@@ -81,18 +81,18 @@
 
 .p-griffen {
   @extend .p-item;
-  @include transform(rotateX(0.1deg));
+  transform: rotateX(0.1deg);
   z-index: 1;
 
   img {
-    @include transform-origin(center, -8%);
+    transform-origin: center, -8%;
   }
 }
 
 .focus-g:hover {
   @extend .focus:hover;  
   img {
-    @include transform(scale(2.5, 2));
+    transform: scale(2.5, 2);
   }
 }
 
@@ -104,7 +104,7 @@
   background-color: #fff;
 
   img {
-    @include transform-origin(-3%, -1%);
+    transform-origin: -3%, -1%;
   }
 }
 
@@ -112,7 +112,7 @@
   @extend .focus:hover;
 
   img {
-    @include transform(scale(3.5, 3));
+    transform: scale(3.5, 3);
   }
 }
 
@@ -120,12 +120,12 @@
 
 .p-suggestion {
   @extend .p-item;
-  @include transition(all 0.5s ease);
+  transition: all 0.5s ease;
   border-color: #6EBFD4;
 
   img {
-    @include transition(all 0.5s ease);
-    @include transform-origin(11%, 6%);
+    transition: all 0.5s ease;
+    transform-origin: 11%, 6%;
   }
 }
 
@@ -133,10 +133,10 @@
   width: 17em;
   border-width: 10px;
   border-radius: 50%;
-  @include transform(rotateZ(360deg));
+  transform: rotateZ(360deg);
 
   img {
-    @include transform(scale(5, 4));
+    transform: scale(5, 4);
   }
 }
 
@@ -144,21 +144,21 @@
 .p-smm {
   border-color: $lime-green;
   @extend .p-item;
-  @include transition(all 2s ease);
+  transition: all 2s ease;
 
   img {
-    @include transition(all 2s ease);
-    @include transform-origin(7%, 9%);
+    transition: all 2s ease;
+    transform-origin: 7%, 9%;
   }
 }
 
 .focus-smm:hover {
   border: 20px solid $lime-green;
   border-radius: 50%;
-  @include transform(rotateZ(360deg));
+  transform: rotateZ(360deg);
 
   img {
-    @include transform(scale(3.5, 3));
+    transform: scale(3.5, 3);
   }
 }
 
@@ -197,7 +197,7 @@
 .p-bolt {
   @media screen and (min-width: 480px) {
     img {
-      @include transform-origin(-3%, -8%);
+      transform-origin: -3%, -8%;
     }
   }
 }
@@ -205,7 +205,7 @@
 #bolt-svg {
   @media screen and (min-width: 480px) {
     width: 7em;
-    @include transform-origin(-7%, -190%);
+    transform-origin: -7%, -190%;
   }
 
   @media screen and (min-width: 1200px) {
@@ -219,7 +219,7 @@
 .p-griffen {
   img {
     @media screen and (min-width: 480px) {
-      @include transform-origin(center, -2%);
+      transform-origin: center, -2%;
     }
   }
 }
@@ -229,7 +229,7 @@
 .p-baldwin {
   @media screen and (min-width: 480px) {
     img {
-      @include transform-origin(-3.5%, top);
+      transform-origin: -3.5%, top;
     }
   }
 }
@@ -261,7 +261,7 @@
 .p-smm {
   @media screen and (min-width: 480px) {
     img {
-      @include transform-origin(7%, 8%);
+      transform-origin: 7%, 8%;
     }
   }
 }

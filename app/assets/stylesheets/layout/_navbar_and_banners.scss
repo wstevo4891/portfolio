@@ -19,18 +19,18 @@ nav.navbar {
 }
 
 nav.navbar, .navbar-header, .nav {
-  @include transition(all 1s ease);
+  transition: all 1s ease;
 }
 
 nav.navbar.shrink {
-  @include transform(translate(0, -28px));
+  transform: translate(0, -28px);
 
   .navbar-header {
-    @include transform(translate(0, 15px));
+    transform: translate(0, 15px);
   }
 
   .nav {
-    @include transform(translate(0, 15px));
+    transform: translate(0, 15px);
   }
 }
 
@@ -40,7 +40,7 @@ nav.navbar.shrink {
 
 #logo, .nav a {
   color: #F8F8F8;
-  @include transition(all 0.5s ease);
+  transition: all 0.5s ease;
   &:hover {
     color: #00A676;
   }

@@ -12,7 +12,7 @@
   color: white;
   text-shadow: 2px 2px 4px #000;
   height: 475px;
-  @include transition(animate 0.5s ease);
+  transition: animate 0.5s ease;
 
   h1 {
     margin: 0;
@@ -31,8 +31,8 @@
 }
 
 .skillset-deep {
-  @include perspective(1000px);
-  @include transform-style(preserve-3d);
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 .skills {
@@ -42,7 +42,7 @@
     position: absolute;
     cursor: pointer;
     z-index: 5;
-    @include transition(all 0.5s ease);
+    transition: all 0.5s ease;
   }
 
   a:hover {
@@ -54,7 +54,7 @@
   left: 14%;
 
   &:hover {
-    @include transform(scale(1.5));
+    transform: scale(1.5);
     color: red;
   }
 }
@@ -80,7 +80,7 @@
   margin-left: -8.5%;
   &:hover {
     color: yellow;
-    @include transform(scale(1.5));
+    transform: scale(1.5);
   }
 }
 
@@ -95,7 +95,7 @@
 
   &:hover {
     color: red;
-    @include transform(scale(1.5));
+    transform: scale(1.5);
   }
 }
 
@@ -118,7 +118,7 @@
     display: inline;
     list-style-type: none;
     margin: -3px;
-    @include transition(all 0.5s ease);
+    transition: all 0.5s ease;
   }
 
   &:hover {
@@ -144,8 +144,8 @@
     -1px 1px 1px #F8F8F8,
      1px 1px 1px #F8F8F8;
   z-index: 5;
-  @include transition(all 0.5s ease);
-  @include transform(scale(1.5));
+  transition: all 0.5s ease;
+  transform: scale(1.5);
 
   li {
     display: inline;
@@ -163,7 +163,7 @@
 }
 
 .jquery-5 {
-  @include transition(all 0.5s ease);
+  transition: all 0.5s ease;
 
   &:hover {
     color: lightskyblue;
@@ -186,10 +186,10 @@
 .css3-skill {
   top: 16em;
   right: 14%;
-  @include transition(rotate scale 0.1s ease);
+  transition: rotate scale 0.1s ease;
 
   &:hover {
-    @include transform(translateX(-150px) rotateZ(-750deg) scale(12.5));
+    transform: translateX(-150px) rotateZ(-750deg) scale(12.5);
     color: #29a9df;
     z-index: 5;
   }
@@ -207,11 +207,11 @@
   top: 2.5em;
   left: 2px;
   cursor: pointer;
-  @include perspective(1000px);
+  perspective: 1000px;
 }
 
 .skills-back:hover .flipper, .skills-back.hover .flipper {
-  @include transform(rotateY(180deg));
+  transform: rotateY(180deg);
 }
 
 .skills-back, .front, .back {
@@ -220,13 +220,13 @@
 }
 
 .flipper {
-  @include transition(0.6s);
-  @include transform-style(preserve-3d);
+  transition: 0.6s;
+  transform-style: preserve-3d;
   position: relative;
 }
 
 .front, .back {
-  @include backface-visibility(hidden);
+  backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -234,12 +234,12 @@
 
 .front {
   z-index: 6;
-  @include transform(rotateY(0deg));
+  transform: rotateY(0deg);
 }
 
 .back {
   z-index: 5;
-  @include transform(rotateY(180deg));
+  transform: rotateY(180deg);
 }
 
 .exhibit {
@@ -249,7 +249,7 @@
   width: 30%;
   height: 475px;
   background-color: #333;
-  @include transition(all 0.5s ease);
+  transition: all 0.5s ease;
 }
 
 /* MEDIA QUERIES 

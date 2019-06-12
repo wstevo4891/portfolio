@@ -12,7 +12,7 @@ class CreatePosts < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :post_sections do |t|
+    create_table :sections do |t|
       t.belongs_to :post, index: true
       t.string     :header
       t.string     :image

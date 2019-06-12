@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
 	mount_uploader :cover, ImageUploader
 	# mount_uploaders :images, ImageUploader
 
-	has_many :post_sections
+	has_many :sections
 
 	def self.attributes
     attribute_names.map(&:to_sym)
