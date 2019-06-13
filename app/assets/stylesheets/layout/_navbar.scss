@@ -1,0 +1,122 @@
+
+
+/* NAVIGATION STYLES 
+==============================================*/
+
+nav.navbar {
+  margin: 0;
+  padding: 1.2em;
+  background-color: #222;
+  z-index: 10;
+
+  button {
+    border: solid 1px #F8F8F8;
+  }
+
+  .icon-bar {
+    background-color: #F8F8F8;
+  }
+}
+
+nav.navbar, .navbar-header, .nav {
+  transition: all 1s ease;
+}
+
+nav.navbar.shrink {
+  transform: translate(0, -28px);
+
+  .navbar-header {
+    transform: translate(0, 15px);
+  }
+
+  .nav {
+    transform: translate(0, 15px);
+  }
+}
+
+#logo {
+  font-size: 2em;
+}
+
+#logo, .nav a {
+  color: #F8F8F8;
+  transition: all 0.5s ease;
+  &:hover {
+    color: $jade;
+  }
+}
+
+#nav-list li {
+  a {
+    font-size: 1.5em;
+    transition: all 0.5s ease;
+  }
+
+  .github-link, .linkedin-link {
+    display: flex;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin: 0 .5rem;
+
+    i {
+      color: white;
+      font-size: 2em;
+    }
+  }
+
+  &:hover {
+    background-color: transparent;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+// MEDIA QUERIES #######
+
+#logo {
+  @media only screen and (min-width: 768px) {
+    position: relative;
+    top: 0.2em;
+  }
+}
+
+.nav {
+  a {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      font-size: 1.2em;
+    }
+
+    @media only screen and (max-width: 768px) {
+      height: 50px;
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+  li {
+    @media only screen and (max-width: 768px) {
+      padding-top: 0.5em;
+    }
+  }
+}
+
+.mobile-nav-break {
+  @media only screen and (max-width: 767px) {
+    border-bottom: 0.05em solid white;
+  }
+}
+
+.main a {
+  width: 10em;
+  height: 5em;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2em;
+  position: relative;
+  top: 2.5em;
+}

@@ -1,0 +1,66 @@
+<%# app/views/layouts/navbar_links %>
+
+<ul id="nav-list" class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <%= link_to "WORK", work_path, class: "nav-link" %>
+  </li>
+
+  <li class="nav-item">
+    <%= link_to "ABOUT", about_path, class: "nav-link" %>
+  </li>
+
+  <li class="nav-item">
+    <%= link_to "BLOG", blog_path, class: "nav-link" %>
+  </li>
+
+  <li class="nav-item">
+    <%= link_to "CONTACT", contact_path, class: 'nav-link' %>
+  </li>
+
+  <li class="nav-item">
+    <a href="https://github.com/wstevo4891" class="github-link">
+      <i class="fa fa-github"></i>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a href="https://www.linkedin.com/in/ericbstephenson4891" class="linkedin-link">
+      <i class="fa fa-linkedin-square"></i>
+    </a>
+  </li>
+</ul>
+
+<%
+=begin%>
+ <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</li> 
+<%
+=end%>
+
+<%
+=begin%>
+ <li><%= link_to "WORK", work_path, class: "nav-link" %></li>
+<li><%= link_to "ABOUT", about_path, class: "nav-link" %></li>
+<li><%= link_to "BLOG", blog_path, class: "nav-link" %></li>
+<li><%= link_to "CONTACT", contact_path %></li>
+<li class="icon-link">
+  <a href="https://github.com/wstevo4891">
+    <i class="fa fa-github"></i>
+  </a>
+</li>
+<li class="icon-link">
+  <a href="https://www.linkedin.com/in/ericbstephenson4891">
+    <i class="fa fa-linkedin-square"></i>
+  </a>
+</li> 
+<%
+=end%>

@@ -7,14 +7,17 @@
   @extend .jumbotron;
   background: image-url("rainier-enhanced.jpg") no-repeat center center fixed;
   background-size: cover;
-  margin: 0;
+  margin-top: -25px;
+  margin-bottom: 0;
   height: 25em;
   color: white;
+
   h1 {
     max-width: 10em;
     margin: 0 auto;
     top: 1em;
     position: relative;
+    font-weight: 400;
     text-shadow: 2px 2px 4px #000;
   }
 }
@@ -71,9 +74,9 @@
   @media only screen and (min-width: 768px) {
     height: 45em;
   }
+
   h1 {
     @media only screen and (min-width: 768px) {
-      top: 2.5em;
       width: auto;
     }
   }

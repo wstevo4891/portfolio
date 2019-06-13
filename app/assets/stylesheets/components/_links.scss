@@ -1,0 +1,32 @@
+// Link Styles
+
+.github-link, .linkedin-link {
+  border: solid 1px transparent;
+  transition: background-color .5s ease;
+
+  i {
+    transition: color .5s ease;
+  }
+}
+
+.github-link {
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $alabaster;
+    text-decoration: none;
+
+    i { color: $github-blue !important; }
+  }
+}
+
+.linkedin-link {
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $alabaster;
+    text-decoration: none;
+
+    i { color: $linkedin-blue !important; }
+  }
+}

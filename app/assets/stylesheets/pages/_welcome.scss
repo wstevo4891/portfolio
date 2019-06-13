@@ -3,6 +3,13 @@
 /* WELCOME PAGE STYLES 
 ===================================*/
 
+.project-section {
+  padding: 4em 0;
+  background-color: #f8f8f8;
+
+  h1 { font-weight: 300; }
+}
+
 .skills-box {
   position: relative;
 }
@@ -23,6 +30,7 @@
 
 .skillset-default {
   background: image-url("macbook-coffee-bw.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .skillset-ror {

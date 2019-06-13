@@ -8,6 +8,6 @@ class PostsController < ApplicationController
   # GET /posts/:slug
   # GET /posts/:slug.json
   def show
-    @post = Post.find(params[:slug])
+    @post = Post.find_by(slug: params[:slug])
   end
 end

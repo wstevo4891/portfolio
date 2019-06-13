@@ -29,10 +29,6 @@ footer {
 
   a {
     color: $mine-shaft;
-    transition: all 0.5s ease;
-    &:hover {
-      background-color: $alabaster;
-    }
   }
 
   i {
@@ -45,12 +41,6 @@ footer {
     position: absolute;
     top: 0.9em;
     left: 39%;
-    border: 1px solid transparent;
-    border-radius: 50%;
-
-    &:hover {
-      color: $github-blue;
-    }
   }
 
   .linkedin-link {
@@ -59,11 +49,5 @@ footer {
     position: absolute;
     top: 1em;
     left: 51%;
-    border: solid 1px transparent;
-    border-radius: 15px;
-
-    &:hover {
-      color: $linkedin-blue;
-    }
   }
 }

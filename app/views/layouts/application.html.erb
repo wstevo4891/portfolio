@@ -10,17 +10,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
   <%= render 'layouts/navbar' %>
 
-  <% if admin_signed_in? %>
+  <% if admin_user_signed_in? %>
     <%= render 'layouts/dash_nav' %>
   <% end %>
 
   <% if notice or alert %>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+      <div class="row justify-content-center">
+        <div class="col-sm-10 col-lg-8">
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
         </div>
@@ -33,6 +32,5 @@
   </main>
   
   <%= render 'layouts/footer' %>
-    
 </body>
 </html>

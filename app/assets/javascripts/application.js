@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
-//= require jquery_ujs
+//= require popper
 //= require bootstrap
+//= require jquery.turbolinks
 //= require select2
 //= require regex_selector
 //= require turbolinks

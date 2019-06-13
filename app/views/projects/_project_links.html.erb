@@ -1,11 +1,11 @@
 <div class="row">
 
-  <%= @projects.each do |project| %>
+  <% @projects.each do |project| %>
 
     <div class="col-md-6">
       <div class="project-link p-item">
         <a href="/work/<%= project.slug %>">
-          <img src="/assets/<%= project.cover %>" class="img-responsive">
+          <img src="<%= project.cover %>" class="img-fluid">
 
           <div class="project-overlay"></div>
 

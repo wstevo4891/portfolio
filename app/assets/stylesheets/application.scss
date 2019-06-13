@@ -12,17 +12,15 @@
  *
  */
 
- /* ALL APPLICATION IMPORTS 
-===========================================*/
+// ALL APPLICATION IMPORTS 
+// ===========================================
 
 // VENDOR IMPORTS
 @import "bootstrap";
-@import "compass/css3";
-@import "font-awesome-sprockets";
 @import "font-awesome";
 
 // LOCAL IMPORTS
-@import "helpers/*";
+@import "variables";
 @import "layout/*";
 @import "components/*";
 @import "pages/*";
