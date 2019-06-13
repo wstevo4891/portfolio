@@ -45,7 +45,7 @@
 
 .skills {
 
-  p, a {
+  p, button, a {
     color: white;
     position: absolute;
     cursor: pointer;
@@ -194,9 +194,20 @@
 .css3-skill {
   top: 16em;
   right: 14%;
-  transition: rotate scale 0.1s ease;
+  border: none;
+  background: transparent;
+  width: 65px;
+  height: 30px;
+  outline: none;
 
-  &:hover {
+  p {
+    position: relative;
+    pointer-events: none;
+    transition: all .5s ease;
+    margin-bottom: 0;
+  }
+
+  &:hover p {
     transform: translateX(-150px) rotateZ(-750deg) scale(12.5);
     color: #29a9df;
     z-index: 5;
