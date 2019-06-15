@@ -98,10 +98,10 @@
     - griffen-financial-product.jpg
   meta_title: Griffen Financial | Full Stack Rails Developer | Eric Stephenson
   meta_description: Ruby on Rails application showcasing integration with
-                    Dropbox and Zoho API's, PDF form uploads to Dropbox using
+                    Dropbox and Zoho APIs, PDF form uploads to Dropbox using
                     Wicked PDF, and dynamic nested forms with Cocoon.
-  summary: Ruby on Rails website using CarrierWave, Cocoon, Wicked_PDF,
-           Dropbox-SDK, and Ruby-Zoho for processing application forms.
+  summary:  Ruby on Rails web application for processing application forms.
+            Integrated with Dropbox, MailChimp, and Zoho APIs.
   site_link: https://dry-tor-4505.herokuapp.com/
   repo_link: https://github.com/wstevo4891/griffen
   description:
@@ -121,13 +121,15 @@
       and host a demo on Heroku.
   features:
     - Integration with Dropbox, Zoho CMS, and MailChimp APIs
-    - Bootstrap forms with add-and-remove nested models
+    - Bootstrap forms with add-and-remove nested fields
+    - Image uploads with Carrierwave
+    - PDF generation of completed forms
   apis:
     - Dropbox
-    - Zoho CMS
     - MailChimp
+    - Zoho CMS
   tech_stack:
-    - Ruby on Rails
+    - Ruby on Rails 4
     - PostgreSQL
     - jQuery
     - HTML5

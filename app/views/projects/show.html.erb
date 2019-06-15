@@ -51,64 +51,69 @@
         <div class="row">
           <div class="col-12">
             <div class="p-info">
-              
-              <p>Griffen Financial is a startup that aims to provide specialized
-              credit/debit card readers for legal marijuana merchants. The client
-              wanted a site to advertise the devices and provide online application
-              forms for buyers. Another request was that the site be integrated with
-              Dropbox, Zoho CMS, and Mandrill.</p>
+              <h2>About this project</h2>
+              <div class="line-break"></div>
 
+              <% @project.description.each do |paragraph| %>
+                <p><%= paragraph %></p>
+              <% end %>
+
+              <h3>Features</h3>
+              <ul className="project-list">
+                <% @project.features.each do |feat| %>
+                  <li><%= feat %></li>
+                <% end %>
+              </ul>
+
+              <h3>Tech Stack</h3>
+              <ul className="project-list">
+                <% @project.tech_stack.each do |tech| %>
+                  <li><%= tech %></li>
+                <% end %>
+              </ul>
+
+              <h3>APIs</h3>
+              <ul className="project-list">
+                <% @project.apis.each do |api| %>
+                  <li><%= api %></li>
+                <% end %>
+              </ul>
             </div>
+          </div>
+        </div>
 
-            <div class="row">
-              <a href="https://dry-tor-4505.herokuapp.com" target="_blank" class="site-link">Visit Website</a>
-            </div>
-
-            <div class="row">
-              <div class="project-img col-md-8 col-md-offset-2">
-                <%= image_tag("griffen-home-page.png", class: "img-responsive") %>
-              </div>
-            </div>
-            <br>
-
+        <%# Full Page image %>
+        <div class="row">
+          <div class="col-12">
             <div class="p-info">
-
-              <h4>My Responsiblities</h4>
-              <ul>
-                <li>Building the site from the ground up in Ruby on Rails</li>
-                <li>Coding the entire backend and integrating with Dropbox and Zoho API</li>
-                <li>Developing the frontend views from a design template</li>
-                <li>Deploying the site on an Apache server with Ubuntu OS</li>
-              </ul>
-              <br>
-
-              <h4>Technology Stack</h4>
-              <ul>
-                <li>Ruby on Rails</li>
-                <li>Bootstrap SASS</li>
-                <li>jQuery</li>
-                <li>Ruby APIs</li>
-              </ul>
-
-              <p>I began this project in March, 2015, and launched a demo version online after four weeks. In the succeeding months, I completed the integrations requested and implemented multiple ruby gems for increased functionality. I used Carrierwave for image uploads on the forms and Cocoon for a form that needed image uploads from each shareholder or partner of the customer's business.</p>
-
-              <p>In July 2015, the project was put on hold indefinitely. I have since rebuilt Griffen Financial with
-              cleaner code and host a demo on Heroku.</p>
-
+              <h2>Desktop</h2>
               <div class="line-break"></div>
             </div>
 
-            <div class="p-info text-center">
-              <h2>Griffen Mobile</h2>
-
-              <div class="row">
-                <div class="mobile-image col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">
-                  <%= image_tag("griffen-mobile-full.png", class: "img-responsive") %>
+            <div class="row">
+              <div class="col-12">
+                <div class="project-img">
+                  <%= image_tag("griffen-home-page.png", class: "img-fluid") %>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div class="mobile-image col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-2">
-                  <%= image_tag("griffen-mobile-menu.png", class: "img-responsive") %>
-                </div>
+        <div class="row">
+          <div class="col-12 mt-5">
+            <div class="p-info">
+              <h2>Mobile</h2>
+              <div class="line-break"></div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="project-img col-sm-6">
+                <%= image_tag("griffen-mobile-full.png", class: "img-fluid") %>
+              </div>
+
+              <div class="project-img col-sm-6">
+                <%= image_tag("griffen-mobile-menu.png", class: "img-fluid") %>
               </div>
             </div>
           </div>

@@ -16,14 +16,6 @@
       <div class="<%= index.zero? ? 'carousel-item active' : 'carousel-item' %>">
         <img class="d-block w-100" src="<%= image %>" alt="First slide">
       </div>
-
-      <%
-=begin%>
- <div class="<%= index.zero? ? 'carousel-item active' : 'carousel-item' %>">
-        <div class="slide-image" style="background-image: url('<%= image %>')"></div>
-      </div> 
-<%
-=end%>
     <% end %>
   </div>
 
@@ -50,13 +42,16 @@
 
 <script>
   $(document).ready(function() {
-    $slider = $('#projectSlider');
-    $buttons = $('.carousel-control-prev, .carousel-control-next');
+    var $slider = $('#projectSlider');
+    var $buttons = $('.carousel-control-prev, .carousel-control-next');
 
+    // Pause the carousel when the slide animation finishes
     $slider.on('slide.bs.carousel', function() {
       $slider.carousel('pause');
     });
 
+    // Remove the focus state on mouse leave
+    // so the opacity returns to 0.5
     $buttons.on('mouseleave', function() {
       $(this).blur();
     });
