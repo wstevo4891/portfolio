@@ -3,14 +3,15 @@
 // ============================================================================
 
 .carousel-inner {
-  height: 40em;
+  height: 55vw;
+  max-height: 40em;
   border: solid 1px #4d4d4d;
-  // box-shadow: 10px 10px 5px #888888;
 }
 
 .carousel-item {
   height: 100%;
   background-size: cover;
+  background-position: center;
 }
 
 // ==============================================
@@ -65,9 +66,14 @@ $black-1: rgba(0,0,0,1);
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   transition: all .15s ease-out;
+
+  @include bp-sm {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 // .left-arrow, .right-arrow {
