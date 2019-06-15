@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :posts
   end
 
+  get '/pages/:page' => 'pages#show'
+
   get '/work' => 'projects#index'
   get '/work/:slug' => 'projects#show'
 

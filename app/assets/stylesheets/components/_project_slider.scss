@@ -1,0 +1,135 @@
+// ============================================================================
+// Project Slider Styles
+// ============================================================================
+
+.carousel-inner {
+  height: 35em;
+  border: solid 1px #4d4d4d;
+  // box-shadow: 10px 10px 5px #888888;
+}
+
+// ==============================================
+// MIXIN: bg-gradient($dir)
+// ==============================================
+// Create a black gradient background in a
+// specified direction
+// 
+// @param $dir - left / right
+// 
+// Example: $dir = left
+// ==========================
+//   background: linear-gradient(
+//     to left, rgba(0,0,0,1) 0,rgba(0,0,0,0) 100%
+//   ) rgba(0,0,0,0);
+
+// Variables
+// ==========================
+
+// black transparent
+$black-0: rgba(0,0,0,0);
+
+// black opaque
+$black-1: rgba(0,0,0,1);
+
+@mixin bg-gradient($dir) {
+  background: linear-gradient(
+    to $dir, $black-1 0, $black-0 100%
+  ) $black-0;
+}
+
+// ========================================================
+// Carousel Buttons
+// ========================================================
+
+.carousel-control-prev,
+.carousel-control-next {
+  transition: all .15s ease-out;
+
+  &:hover span {
+    transform: scale(1.2);
+  }
+}
+
+.carousel-control-prev {
+  @include bg-gradient(right);
+}
+
+.carousel-control-next {
+  @include bg-gradient(left);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  transition: all .15s ease-out;
+}
+
+// .left-arrow, .right-arrow {
+//   display: block;
+//   position: absolute;
+//   height: 20px;
+//   width: 20px;
+//   top: calc(50% - 10px);
+//   transition: transform .2s ease-out .2s;
+//   right: 30px;
+
+//   &:before {
+//     top: -50%;
+//   }
+
+//   &:after {
+//     top: calc(-50% + -1px);
+//   }
+
+//   &:before, &:after {
+//     content: " ";
+//     position: absolute;
+//     right: 0;
+//     height: 100%;
+//     width: 2px;
+//     background-color: #6a6a6a;
+//     opacity: .75;
+//     transform-origin: 50% 100% 0;
+//     transition: transform .15s ease-out;
+//   }
+// }
+
+// .left-arrow {
+//   left: 30px;
+
+//   &:before, &:after {
+//     right: auto;
+//     left: 0;
+//   }
+
+//   &:before {
+//     transform: rotate(45deg);
+//   }
+
+//   &:after {
+//     transform: rotate(135deg);
+//   }
+// }
+
+// .right-arrow {
+//   &:before {
+//     transform: rotate(-45deg);
+//   }
+
+//   &:after {
+//     transform: rotate(-135deg);
+//   }
+// }
+
+// ========================================================
+// Carousel Indicators
+// ========================================================
+
+.carousel-indicators {
+  bottom: -65px;
+
+  li {
+    background-color: #505050;
+  }
+}

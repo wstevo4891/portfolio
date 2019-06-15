@@ -1,4 +1,119 @@
-<p id="notice"><%= notice %></p>
+<%# app/views/projects/show.html.erb %>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<div class="project-page">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="page-headline">
+              <%= @project.title %>
+            </h1>
+
+            <p class="technologies">
+              <%= top_tech(@project.tech_stack) %>
+            </p>
+
+            <div class="p-info">
+              <p><%= @project.summary %></p>
+            </div>
+          <div>
+        </div>
+
+        <div class="row">
+          <div class="micro-12 col-6">
+            <a
+              href="<%= @project.site_link %>"
+              target="_blank"
+              class="site-link top"
+            >
+              Visit Website
+            </a>
+          </div>
+
+          <div class="micro-12 col-6">
+            <a
+              href="<%= @project.repo_link %>"
+              target="_blank"
+              class="site-link"
+            >
+              Visit Repo
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mt-5 mb-5">
+            <%= render 'project_slider' %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="p-info">
+              
+              <p>Griffen Financial is a startup that aims to provide specialized
+              credit/debit card readers for legal marijuana merchants. The client
+              wanted a site to advertise the devices and provide online application
+              forms for buyers. Another request was that the site be integrated with
+              Dropbox, Zoho CMS, and Mandrill.</p>
+
+            </div>
+
+            <div class="row">
+              <a href="https://dry-tor-4505.herokuapp.com" target="_blank" class="site-link">Visit Website</a>
+            </div>
+
+            <div class="row">
+              <div class="project-img col-md-8 col-md-offset-2">
+                <%= image_tag("griffen-home-page.png", class: "img-responsive") %>
+              </div>
+            </div>
+            <br>
+
+            <div class="p-info">
+
+              <h4>My Responsiblities</h4>
+              <ul>
+                <li>Building the site from the ground up in Ruby on Rails</li>
+                <li>Coding the entire backend and integrating with Dropbox and Zoho API</li>
+                <li>Developing the frontend views from a design template</li>
+                <li>Deploying the site on an Apache server with Ubuntu OS</li>
+              </ul>
+              <br>
+
+              <h4>Technology Stack</h4>
+              <ul>
+                <li>Ruby on Rails</li>
+                <li>Bootstrap SASS</li>
+                <li>jQuery</li>
+                <li>Ruby APIs</li>
+              </ul>
+
+              <p>I began this project in March, 2015, and launched a demo version online after four weeks. In the succeeding months, I completed the integrations requested and implemented multiple ruby gems for increased functionality. I used Carrierwave for image uploads on the forms and Cocoon for a form that needed image uploads from each shareholder or partner of the customer's business.</p>
+
+              <p>In July 2015, the project was put on hold indefinitely. I have since rebuilt Griffen Financial with
+              cleaner code and host a demo on Heroku.</p>
+
+              <div class="line-break"></div>
+            </div>
+
+            <div class="p-info text-center">
+              <h2>Griffen Mobile</h2>
+
+              <div class="row">
+                <div class="mobile-image col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">
+                  <%= image_tag("griffen-mobile-full.png", class: "img-responsive") %>
+                </div>
+
+                <div class="mobile-image col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-2">
+                  <%= image_tag("griffen-mobile-menu.png", class: "img-responsive") %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

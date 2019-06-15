@@ -16,22 +16,14 @@ nav.navbar {
   .icon-bar {
     background-color: #F8F8F8;
   }
+
+  &.shrink {
+    padding: 0.3em;
+  }
 }
 
 nav.navbar, .navbar-header, .nav {
   transition: all 1s ease;
-}
-
-nav.navbar.shrink {
-  transform: translate(0, -28px);
-
-  .navbar-header {
-    transform: translate(0, 15px);
-  }
-
-  .nav {
-    transform: translate(0, 15px);
-  }
 }
 
 #logo {
