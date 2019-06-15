@@ -38,6 +38,9 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = false
 
+  # Additional asset paths
+  # config.assets.paths << Rails.root.join('public')
+
   # Live Reload Setup
   # config.middleware.insert_before Rack::Lock, Rack::LiveReload
 
