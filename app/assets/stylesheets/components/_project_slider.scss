@@ -3,9 +3,14 @@
 // ============================================================================
 
 .carousel-inner {
-  height: 35em;
+  height: 40em;
   border: solid 1px #4d4d4d;
   // box-shadow: 10px 10px 5px #888888;
+}
+
+.carousel-item {
+  height: 100%;
+  background-size: cover;
 }
 
 // ==============================================

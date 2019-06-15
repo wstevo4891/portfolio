@@ -20,10 +20,12 @@
     <% end %>
   </ul>
 
-  <h3>APIs</h3>
-  <ul className="project-list">
-    <% @project.apis.each do |api| %>
-      <li><%= api %></li>
-    <% end %>
-  </ul>
+  <% if @project.apis %>
+    <h3>APIs</h3>
+    <ul className="project-list">
+      <% @project.apis.each do |api| %>
+        <li><%= api %></li>
+      <% end %>
+    </ul>
+  <% end %>
 </div>

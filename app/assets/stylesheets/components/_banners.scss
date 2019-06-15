@@ -37,7 +37,7 @@
 .jumbotron-contact {
   @extend .jumbotron-small;
   background: image-url("lake-union.jpg") no-repeat center;
-  background-size: 1280px 100%;
+  background-size: cover;
   h1 {
     max-width: 10em;
     margin: 0 auto;
@@ -47,6 +47,7 @@
 .jumbotron-about {
   @extend .jumbotron-small;
   background: image-url("atacama-enhanced.jpg") no-repeat center center;
+  background-size: cover;
   height: 25em;
   h1 {
     top: 0.5em;

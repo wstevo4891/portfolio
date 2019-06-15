@@ -9,7 +9,7 @@
   <script src="https://use.fontawesome.com/042562367c.js"></script>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-controller="<%= controller_name %>-<%= action_name %>">
   <%= render 'layouts/navbar' %>
 
   <% if admin_user_signed_in? %>
