@@ -1,15 +1,15 @@
-// Project Slider custom JS
+// =========================================================
+// Custom Project Slider JS
+// =========================================================
 
 $(document).ready(function() {
   if ($('body').data('controller') !== 'projects-show') return;
 
-  console.log('slider rendered');
   var $slider = $('#projectSlider');
   var $buttons = $('.carousel-control-prev, .carousel-control-next');
 
   // Pause the carousel when the slide animation finishes
   $slider.on('slide.bs.carousel', function() {
-    console.log('transition end');
     $slider.carousel('pause');
   });
 

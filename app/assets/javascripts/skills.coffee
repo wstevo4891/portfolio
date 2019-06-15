@@ -1,6 +1,6 @@
-
+# =========================================================
 # HOME PAGE SKILLS ANIMATIONS
-#========================================
+# =========================================================
 
 skills_main = ->
 
@@ -132,4 +132,9 @@ skills_main = ->
     return
   return
 
-$(document).ready skills_main
+# Only call skills_main() on home page
+$(document).ready ->
+  if $('body').data('controller') != 'home-index'
+    return
+  else
+    skills_main()
