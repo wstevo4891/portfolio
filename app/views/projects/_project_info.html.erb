@@ -1,0 +1,29 @@
+<div class="p-info">
+  <h2>About this project</h2>
+  <div class="line-break"></div>
+
+  <% @project.description.each do |paragraph| %>
+    <p><%= paragraph %></p>
+  <% end %>
+
+  <h3>Features</h3>
+  <ul className="project-list">
+    <% @project.features.each do |feat| %>
+      <li><%= feat %></li>
+    <% end %>
+  </ul>
+
+  <h3>Tech Stack</h3>
+  <ul className="project-list">
+    <% @project.tech_stack.each do |tech| %>
+      <li><%= tech %></li>
+    <% end %>
+  </ul>
+
+  <h3>APIs</h3>
+  <ul className="project-list">
+    <% @project.apis.each do |api| %>
+      <li><%= api %></li>
+    <% end %>
+  </ul>
+</div>
