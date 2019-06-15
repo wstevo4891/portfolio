@@ -5,15 +5,16 @@
 
 footer { 
   padding-top: 1em;
-  background-color: $jade;
+  background-color: #343a40;
   border-top: solid 2px $mine-shaft;
-  color: $mine-shaft;
+  color: #fff;
   height: 140px;
   z-index: 0;
 
   p {
     position: relative;
     top: 2.5em;
+    // color: #fff;
   }
 }
 
@@ -28,7 +29,7 @@ footer {
   }
 
   a {
-    color: $mine-shaft;
+    color: #fff;
   }
 
   i {
