@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :projects
     resources :posts
+    resources :exhibits
   end
 
   get '/pages/:page' => 'pages#show'
