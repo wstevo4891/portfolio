@@ -1,0 +1,80 @@
+// Skill Buttons Styles
+
+.skill-btn {
+  height: 5em;
+  border: none;
+  color: #fff;
+  background: transparent;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px #000;
+  outline: none;
+  transition: all 0.5s ease;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.ruby-btn:hover, .rails-btn:hover {
+  transform: scale(1.5);
+  color: red;
+}
+
+.js-btn {
+  position: relative;
+  transition: none;
+}
+
+// .javascript-btn:hover {
+//   color: yellow;
+//   transform: scale(1.5);
+// }
+
+.css3-btn {
+  p {
+    position: relative;
+    pointer-events: none;
+    transition: all .5s ease;
+    margin-bottom: 0;
+  }
+
+  &:hover p {
+    transform: translateX(-150px) rotateZ(-750deg) scale(12.5);
+    color: #29a9df;
+    z-index: 5;
+  }
+}
+
+.react-btn:hover {
+  color: $react-blue;
+  transform: scale(1.5);
+}
+
+.bootstrap-btn {
+  ul {
+    transition: all .4s;
+  }
+
+  li {
+    display: inline;
+    list-style-type: none;
+    margin: -3px;
+    transition: all .4s;
+  }
+
+  &:hover {
+    ul {
+      transform: scale(1.5);
+    }
+
+    li {
+      height: 4em;
+      margin: 0;
+      padding: 5px;
+      border-right: solid 1px white;
+      color: $bootstrap-purple;
+      font-weight: 800;
+      text-shadow: 1px 1px 0px white;
+    }
+  }
+}

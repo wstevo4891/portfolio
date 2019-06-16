@@ -14,7 +14,11 @@
 //= require popper
 //= require bootstrap
 //= require jquery.turbolinks
+//= require jquery-ui
 //= require select2
 //= require regex_selector
 //= require turbolinks
-//= require_tree .
+//= require_tree ./components
+//= require ButtonApp
+//= require_tree ./button_apps
+//= require SkillsApp

@@ -1,0 +1,73 @@
+<div class="skills-box">
+  <div class="skillset skillset-default">
+    <h2>Skills</h2>
+
+    <span class="ruby-gif">
+      <%= image_tag("rotating-ruby.gif", class: "img-responsive") %>
+    </span>
+
+    <div class="skills-back">
+      <div class="flipper">
+        <div class="front"><span>Back</span></div>
+        <div class="back"><i class="fa fa-arrow-left"></i></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-sm-4">
+          <button class="skill-btn ruby-btn">Ruby</button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <button class="skill-btn js-btn jquery-1">
+            JavaScript
+            <span class="jquery-fine">Fine, click me!</span>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <button class="skill-btn css3-btn">
+            <p>CSS3</p>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <button class="skill-btn rails-btn">Ruby on Rails</button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <button class="skill-btn react-btn">ReactJS</button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <button class="skill-btn bootstrap-btn">
+            <ul>
+              <li>Boo</li>
+              <li>ts</li>
+              <li>trap</li>
+            </ul>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exhibit ruby-exhibit">
+    <%= render 'ruby_exhibit' %>
+  </div>
+
+  <div class="exhibit javascript-exhibit">
+    
+  </div>
+
+  <div class="exhibit css3-exhibit"></div>
+
+  <div class="exhibit rails-exhibit">
+    
+  </div>
+
+  <div class="exhibit react-exhibit"></div>
+
+  <div class="exhibit bootstrap-exhibit"></div>
+</div>
