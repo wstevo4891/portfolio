@@ -75,7 +75,10 @@
       border-right: solid 1px white;
       color: $bootstrap-purple;
       font-weight: 800;
-      text-shadow: 1px 1px 0px white;
+      text-shadow:  -1px -1px 1px #F8F8F8,
+                    1px -1px 1px #F8F8F8,
+                    -1px 1px 1px #F8F8F8,
+                    1px 1px 1px #F8F8F8;
     }
   }
 }

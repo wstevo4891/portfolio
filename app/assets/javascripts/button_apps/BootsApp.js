@@ -12,15 +12,28 @@ class BootsApp extends ButtonApp {
     var self = this;
 
     this.button.click(function() {
-      // $(this).removeClass('skill-btn').addClass('bootstrap-title');
       self.activateSkill();
 
-      self.showExhibit();
+      self.appendSpans();
+
+      $('.skills-back').fadeIn('slow');
     });
   }
 
   activateSkill() {
     super.activateSkill('bootstrap', 'Bootstrap');
+    $('.skillset').addClass('bootstrap');
+  }
+
+  appendSpans() {
+    $('.skillset .container')
+      .before('<span class="container-span">Container</span>');
+
+    $('.skillset .row').before('<span class="row-span">Row</span>');
+
+    $('.skill-btn').each( function() {
+      $(this).after('<span class="col-span">Col-6 Col-sm-4</span>');
+    });
   }
 
   showExhibit() {

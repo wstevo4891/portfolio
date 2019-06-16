@@ -26,9 +26,14 @@ class BackBtnApp {
   }
 
   resetActiveSkill() {
-    $('.active-skill').removeClass()
-                      .addClass('active-skill')
-                      .fadeOut('fast');
+    var $active = $('.active-skill');
+
+    if ($active.hasClass('bootstrap')) {
+      $('.container-span, .row-span, .col-span').remove();
+      $('.skillset').removeClass('bootstrap');
+    }
+
+    $active.removeClass().addClass('active-skill').text('Skills');
   }
 
   resetButtons() {

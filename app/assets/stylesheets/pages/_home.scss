@@ -1,6 +1,6 @@
 
 
-/* WELCOME PAGE STYLES 
+/* HOME PAGE STYLES 
 ===================================*/
 
 .project-section {
@@ -213,71 +213,6 @@
   top: 10px;
   left: 10px;
   color: #29a9df !important;
-}
-
-.skills-back {
-  display: none;
-  position: absolute;
-  top: 2.5em;
-  left: 2px;
-  background: transparent;
-  border: none;
-  perspective: 1000px;
-  cursor: pointer;
-
-  &:hover .flipper,
-  &.hover .flipper {
-    transform: rotateY(180deg);
-  }
-
-  &:focus {
-    outline: none;
-  }
-}
-
-// .skills-back:hover .flipper, .skills-back.hover .flipper {
-//   transform: rotateY(180deg);
-// }
-
-.skills-back, .front, .back {
-  width: 4em;
-  height: 2em;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-
-.front, .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-}
-
-.front {
-  left: 0;
-  z-index: 6;
-  transform: rotateY(0deg);
-}
-
-.back {
-  left: -5px;
-  z-index: 5;
-  transform: rotateY(180deg);
-}
-
-.exhibit {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 30%;
-  height: 475px;
-  background-color: #333;
-  transition: all 0.5s ease;
 }
 
 /* MEDIA QUERIES 
