@@ -1,0 +1,22 @@
+---
+- title: Ruby
+  description:
+  body:
+
+- title: JavaScript
+  description: 
+  body: "```javascript\n
+        <%= File.open(Rails.root.join('app/assets/javascripts/button_apps/JSApp.js')).read %>
+        ```"
+
+- title: CSS3
+  description:
+  body: 
+
+- title: Ruby on Rails
+  description:
+  body:
+
+- title: ReactJS
+  description:
+  body:
