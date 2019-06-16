@@ -2,16 +2,22 @@
   <div class="skillset skillset-default">
     <h2>Skills</h2>
 
+    <h3 class="active-skill"></h3>
+
     <span class="ruby-gif">
-      <%= image_tag("rotating-ruby.gif", class: "img-responsive") %>
+      <%= image_tag 'rotating-ruby.gif', class: 'img-fluid' %>
     </span>
 
-    <div class="skills-back">
+    <span class="react-logo">
+      <%= image_tag 'react.svg', class: 'img-fluid rotate' %>
+    </span>
+
+    <button class="skills-back">
       <div class="flipper">
         <div class="front"><span>Back</span></div>
         <div class="back"><i class="fa fa-arrow-left"></i></div>
       </div>
-    </div>
+    </button>
 
     <div class="container">
       <div class="row">
@@ -57,7 +63,7 @@
     <%= render 'ruby_exhibit' %>
   </div>
 
-  <div class="exhibit javascript-exhibit">
+  <div class="exhibit js-exhibit">
     
   </div>
 

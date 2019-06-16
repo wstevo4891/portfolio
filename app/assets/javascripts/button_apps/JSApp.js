@@ -73,10 +73,33 @@ class JSApp extends ButtonApp {
     this.button.click(function() {
       $('.jquery-fine').slideUp('slow');
 
-      $(this).removeClass('skill-btn jquery-5').addClass('js-title');
+      self.resetButton();
+
+      // $(this).removeClass('skill-btn jquery-5').addClass('js-title');
+      self.activateSkill();
 
       self.showExhibit();
     });
+  }
+
+  resetButton() {
+    this.button.removeClass('jquery-5')
+               .addClass('jquery-1')
+               .css(this.defaultStyle());
+  }
+
+  defaultStyle() {
+    return {
+      top: '',
+      left: '',
+      color: '',
+      transition: '',
+      display: ''
+    };
+  }
+
+  activateSkill() {
+    super.activateSkill('js', 'JavaScript');
   }
 
   showExhibit() {

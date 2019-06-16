@@ -7,6 +7,12 @@ class ButtonApp {
     this.button = $(btnClass);
   }
 
+  activateSkill(skill, text) {
+    $('.active-skill').addClass(skill)
+                      .text(text)
+                      .fadeIn('slow');
+  }
+
   showExhibit(exhibit) {
     $('.skill-btn').fadeOut('fast');
 

@@ -32,12 +32,18 @@ class RubyApp extends ButtonApp {
     var self = this;
 
     this.button.click(function() {
-      $(this).removeClass('skill-btn').addClass('ruby-title');
+      // $(this).removeClass('skill-btn').addClass('ruby-title');
 
       $('.ruby-gif').fadeOut('fast');
 
+      self.activateSkill();
+
       return self.showExhibit();
     });
+  }
+
+  activateSkill() {
+    super.activateSkill('ruby', 'Ruby');
   }
 
   showExhibit() {

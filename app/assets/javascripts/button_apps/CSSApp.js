@@ -12,10 +12,15 @@ class CSSApp extends ButtonApp {
     var self = this;
 
     this.button.click(function() {
-      $(this).removeClass('skill-btn').addClass('css3-title');
+      // $(this).removeClass('skill-btn').addClass('css3-title');
+      self.activateSkill();
 
       return self.showExhibit();
     });
+  }
+
+  activateSkill() {
+    super.activateSkill('css', 'CSS3');
   }
 
   showExhibit() {

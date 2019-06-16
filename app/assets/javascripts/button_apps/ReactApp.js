@@ -18,12 +18,12 @@ class ReactApp extends ButtonApp {
       function() {
         if ($(this).hasClass('react-title')) return;
 
-        $('.ruby-gif').fadeIn('fast');
+        $('.react-logo').fadeIn('fast');
 
       }, function() {
         if ($(this).hasClass('react-title')) return;
 
-        $('.ruby-gif').fadeOut('fast');
+        $('.react-logo').fadeOut('fast');
       }
     );
   }
@@ -32,12 +32,18 @@ class ReactApp extends ButtonApp {
     var self = this;
 
     this.button.click(function() {
-      $(this).removeClass('skill-btn').addClass('react-title');
+      // $(this).removeClass('skill-btn').addClass('react-title');
 
-      $('.ruby-gif').fadeOut('fast');
+      $('.react-logo').fadeOut('fast');
+
+      self.activateSkill();
 
       return self.showExhibit();
     });
+  }
+
+  activateSkill() {
+    super.activateSkill('react', 'ReactJS');
   }
 
   showExhibit() {

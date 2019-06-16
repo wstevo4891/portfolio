@@ -33,10 +33,15 @@ class RailsApp extends ButtonApp {
     var self = this;
 
     this.button.click(function() {
-      $(this).removeClass('skill-btn').addClass('rails-title');
+      // $(this).removeClass('skill-btn').addClass('rails-title');
+      self.activateSkill();
 
       return self.showExhibit();
     });
+  }
+
+  activateSkill() {
+    super.activateSkill('rails', 'Ruby on Rails');
   }
 
   showExhibit() {

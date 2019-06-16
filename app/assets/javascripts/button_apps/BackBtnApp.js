@@ -15,26 +15,43 @@ class BackBtnApp {
     this.button.click(function() {
       $(this).fadeOut('slow');
 
-      $('[class$=-title]').fadeOut('slow');
+      // $('[class$=-title]').fadeOut('slow');
 
-      self.resetButtons();
+      // self.resetButtons();
+
+      self.resetActiveSkill();
 
       self.hideExhibit();
     });
   }
 
+  resetActiveSkill() {
+    $('.active-skill').removeClass()
+                      .addClass('active-skill')
+                      .fadeOut('fast');
+  }
+
   resetButtons() {
-    $('.ruby-title').removeClass('ruby-title').addClass('ruby-btn');
+    $('.ruby-title').removeClass('ruby-title').addClass('skill-btn ruby-btn');
 
     $('.js-title').removeClass('js-title')
-                  .addClass('javascript-btn jquery-1');
+                  .addClass('skill-btn js-btn jquery-1')
+                  .css({
+                    top: '',
+                    left: '',
+                    color: '',
+                    transition: '',
+                    display: ''
+                  });
 
-    $('.ror-title').removeClass('ror-title').addClass('ror-btn');
+    $('.css3-title').removeClass('css3-title').addClass('skill-btn css3-btn');
+
+    $('.rails-title').removeClass('rails-title').addClass('skill-btn rails-btn');
+
+    $('.react-title').removeClass('react-title').addClass('skill-btn react-btn');
 
     $('.bootstrap-title').removeClass('bootstrap-title')
-                         .addClass('bootstrap-btn');
-
-    $('.css3-title').removeClass('css3-title').addClass('css3-btn');
+                         .addClass('skill-btn bootstrap-btn');
 
     $('.skillset').removeClass('skillset-ror skillset-deep')
                   .addClass('skillset-default');
@@ -50,7 +67,7 @@ class BackBtnApp {
     }, {
       duration: 300,
       complete: function() {
-        return $("[class$=-btn]").delay(500).fadeIn('slow');
+        return $('.skill-btn').delay(500).fadeIn('slow');
       }
     });
   }

@@ -1,0 +1,68 @@
+// ==================================================================
+// Skills App Styles
+// ==================================================================
+
+.active-skill {
+  display: none;
+  transform: scale(1.5);
+
+  &.ruby {
+    color: $ruby-red;
+  }
+
+  &.js {
+    color: $javascript-yellow;
+  }
+
+  &.css {
+    color: $css-blue;
+  }
+
+  &.rails {
+    color: $ruby-red;
+  }
+
+  &.react {
+    color: $react-blue;
+  }
+
+  &.bootstrap {
+    color: $bootstrap-purple;
+    font-weight: 800;
+    text-shadow: 1px 1px 0px white;
+  }
+}
+
+// ==============================================
+// Logos
+// ==============================================
+.ruby-gif, .react-logo {
+  display: none;
+  position: absolute;
+  left: 50%;
+  z-index: 0;
+}
+
+.ruby-gif {
+  width: 30%;
+  margin-left: -15%;
+}
+
+.react-logo {
+  top: 15%;
+  width: 40%;
+  margin-left: -20%;
+}
+
+.rotate {
+  animation: logo-spin infinite 10s linear;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
