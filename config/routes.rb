@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     resources :exhibits
   end
 
+  get '/exhibits' => 'exhibits#index'
+  get '/exhibits/:title' => 'exhibits#show'
+
   get '/pages/:page' => 'pages#show'
 
   get '/work' => 'projects#index'

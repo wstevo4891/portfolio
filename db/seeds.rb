@@ -30,6 +30,17 @@ def seed_aws_image(file)
   end
 end
 
+def load_exhibit(file, type)
+  path = Rails.root.join(file)
+  body = File.open(path).read
+
+  "```#{type}\n #{body}\n ```"
+end
+
+# =========================================================
+# PROJECTS
+# =========================================================
+
 Project.delete_all
 
 puts 'Loading projects ========================='
@@ -58,11 +69,15 @@ projects.each do |project|
   )
 end
 
-posts = load_yaml('posts')
+# =========================================================
+# POSTS
+# =========================================================
 
 Post.delete_all
 
 puts 'Loading posts ============================'
+
+posts = load_yaml('posts')
 
 posts.each do |post|
   puts "Loading post: #{post['title']}"
@@ -84,4 +99,24 @@ posts.each do |post|
       body: section['body']
     )
   end
+end
+
+# =========================================================
+# EXHIBITS
+# =========================================================
+
+Exhibit.delete_all
+
+puts 'Loading exhibits ========================='
+
+exhibits = load_yaml('exhibits')
+
+exhibits.each do |exhibit|
+  puts "Creating exhibit: #{exhibit['title']}"
+
+  Exhibit.create!(
+    title: exhibit['title'],
+    description: exhibit['description'],
+    body: exhibit['body']
+  )
 end
