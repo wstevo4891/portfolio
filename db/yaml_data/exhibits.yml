@@ -1,5 +1,6 @@
 ---
 - title: Ruby
+  slug: ruby
   code: ruby
   description:
   body:
@@ -10,16 +11,19 @@
   body: app/assets/javascripts/button_apps/JSApp.js
 
 - title: CSS3
+  slug: css3
   code: css
   description:
   body: 
 
 - title: Ruby on Rails
+  slug: ruby-on-rails
   code: ruby
   description:
   body:
 
 - title: ReactJS
+  slug: react-js
   code: javascript
   description:
   body:

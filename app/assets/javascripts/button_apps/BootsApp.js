@@ -35,8 +35,4 @@ class BootsApp extends ButtonApp {
       $(this).after('<span class="col-span">Col-6 Col-sm-4</span>');
     });
   }
-
-  showExhibit() {
-    super.showExhibit('.bootstrap-exhibit');
-  }
 }

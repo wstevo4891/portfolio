@@ -15,10 +15,6 @@ class BackBtnApp {
     this.button.click(function() {
       $(this).fadeOut('slow');
 
-      // $('[class$=-title]').fadeOut('slow');
-
-      // self.resetButtons();
-
       self.resetActiveSkill();
 
       self.hideExhibit();
@@ -36,36 +32,17 @@ class BackBtnApp {
     $active.removeClass().addClass('active-skill').text('Skills');
   }
 
-  resetButtons() {
-    $('.ruby-title').removeClass('ruby-title').addClass('skill-btn ruby-btn');
-
-    $('.js-title').removeClass('js-title')
-                  .addClass('skill-btn js-btn jquery-1')
-                  .css({
-                    top: '',
-                    left: '',
-                    color: '',
-                    transition: '',
-                    display: ''
-                  });
-
-    $('.css3-title').removeClass('css3-title').addClass('skill-btn css3-btn');
-
-    $('.rails-title').removeClass('rails-title').addClass('skill-btn rails-btn');
-
-    $('.react-title').removeClass('react-title').addClass('skill-btn react-btn');
-
-    $('.bootstrap-title').removeClass('bootstrap-title')
-                         .addClass('skill-btn bootstrap-btn');
-
-    $('.skillset').removeClass('skillset-ror skillset-deep')
-                  .addClass('skillset-default');
-  }
-
   hideExhibit() {
-    $('[class$=-exhibit]').animate({
+    var $exhibit = $('#exhibit');
+
+    $exhibit.animate({
       left: '100%'
-    }, 100);
+    }, {
+      duration: 100,
+      complete: function() {
+        $exhibit.html('');
+      }
+    });
 
     $('.skillset').animate({
       width: '100%'

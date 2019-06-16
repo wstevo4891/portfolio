@@ -1,7 +1,7 @@
 # app/controllers/exhibits_controller.rb
 
 # Public Controller for exhibits API
-class ExhibitsController < ApplicationController  
+class ExhibitsController < ApplicationController
   # GET /exhibits
   def index
     @exhibits = Exhibit.all
@@ -10,9 +10,13 @@ class ExhibitsController < ApplicationController
   end
 
   # GET /exhibits/Ruby
+  # GET /exhibits/Ruby.json
   def show
-    @exhibit = Exhibit.find_by(title: params[:title])
+    @exhibit = Exhibit.find_by(slug: params[:slug])
 
-    render json: @exhibit, status: :ok
+    respond_to do |format|
+      format.html { render partial: 'exhibit_code', status: :ok }
+      format.json { render json: @exhibit, status: :ok }
+    end
   end
 end  

@@ -38,7 +38,7 @@ class ReactApp extends ButtonApp {
 
       self.activateSkill();
 
-      return self.showExhibit();
+      return self.fetchExhibit();
     });
   }
 
@@ -46,7 +46,7 @@ class ReactApp extends ButtonApp {
     super.activateSkill('react', 'ReactJS');
   }
 
-  showExhibit() {
-    super.showExhibit('.react-exhibit');
+  fetchExhibit() {
+    super.fetchExhibit('.react-js');
   }
 }

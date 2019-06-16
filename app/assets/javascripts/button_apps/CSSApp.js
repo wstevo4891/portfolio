@@ -15,7 +15,7 @@ class CSSApp extends ButtonApp {
       // $(this).removeClass('skill-btn').addClass('css3-title');
       self.activateSkill();
 
-      return self.showExhibit();
+      return self.fetchExhibit();
     });
   }
 
@@ -23,7 +23,7 @@ class CSSApp extends ButtonApp {
     super.activateSkill('css', 'CSS3');
   }
 
-  showExhibit() {
-    super.showExhibit('.css3-exhibit');
+  fetchExhibit() {
+    super.fetchExhibit('css3');
   }
 }

@@ -36,7 +36,7 @@ class RailsApp extends ButtonApp {
       // $(this).removeClass('skill-btn').addClass('rails-title');
       self.activateSkill();
 
-      return self.showExhibit();
+      return self.fetchExhibit();
     });
   }
 
@@ -44,7 +44,7 @@ class RailsApp extends ButtonApp {
     super.activateSkill('rails', 'Ruby on Rails');
   }
 
-  showExhibit() {
-    super.showExhibit('.rails-exhibit');
+  fetchExhibit() {
+    super.showExhibit('ruby-on-rails');
   }
 }

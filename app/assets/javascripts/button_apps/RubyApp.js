@@ -38,7 +38,7 @@ class RubyApp extends ButtonApp {
 
       self.activateSkill();
 
-      return self.showExhibit();
+      return self.fetchExhibit();
     });
   }
 
@@ -46,7 +46,7 @@ class RubyApp extends ButtonApp {
     super.activateSkill('ruby', 'Ruby');
   }
 
-  showExhibit() {
-    super.showExhibit('.ruby-exhibit');
+  fetchExhibit() {
+    super.fetchExhibit('.ruby');
   }
 }

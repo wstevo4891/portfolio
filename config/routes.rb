@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   get '/exhibits' => 'exhibits#index'
-  get '/exhibits/:title' => 'exhibits#show'
+  get '/exhibits/:slug' => 'exhibits#show'
 
   get '/pages/:page' => 'pages#show'
 

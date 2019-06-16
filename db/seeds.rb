@@ -31,8 +31,9 @@ def seed_aws_image(file)
 end
 
 def load_exhibit(file, code)
-  path = Rails.root.join(file)
-  body = File.open(path).read
+  return '' if file.nil?
+
+  body = File.open(Rails.root.join(file)).read
 
   "```#{code}\n #{body}\n ```"
 end
@@ -116,7 +117,9 @@ exhibits.each do |exhibit|
 
   Exhibit.create!(
     title: exhibit['title'],
+    slug: exhibit['slug'],
+    code: exhibit['code'],
     description: exhibit['description'],
-    body: exhibit['body']
+    body: load_exhibit(exhibit['body'], exhibit['code'])
   )
 end

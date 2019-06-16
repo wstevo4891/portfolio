@@ -75,10 +75,9 @@ class JSApp extends ButtonApp {
 
       self.resetButton();
 
-      // $(this).removeClass('skill-btn jquery-5').addClass('js-title');
       self.activateSkill();
 
-      self.showExhibit();
+      self.fetchExhibit();
     });
   }
 
@@ -102,7 +101,7 @@ class JSApp extends ButtonApp {
     super.activateSkill('js', 'JavaScript');
   }
 
-  showExhibit() {
-    super.showExhibit('.js-exhibit');
+  fetchExhibit() {
+    super.fetchExhibit('javascript');
   }
 }
