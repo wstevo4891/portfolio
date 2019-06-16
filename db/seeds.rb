@@ -30,11 +30,11 @@ def seed_aws_image(file)
   end
 end
 
-def load_exhibit(file, type)
+def load_exhibit(file, code)
   path = Rails.root.join(file)
   body = File.open(path).read
 
-  "```#{type}\n #{body}\n ```"
+  "```#{code}\n #{body}\n ```"
 end
 
 # =========================================================
