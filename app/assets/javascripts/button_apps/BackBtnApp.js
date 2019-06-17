@@ -2,14 +2,14 @@
  * @file app/assets/javascripts/skill_apps/BackBtnApp.js
  */
 
-class BackBtnApp {
+class BackBtnApp extends ButtonApp {
   constructor() {
-    this.button = $('.skills-back');
+    super('.skills-back');
 
-    this.handleBackBtnClick();
+    this.handleClick();
   }
 
-  handleBackBtnClick() {
+  handleClick() {
     var self = this;
 
     this.button.click(function() {
@@ -24,19 +24,7 @@ class BackBtnApp {
   }
 
   resetJSButton() {
-    $('.js-btn').removeClass()
-                .addClass('skill-btn js-btn jquery-1')
-                .css(this.defaultStyle());
-  }
-
-  defaultStyle() {
-    return {
-      top: '',
-      left: '',
-      color: '',
-      transition: '',
-      display: ''
-    };
+    super.resetJSButton()
   }
 
   resetActiveSkill() {

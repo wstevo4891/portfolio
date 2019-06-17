@@ -12,14 +12,20 @@ class ButtonApp {
                       .text(text);
   }
 
-  showExhibit() {
-    $('.skill-btn').fadeOut('fast');
+  resetJSButton() {
+    $('.js-btn').removeClass()
+                .addClass('skill-btn js-btn jquery-1')
+                .css(this.jsDefault());
+  }
 
-    $('.skills-back').fadeIn('slow');
-
-    $('.skillset').animate({ width: '30%' });
-
-    $('#exhibit').animate({ left: '30%' });
+  jsDefault() {
+    return {
+      top: '',
+      left: '',
+      color: '',
+      transition: '',
+      display: ''
+    };
   }
 
   fetchExhibit(slug) {
@@ -39,5 +45,15 @@ class ButtonApp {
         self.showExhibit();
       }
     })
+  }
+
+  showExhibit() {
+    $('.skill-btn').fadeOut('fast');
+
+    $('.skills-back').fadeIn('slow');
+
+    $('.skillset').animate({ width: '30%' });
+
+    $('#exhibit').animate({ left: '30%' });
   }
 }

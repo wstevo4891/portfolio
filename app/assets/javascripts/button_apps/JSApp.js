@@ -9,13 +9,13 @@ class JSApp extends ButtonApp {
   }
 
   setEvents() {
-    this.handleMouseOver();
-    this.handleClick();
-  }
-
-  handleMouseOver() {
     var self = this;
 
+    this.handleMouseOver(self);
+    this.handleClick(self);
+  }
+
+  handleMouseOver(self) {
     this.button.mouseover(function() {
       var $this = $(this);
       var animation;
@@ -68,9 +68,7 @@ class JSApp extends ButtonApp {
     );
   }
 
-  handleClick() {
-    var self = this;
-
+  handleClick(self) {
     this.button.click(function() {
       $('.jquery-fine').slideUp('slow');
 
@@ -83,19 +81,7 @@ class JSApp extends ButtonApp {
   }
 
   resetButton() {
-    this.button.removeClass('jquery-5')
-               .addClass('jquery-1')
-               .css(this.defaultStyle());
-  }
-
-  defaultStyle() {
-    return {
-      top: '',
-      left: '',
-      color: '',
-      transition: '',
-      display: ''
-    };
+    super.resetJSButton()
   }
 
   activateSkill() {
