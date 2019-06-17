@@ -17,9 +17,9 @@ class ButtonApp {
 
     $('.skills-back').fadeIn('slow');
 
-    $('.skillset').animate({ width: '70%' });
+    $('.skillset').animate({ width: '30%' });
 
-    $('#exhibit').animate({ left: '70%' });
+    $('#exhibit').animate({ left: '30%' });
   }
 
   fetchExhibit(slug) {
@@ -34,8 +34,6 @@ class ButtonApp {
         console.error(err);
       },
       success: function(data) {
-        console.log('Praise the Sun, it worked!');
-
         $('#exhibit').html(data);
 
         self.showExhibit();

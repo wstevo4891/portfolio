@@ -25,11 +25,6 @@
   transition: none;
 }
 
-// .javascript-btn:hover {
-//   color: yellow;
-//   transform: scale(1.5);
-// }
-
 .css3-btn {
   p {
     position: relative;
@@ -39,7 +34,6 @@
   }
 
   &:hover p {
-    // transform: translateX(-150px) rotateZ(-750deg) scale(12.5);
     transform: translateX(-150px) rotateZ(-390deg) scale(12.5);
     color: $css-blue;
     z-index: 5;

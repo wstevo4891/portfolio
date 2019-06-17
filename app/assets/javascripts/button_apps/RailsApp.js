@@ -45,6 +45,6 @@ class RailsApp extends ButtonApp {
   }
 
   fetchExhibit() {
-    super.showExhibit('ruby-on-rails');
+    super.fetchExhibit('ruby-on-rails');
   }
 }

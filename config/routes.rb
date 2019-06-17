@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
   get '/contact' => 'contact#index'
 
+  get '/debug' => 'debug#index'
+
   # get '/work' => 'pages#work'
   # get '/about' => 'pages#about'
   # get 'pages/blog'

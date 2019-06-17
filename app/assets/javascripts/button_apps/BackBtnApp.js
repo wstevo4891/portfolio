@@ -15,10 +15,28 @@ class BackBtnApp {
     this.button.click(function() {
       $(this).fadeOut('slow');
 
+      self.resetJSButton();
+
       self.resetActiveSkill();
 
       self.hideExhibit();
     });
+  }
+
+  resetJSButton() {
+    $('.js-btn').removeClass()
+                .addClass('skill-btn js-btn jquery-1')
+                .css(this.defaultStyle());
+  }
+
+  defaultStyle() {
+    return {
+      top: '',
+      left: '',
+      color: '',
+      transition: '',
+      display: ''
+    };
   }
 
   resetActiveSkill() {

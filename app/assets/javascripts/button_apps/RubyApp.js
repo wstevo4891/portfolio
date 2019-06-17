@@ -32,8 +32,6 @@ class RubyApp extends ButtonApp {
     var self = this;
 
     this.button.click(function() {
-      // $(this).removeClass('skill-btn').addClass('ruby-title');
-
       $('.ruby-gif').fadeOut('fast');
 
       self.activateSkill();
@@ -47,6 +45,6 @@ class RubyApp extends ButtonApp {
   }
 
   fetchExhibit() {
-    super.fetchExhibit('.ruby');
+    super.fetchExhibit('ruby');
   }
 }

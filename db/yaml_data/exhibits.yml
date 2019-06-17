@@ -3,9 +3,10 @@
   slug: ruby
   code: ruby
   description:
-  body:
+  body: lib/services/search_results.rb
 
 - title: JavaScript
+  slug: javascript
   code: javascript
   description: 
   body: app/assets/javascripts/button_apps/JSApp.js
@@ -14,16 +15,16 @@
   slug: css3
   code: css
   description:
-  body: 
+  body: app/assets/stylesheets/components/_skill_buttons.scss
 
 - title: Ruby on Rails
   slug: ruby-on-rails
   code: ruby
   description:
-  body:
+  body: app/controllers/admin/projects_controller.rb
 
 - title: ReactJS
   slug: react-js
   code: javascript
   description:
-  body:
+  body: db/code_files/GenreSlidersContainer.txt

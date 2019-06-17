@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 201906211205533) do
 
   create_table "exhibits", force: :cascade do |t|
     t.string   "title"
+    t.string   "slug"
     t.string   "code"
     t.text     "description"
     t.text     "body"

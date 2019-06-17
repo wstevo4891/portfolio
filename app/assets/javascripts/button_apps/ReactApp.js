@@ -47,6 +47,6 @@ class ReactApp extends ButtonApp {
   }
 
   fetchExhibit() {
-    super.fetchExhibit('.react-js');
+    super.fetchExhibit('react-js');
   }
 }

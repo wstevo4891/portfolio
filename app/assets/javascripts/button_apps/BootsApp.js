@@ -21,8 +21,25 @@ class BootsApp extends ButtonApp {
   }
 
   activateSkill() {
+    this.resetJSButton();
     super.activateSkill('bootstrap', 'Bootstrap');
     $('.skillset').addClass('bootstrap');
+  }
+
+  resetJSButton() {
+    $('.js-btn').removeClass()
+                .addClass('skill-btn js-btn jquery-1')
+                .css(this.defaultStyle());
+  }
+
+  defaultStyle() {
+    return {
+      top: '',
+      left: '',
+      color: '',
+      transition: '',
+      display: ''
+    };
   }
 
   appendSpans() {

@@ -3,10 +3,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h2><%= @exhibit.title %></h2>
+      <h2>Code Exhibit</h2>
 
-      <div class="text-left post-view">
-        <%= markdown(@exhibit.body) %>
+      <div class="text-left">
+        <%#= one_dark(@exhibit.body) %>
+        <%= coderay(@exhibit.body, @exhibit.code).html_safe %>
       </div>
     </div>
   </div>
