@@ -9,8 +9,6 @@ class Project < ActiveRecord::Base
   end
 
   def pretty_print
-    h = JSON.parse(to_json)
-
-    JSON.pretty_generate(h)
+    JSON.pretty_generate(attributes)
   end
 end

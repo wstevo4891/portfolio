@@ -15,9 +15,7 @@ class SkillsApp {
 }
 
 $(document).ready(function() {
-  var $ctlr = $('body').data('controller');
-
-  if ($ctlr !== 'home-index') return;
+  if ($('body').data('controller') !== 'home-index') return;
 
   var skillsApp = new SkillsApp();
 });

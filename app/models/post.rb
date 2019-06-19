@@ -7,5 +7,12 @@ class Post < ActiveRecord::Base
 
 	def self.attributes
     attribute_names.map(&:to_sym)
+	end
+	
+	def pretty_print
+		h = attributes
+		h[:sections] = sections.map(&:attributes)
+
+    JSON.pretty_generate(h)
   end
 end

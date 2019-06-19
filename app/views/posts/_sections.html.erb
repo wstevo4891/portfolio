@@ -1,8 +1,6 @@
 <% @post.sections.each do |section| %>
   <h2><%= section.header %></h2>
 
-  <img src="<%= section.image %>" class="img-fluid" alt="section image">
-
   <div class="text-left post-view">
     <%= markdown(section.body) %>
   </div>

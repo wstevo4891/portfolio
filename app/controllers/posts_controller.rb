@@ -9,5 +9,11 @@ class PostsController < ApplicationController
   # GET /posts/:slug.json
   def show
     @post = Post.find_by(slug: params[:slug])
+
+    respond_to do |format|
+      format.html { render :show, status: :ok }
+      format.json { render json: @post, status: :ok }
+      format.text { render plain: @post.pretty_print }
+    end
   end
 end
