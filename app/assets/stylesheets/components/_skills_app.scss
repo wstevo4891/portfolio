@@ -3,7 +3,7 @@
 // ==================================================================
 
 .active-skill {
-  transition: all .5s ease;
+  transition: all 1s ease;
 
   &.ruby {
     color: $ruby-red;
