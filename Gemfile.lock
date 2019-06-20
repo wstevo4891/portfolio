@@ -100,7 +100,7 @@ GEM
     ffi (1.9.10)
     figaro (1.1.1)
       thor (~> 0.14)
-    fog-aws (3.2.0)
+    fog-aws (3.3.0)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
       fog-xml (~> 0.1)
@@ -330,7 +330,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.5)
   faker
   figaro
-  fog-aws (= 3.2.0)
+  fog-aws (= 3.3.0)
   font-awesome-rails
   guard-rspec
   jbuilder (~> 2.0)
