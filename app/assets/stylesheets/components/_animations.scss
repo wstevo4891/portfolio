@@ -172,24 +172,30 @@
 }
 
 .p-item {
-  @media only screen and (min-width: 480px) and (max-width: 1199px) {
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
     height: 20em;
     width: 30em;
   }
+
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 26em;
+  }
+
   @media only screen and (min-width: 1200px) {
     height: 25em;
     width: 35em;
   }
-  img {
-    @media only screen and (min-width: 480px) and (max-width: 1199px) {
-      height: 20em;
-      width: 35em;
-    }
-    @media only screen and (min-width: 1200px) {
-      height: 25em;
-      width: 40em;
-    }
-  }
+
+  // img {
+  //   @media only screen and (min-width: 480px) and (max-width: 1199px) {
+  //     height: 20em;
+  //     width: 35em;
+  //   }
+  //   @media only screen and (min-width: 1200px) {
+  //     height: 25em;
+  //     width: 40em;
+  //   }
+  // }
 }
 
 // Bolt Network ####

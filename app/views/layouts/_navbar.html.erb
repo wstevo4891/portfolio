@@ -1,6 +1,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="/">Eric Stephenson</a>
+  <div id="nav-container" class="container">
+    <%# navbar-brand link %>
+    <%= link_to 'Eric Stephenson', root_path, class: brand_class %>
     <button
       class="navbar-toggler"
       type="button"

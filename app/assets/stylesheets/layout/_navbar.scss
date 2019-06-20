@@ -3,6 +3,19 @@
 /* NAVIGATION STYLES 
 ==============================================*/
 
+.navbar-dark .navbar-brand {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.5s ease;
+
+  &.active {
+    color: #fff;
+  }
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
 nav.navbar {
   margin: 0;
   padding: 1.2em;
