@@ -1,4 +1,6 @@
 
+require 'carrierwave/storage/fog'
+
 # Use local storage in development & test
 if Rails.env.development? || Rails.env.test?
   CarrierWave.configure do |config|
