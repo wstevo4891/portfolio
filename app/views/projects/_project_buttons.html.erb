@@ -1,21 +1,35 @@
-<div class="row">
-  <div class="micro-12 col-6">
-    <a
-      href="<%= @project.site_link %>"
-      target="_blank"
-      class="site-link top"
-    >
-      Visit Website
-    </a>
-  </div>
+<%# app/projects/project_buttons.html.erb %>
 
-  <div class="micro-12 col-6">
-    <a
-      href="<%= @project.repo_link %>"
-      target="_blank"
-      class="site-link"
-    >
-      Visit Repo
-    </a>
-  </div>
+<div class="row">
+  <% if @project.repo_link %>
+    <div class="micro-12 col-6">
+      <a
+        href="<%= @project.site_link %>"
+        target="_blank"
+        class="site-link top"
+      >
+        Visit Website
+      </a>
+    </div>
+
+    <div class="micro-12 col-6">
+      <a
+        href="<%= @project.repo_link %>"
+        target="_blank"
+        class="site-link"
+      >
+        Visit Repo
+      </a>
+    </div>
+  <% else %>
+    <div class="col">
+      <a
+        href="<%= @project.site_link %>"
+        target="_blank"
+        class="site-link top"
+      >
+        Visit Website
+      </a>
+    </div>
+  <% end %>
 </div>
