@@ -2,6 +2,55 @@
 // Skills App Styles
 // ==================================================================
 
+.skills-box {
+  position: relative;
+}
+
+.skillset {
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  height: 40vw;
+  min-height: 475px;
+  transition: animate 0.5s ease;
+
+  h2 {
+    margin: 0;
+    padding: 1.5em 0 1em;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+}
+
+.skillset-default {
+  background: image-url("macbook-coffee-bw.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.skillset-ror {
+  background: image-url("fast-train.gif") no-repeat center center;
+  background-size: cover;
+}
+
+.skillset-deep {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.skills {
+  p, button, a {
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.5s ease;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
 .active-skill {
   transition: all 1s ease;
 

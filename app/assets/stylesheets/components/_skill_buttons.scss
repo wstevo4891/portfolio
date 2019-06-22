@@ -25,6 +25,21 @@
   transition: none;
 }
 
+.jquery-5 {
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: lightskyblue;
+  }
+}
+
+.jquery-fine {
+  display: none;
+  font-size: 18px;
+  text-align: center;
+  color: white !important;
+}
+
 .css3-btn {
   p {
     position: relative;
