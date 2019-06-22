@@ -3,7 +3,7 @@
   slug: ruby
   code: ruby
   description:
-  body: lib/services/search_results.rb
+  body: db/code_files/bolt-network-search.txt
 
 - title: JavaScript
   slug: javascript

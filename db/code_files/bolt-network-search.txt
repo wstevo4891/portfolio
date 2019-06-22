@@ -1,0 +1,187 @@
+# app/models/movie.rb
+
+# Model for movies table
+class Movie < ApplicationRecord
+  # == Attributes ===========================================================
+  attr_accessor :genres_list
+  mount_uploader :photo, PhotoUploader
+
+  # == Extensions ===========================================================
+  include PgSearch
+
+  # == Relationships ========================================================
+  has_and_belongs_to_many :genres
+
+  # == Validations ==========================================================
+  validates :title, :year, :rated, :run_time, :plot, presence: true
+
+  # == Scopes ===============================================================
+  pg_search_scope :search_by_title, against: :title, using: [:tsearch]
+
+  # == Callbacks ============================================================
+  after_initialize do |movie|
+    movie.genres_list = movie.three_genres
+  end
+
+  # == Class Methods ========================================================
+  def self.search(search)
+    Movie.where('title ~* :search', search: "(#{search})")
+  end
+
+  def self.find_by_genre(genre_id)
+    Genre.find(genre_id).movies
+  end
+
+  def self.lookup(movie_id)
+    movie = Movie.find(movie_id)
+    movie.genres_list = movie.genres.map(&:name)
+    movie
+  end
+
+  def self.by_first_char(query)
+    where('lower(title) LIKE :prefix', prefix: "#{query}%")
+  end
+
+  def self.lower_case_match(query)
+    where(Movie.arel_table[:title].lower.matches("%#{query}%"))
+  end
+
+  # == Instance Methods =====================================================
+  def three_genres
+    genres.limit(3).map(&:name)
+  end
+end
+
+
+# app/models/genre.rb
+
+# Model for genres table
+class Genre < ApplicationRecord
+  # == Attributes ===========================================================
+  # +name+:: String
+  # +plural:: String
+  # +category+:: String
+
+  # == Extensions ===========================================================
+  include PgSearch
+
+  # == Relationships ========================================================
+  has_and_belongs_to_many :movies
+  has_many :subgenres
+
+  # == Validations ==========================================================
+  validates :name, :plural, :category, presence: true
+
+  # == Scopes ===============================================================
+  pg_search_scope :full_text_search, against: %i[name plural category], using: [:tsearch]
+
+  # == Class Methods ========================================================
+  def self.by_first_char(query)
+    where('lower(name) LIKE :prefix', prefix: "#{query}%")
+  end
+
+  def self.lower_case_match(query)
+    where(Genre.arel_table[:name].lower.matches("%#{query}%"))
+  end
+end
+
+
+
+# app/services/search_results.rb
+
+# Service for searching movies and genres
+class SearchResults
+  attr_reader :query, :genres, :movies
+
+  def self.create(query)
+    new(query).call
+  end
+
+  def initialize(query)
+    @query = query.downcase
+  end
+
+  def call
+    retrieve_results
+  end
+
+  private
+
+  def retrieve_results
+    if @query.length == 1
+      first_char_match
+    else
+      full_match_results
+    end
+  end
+
+  def first_char_match
+    @genres = genres_by_first_char
+    
+    movies_list = full_movies_search
+
+    { genres: @genres.to_a, movies: movies_list }
+  end
+
+  def full_movies_search
+    first_search = movies_by_first_char.to_a
+
+    if genres.empty?
+      first_search
+    else
+      second_search = concat_movies_by_genre
+
+      first_search.concat(second_search)
+    end
+  end
+
+  def genres_by_first_char
+    Genre.by_first_char(query)
+  rescue ActiveRecord::RecordNotFound
+    []
+  end
+
+  def movies_by_first_char
+    Movie.by_first_char(query).limit(15)
+  rescue ActiveRecord::RecordNotFound
+    []
+  end
+
+  def full_match_results
+    @genres = genre_name_match
+
+    { genres: @genres.to_a, movies: movie_results }
+  end
+
+  def genre_name_match
+    genres = Genre.lower_case_match(query)
+
+    return genres unless genres.empty?
+
+    Genre.full_text_search(query)
+  rescue ActiveRecord::RecordNotFound
+    []
+  end
+
+  def movie_results
+    if genres.empty?
+      movie_title_match
+    else
+      concat_movies_by_genre
+    end
+  end
+
+  def movie_title_match
+    Movie.lower_case_match(query).limit(15)
+  rescue ActiveRecord::RecordNotFound
+    []
+  end
+
+  def concat_movies_by_genre
+    limit = genres.length > 1 ? 5 : 20
+
+    genres.each_with_object([]) do |genre, arr|
+      arr.concat genre.movies.limit(limit)
+    end
+  end
+end
