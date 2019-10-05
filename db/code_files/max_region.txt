@@ -18,7 +18,7 @@
 # 0 0 0 1
 
 # Service: MaxRegion
-#   Calculates the size of the maximum area of 1's
+#   Calculates the size of the largest area of 1's
 #   in a 2D binary grid
 class MaxRegion
   # Convenience class method to run the algorithm
@@ -30,7 +30,7 @@ class MaxRegion
   # initialize()
   #
   # @param [Array<Integer>] grid
-  # 
+  #
   def initialize(grid)
     # Binary 2D array
     @grid = grid
@@ -62,16 +62,16 @@ class MaxRegion
   def calc_max_region
     # Traverse the grid by rows...
     (0..@rows).each do |i|
-
       # and columns.
       (0..@cols).each do |j|
         ##
-        # Calculate the current maximum region with
-        # a depth-first search method
+        # Set @max to the max value of a comparison
+        # between the current max region size
+        # and the next one found by a depth-first
+        # search calculation.
         #
         @max = [@max, dfs(i, j)].max
       end
-
     end
 
     # Return the size of the final maximum region
@@ -124,6 +124,39 @@ class MaxRegion
   end
 end
 
+# Test 1
+# =================
+grid = [
+  [0, 0, 1],
+  [1, 0, 0],
+  [1, 1, 0]
+]
+
+puts 'Grid:'
+grid.each { |arr| print "#{arr}\n"}
+puts ''
+# Should print: 3
+puts "Size of max region is: #{MaxRegion.calc(grid)}"
+puts ''
+
+# Test 2
+# =================
+grid = [
+  [1, 0, 0, 1],
+  [0, 1, 0, 0],
+  [0, 0, 1, 0],
+  [1, 0, 0, 1]
+]
+
+puts 'Grid:'
+grid.each { |arr| print "#{arr}\n"}
+puts ''
+# Should print: 4
+puts "Size of max region is: #{MaxRegion.calc(grid)}"
+puts ''
+
+# Test 3
+# =================
 grid = [
   [1, 0, 1, 1, 0],
   [1, 1, 0, 0, 1],
@@ -132,8 +165,28 @@ grid = [
   [1, 1, 1, 0, 0]
 ]
 
-# Should print: 10
 puts 'Grid:'
 grid.each { |arr| print "#{arr}\n"}
 puts ''
+# Should print: 10
+puts "Size of max region is: #{MaxRegion.calc(grid)}"
+puts ''
+
+# Test 4
+# =================
+grid = [
+  [0, 1, 0, 0],
+  [1, 1, 1, 0],
+  [0, 1, 0, 0],
+  [0, 0, 0, 1],
+  [0, 1, 1, 0],
+  [1, 0, 1, 1],
+  [0, 1, 0, 0],
+  [1, 0, 1, 0]
+]
+
+puts 'Grid:'
+grid.each { |arr| print "#{arr}\n"}
+puts ''
+# Should print: 9
 puts "Size of max region is: #{MaxRegion.calc(grid)}"
