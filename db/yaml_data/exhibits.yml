@@ -3,7 +3,7 @@
   slug: ruby
   code: ruby
   description:
-  body: db/code_files/bolt-network-search.txt
+  body: db/code_files/max_region.txt
 
 - title: JavaScript
   slug: javascript
@@ -21,7 +21,7 @@
   slug: ruby-on-rails
   code: ruby
   description:
-  body: app/controllers/admin/projects_controller.rb
+  body: db/code_files/bolt_network_search.txt
 
 - title: ReactJS
   slug: react-js

@@ -19,4 +19,4 @@ class ExhibitsController < ApplicationController
       format.json { render json: @exhibit, status: :ok }
     end
   end
-end  
+end
