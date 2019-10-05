@@ -8,14 +8,16 @@ class ButtonApp {
   }
 
   activateSkill(skill, text) {
-    $('.active-skill').addClass(skill)
-                      .text(text);
+    $('.active-skill')
+      .addClass(skill)
+      .text(text);
   }
 
   resetJSButton() {
-    $('.js-btn').removeClass()
-                .addClass('skill-btn js-btn jquery-1')
-                .css(this.jsDefault());
+    $('.js-btn')
+      .removeClass()
+      .addClass('skill-btn js-btn jquery-1')
+      .css(this.jsDefault());
   }
 
   jsDefault() {

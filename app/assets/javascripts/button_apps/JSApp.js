@@ -42,8 +42,9 @@ class JSApp extends ButtonApp {
           transition: 'all .5s ease'
         });
 
-        $('.jquery-fine').slideDown('slow')
-                         .css('display', 'block');
+        $('.jquery-fine')
+          .slideDown('slow')
+          .css('display', 'block');
       }
     });
   }

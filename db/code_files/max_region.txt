@@ -1,0 +1,139 @@
+#!/bin/ruby
+
+# frozen_string_literal: true
+
+# In a grid of cells containing either 1 or 0,
+# find the size of the largest area of connected cells
+# containing a 1.
+
+# The cells are considered connected if they are
+# adjacent both perpendicularly and diagonally,
+# i.e. a cell can be connected to any of the
+# 7 cells around it.
+
+# In this example, all of the 1's are connected:
+# 0 1 0 0
+# 1 0 1 0
+# 1 1 0 1
+# 0 0 0 1
+
+# Service: MaxRegion
+#   Calculates the size of the maximum area of 1's
+#   in a 2D binary grid
+class MaxRegion
+  # Convenience class method to run the algorithm
+  def self.calc(grid)
+    new(grid).call
+  end
+
+  ##
+  # initialize()
+  #
+  # @param [Array<Integer>] grid
+  # 
+  def initialize(grid)
+    # Binary 2D array
+    @grid = grid
+    # Rows and Columns of grid
+    @rows = grid.size - 1
+    @cols = grid[0].size - 1
+    # Coordinates of the 7 positions around a cell
+    @positions = [
+      [-1, -1], [-1, 0], [-1, 1],
+      [0, -1],           [0, 1],
+      [1, -1],  [1, 0],  [1, 1]
+    ]
+    # Start the maximum region count at 0
+    @max = 0
+  end
+
+  def call
+    calc_max_region
+  end
+
+  private
+
+  ##
+  # calc_max_region()
+  # Traverses @grid to calculate the maximum region of 1's
+  #
+  # @returns [Integer]
+  #
+  def calc_max_region
+    # Traverse the grid by rows...
+    (0..@rows).each do |i|
+
+      # and columns.
+      (0..@cols).each do |j|
+        ##
+        # Calculate the current maximum region with
+        # a depth-first search method
+        #
+        @max = [@max, dfs(i, j)].max
+      end
+
+    end
+
+    # Return the size of the final maximum region
+    @max
+  end
+
+  ##
+  # dfs()
+  # Recursive depth-first search.
+  # Traverses a connected region of 1's
+  # and counts the number of cells.
+  #
+  # @param [Integer] i
+  # @param [Integer] j
+  #
+  # @returns [Integer]
+  #
+  def dfs(i, j)
+    # Skip cells that contain 0
+    return 0 if @grid[i][j].zero?
+
+    # If the cell contains 1:
+    #   Set its value to 0 so we don't repeat this search
+    #   and so the recursion will eventually terminate
+    @grid[i][j] = 0
+    #   Set count to 1 to account for the cell's value
+    count = 1
+
+    # Iterate through the 7 positions
+    # and evaluate the cells at those coordinates
+    @positions.each do |pos|
+      # Skip cells that:
+      #  1. Are out of bounds of the grid
+      next unless (i + pos[0]).between?(0, @rows) &&
+                  (j + pos[1]).between?(0, @cols) &&
+                  #
+                  # 2. Contain a 0
+                  #
+                  @grid[i + pos[0]][j + pos[1]] == 1
+
+      # If a cell contains a 1:
+      #  Increment the count by the result of
+      #  calling dfs() on the current position
+      #
+      count += dfs(i + pos[0], j + pos[1])
+    end
+
+    # Return the final count
+    count
+  end
+end
+
+grid = [
+  [1, 0, 1, 1, 0],
+  [1, 1, 0, 0, 1],
+  [0, 1, 1, 1, 0],
+  [0, 0, 0, 0, 1],
+  [1, 1, 1, 0, 0]
+]
+
+# Should print: 10
+puts 'Grid:'
+grid.each { |arr| print "#{arr}\n"}
+puts ''
+puts "Size of max region is: #{MaxRegion.calc(grid)}"
