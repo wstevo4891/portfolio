@@ -64,6 +64,9 @@ class MaxRegion
     (0..@rows).each do |i|
       # and columns.
       (0..@cols).each do |j|
+        # Skip cells containing 0
+        next if @grid[i][j].zero?
+
         ##
         # Set @max to the max value of a comparison
         # between the current max region size
@@ -90,7 +93,8 @@ class MaxRegion
   # @returns [Integer]
   #
   def dfs(i, j)
-    # Skip cells that contain 0
+    # If the current cell contains 0:
+    #   Return 0 and terminate recursion
     return 0 if @grid[i][j].zero?
 
     # If the cell contains 1:
